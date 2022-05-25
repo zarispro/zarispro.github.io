@@ -10,6 +10,41 @@ html {
   font-family: myFirstFont;
 }
 
+
+
+
+
+
+.divleft{
+  animation-name: example01;
+  animation-duration: 1s;
+}
+
+.divright{
+  animation-name: example02;
+  animation-duration: 1s;
+}
+
+
+
+@keyframes example01 {
+  0%{transform: translate(-780px, 0px);}
+61%{transform: translate(99px, 0px);}
+73%{transform: translate(-10px, 0px);}
+  100%{transform: translate(0px, 0px);}
+}
+
+@keyframes example02 {
+  0%{transform: translate(780px, 0px);}
+61%{transform: translate(-99px, 0px);}
+73%{transform: translate(10px, 0px);}
+  100%{transform: translate(0px, 0px);}
+}
+
+
+
+
+
 </style>
 </head>
 <body align="center">
@@ -55,7 +90,7 @@ a{color:white}
 
 <h2>欢迎来到我的个人网站</h2>
 
-<a href="https://zarispro.github.io/c/"><div id="wd1"><div style="float:left;width: 204px;margin-left: 9px;" align="left"><h1 style="margin-top: 3px;margin-left: 70px;">日历</h1>
+<a href="https://zarispro.github.io/c/"><div id="wd1" class="divleft"><div style="float:left;width: 204px;margin-left: 9px;" align="left"><h1 style="margin-top: 3px;margin-left: 70px;">日历</h1>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 从2019年6月1日起，我就开始制作每天都日历，当初的界面并不完善，直至2020年11月20日，第五版日历的诞生...
 
@@ -67,7 +102,7 @@ a{color:white}
 </div>
 </a>
 <!--<br><br>
-<a href="https://zarispro.github.io/61a/"><div id="wd3"><div style="float:left;width: 204px;margin-left: 9px;" align="left"><h1 style="margin-top: 3px;margin-left: 90px;">61</h1>
+<a href="https://zarispro.github.io/61a/"><div id="wd3" class="divright"><div style="float:left;width: 204px;margin-left: 9px;" align="left"><h1 style="margin-top: 3px;margin-left: 90px;">61</h1>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 61是什么？为什么这个数字会让我印象如此深刻？到底是什么事情让我拥有如此般的记忆？
 
@@ -84,7 +119,7 @@ a{color:white}
 
 
 <br><br>
-<a href="https://zarispro.github.io/ad/"><div id="wd2"><div style="float:left;width: 204px;margin-left: 9px;" align="left"><h1 style="margin-top: 3px;margin-left: 35px;">商业广告</h1>
+<a href="https://zarispro.github.io/ad/"><div id="wd2" class="divright"><div style="float:left;width: 204px;margin-left: 9px;" align="left"><h1 style="margin-top: 3px;margin-left: 35px;">商业广告</h1>
 
 <div style="margin-top: -18px;"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;免费商业广告，目前收录美国科技巨头谷歌和微软的产品广告，网站来宾提供的个人广告以及我喜欢的产品广告。
 </div>
@@ -110,7 +145,7 @@ a{color:white}
 </a>-->
 
 <br><br>
-<a href="https://zarispro.github.io/music/"><div id="wd4" style="background-color: #191900"><div style="float:left;width: 204px;margin-left: 9px;" align="left"><h1 style="margin-top: 3px;margin-left: 70px;">音乐</h1>
+<a href="https://zarispro.github.io/music/"><div id="wd4" class="divleft" style="background-color: #191900"><div style="float:left;width: 204px;margin-left: 9px;" align="left"><h1 style="margin-top: 3px;margin-left: 70px;">音乐</h1>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这里是我的音乐收集站，欢迎各位来宾前来欣赏音乐。
 
