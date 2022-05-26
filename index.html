@@ -55,31 +55,61 @@ position: fixed; left: 0px; top: 0px;z-index: 44921;color: white;font-size:26px;
 
 
 #wd1{width: 365px;height:190px;background-color:#77020288;backdrop-filter: blur(7px);
+border: 3px solid #ff77ff;
 
-border-style:solid;border-width: 3px;
 display:inline-block;border-radius: 10px;
+  animation-name: example108;
+  animation-duration: 1.4s;animation-iteration-count: infinite;
+}
+
+#wd4{width: 365px;height:190px;background-color:#00003486;backdrop-filter: blur(7px);border: 3px solid #ff77ff;
+  animation-name: example108;
+  animation-duration: 1.4s;
+
+display:inline-block;border-radius: 10px;animation-iteration-count: infinite;
 
 }
 
-#wd4{width: 365px;height:190px;background-color:#00003486;backdrop-filter: blur(7px);
+#wd3{width: 365px;height:190px;background-color:#02370286;backdrop-filter: blur(7px);border: 3px solid #ff77ff;
+  animation-name: example108;
+  animation-duration: 1.4s;
 
-border-style:solid;border-width: 3px;
-display:inline-block;border-radius: 10px;
-
-}
-
-#wd3{width: 365px;height:190px;background-color:#02370286;backdrop-filter: blur(7px);
-
-border-style:solid;border-width: 3px;
-display:inline-block;border-radius: 10px;
+display:inline-block;border-radius: 10px;animation-iteration-count: infinite;
 
 }
-#wd2{width: 365px;height:190px;background-color:#37072284;backdrop-filter: blur(7px);
-
-border-style:solid;border-width: 3px;
+#wd2{width: 365px;height:190px;background-color:#37072284;backdrop-filter: blur(7px);border: 3px solid #ff77ff;
+animation-iteration-count: infinite;
 display:inline-block;border-radius: 10px;
-
+  animation-name: example108;
+  animation-duration: 1.4s;
 }
+
+/* 动画代码 */
+@keyframes example108 {
+  0%   {border: 3px solid #ff77ff;}
+  25%  {border: 3px solid #ff37ff;}
+  50%  {border: 3px solid #ff57ff;}
+  100% {border: 3px solid #ff77ff;}
+}
+
+/* 应用动画的元素 */
+#iddiv {
+  animation-name: example108;
+  animation-duration: 3.4s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 a{color:white}
 </style>
@@ -173,7 +203,7 @@ a{color:white}
 
 </body>
 
-<img src="image/back.webp" style="position: fixed; left: 0px; top: 0px;z-index: -44921;color: white;font-size:26px;width:100%;height:100%;object-fit:cover;">
+<img src="https://zarispro.github.io/image/back.webp" style="position: fixed; left: 0px; top: 0px;z-index: -44921;color: white;font-size:26px;width:100%;height:100%;object-fit:cover;">
 
 
 
