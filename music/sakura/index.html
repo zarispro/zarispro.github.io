@@ -82,7 +82,20 @@ html{Background-attachment:fixed}
   border: 2px solid #007799;
 }
 
+// 这个方式兼容所有版本的谷歌浏览器
+audio::-webkit-media-controls {
+    overflow: hidden !important
+}
+audio::-webkit-media-controls-enclosure {
+    width: calc(100% + 0px);
+    margin-left: auto;
+border-radius: 13px;
+background-color: #ffffffdc;
+text-color:white;
+}
 
+
+#zar001:hover{background-color: #ff77ff88;}
 </style>
 
 <center>
