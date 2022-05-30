@@ -1,6 +1,26 @@
 <!DOCTYPE html>
 <html align="center" style="cursor:default;color:white;" leftmargin="0" topmargin="0" οncοntextmenu="return false" οndragstart="return false" onselectstart="return false" οnselect="document.selection.empty()" οncοpy="document.selection.empty()" onbeforecopy="return false" οnmοuseup="document.selection.empty()" ondragstart="return false;" oncontextmenu="return false;"><head><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"><meta charset="utf-8">
-<link rel="Shortcut Icon" href="https://zarandzjy.github.io/icon.ico" type="image/x-icon"><title>主页</title><style>
+<link rel="Shortcut Icon" href="https://zarandzjy.github.io/icon.ico" type="image/x-icon"><title>主页</title>
+  
+  
+  <script type="text/javascript">
+  var system = {};
+  var p = navigator.platform;
+  var u = navigator.userAgent;
+
+  system.win = p.indexOf("Win") == 0;
+  system.mac = p.indexOf("Mac") == 0;
+  system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+  if (system.win || system.mac || system.xll) {//如果是PC转
+    if (u.indexOf('Windows Phone') > -1) {  //win手机端
+
+    }else {
+      window.location.href = " https://zarispro.github.io/d/";
+    }
+  }
+</script>
+  
+  <style>
 @font-face啊 {
   font-family: myFirstFont;
   src: url(indexs.ttc);
