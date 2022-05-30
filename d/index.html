@@ -15,22 +15,21 @@ background-color: green;font-size: 34px;color: #fff;}
 <body><center>
 <div id="dinglan"><div id="v2">主页</div>
 &nbsp;
-<div id="v1">音乐</div>
-<!--&nbsp;
-<div id="v0">紧急情报</div>-->
+<div id="v1" onclick="window.open('music/','_self')">音乐</div>
+
 &nbsp;
-<div id="v1">商业广告</div>
+<div id="v1" onclick="window.open('ad/','_self')">商业广告</div>
 &nbsp;
-<div id="v1">日历</div>
+<div id="v1" onclick="window.open('c/','_self')">日历</div>
 
 </div>
 <br><br><br><br>
 <h1 style="font-size: 88px;">欢迎来到我的个人网站</h1>
 <style>
-#k1{transition: 0.32s;cursor:pointer;margin-left: 6px;margin-right: 6px;
+#k1{transition: 0.32s;cursor:pointer;margin-left: 5px;margin-right: 5px;
 color:white;font-size: 47px;
 width: 399px;height: 333px; border: 2px solid #00000000;border-radius: 15px;display:inline-block;background-color: #8800ff;overflow: hidden;}
-#k1in{font-size:28px;margin-left: 10px;margin-right: 10px;
+#k1in{font-size:26px;margin-left: 10px;margin-right: 10px;
 
 
 }
@@ -40,7 +39,7 @@ width: 399px;height: 333px; border: 2px solid #00000000;border-radius: 15px;disp
 .k2:hover{box-shadow: 0 0 14px #007777;z-index: 99999;}
 .k22:hover{box-shadow: 0 0 14px #770000;z-index: 99999;}
 </style>
-<div id="k1" class="k21">日历
+<div id="k1" class="k21" onclick="window.open('c/','_self')">日历
 <br><img src="https://zarandzjy.github.io/rl04.png" width="100">
 <br><div align="left" id="k1in">&nbsp;&nbsp;&nbsp;&nbsp;
 从2019年6月1日起，我就每天制作日历，当初的界面并不完善，直至2020年11月20日，第五版日历的诞生...</div>
@@ -49,7 +48,7 @@ width: 399px;height: 333px; border: 2px solid #00000000;border-radius: 15px;disp
 </div>
 
 
-<div id="k1" class="k2" style="background-color: #007777;">
+<div id="k1" class="k2" style="background-color: #007777;" onclick="window.open('ad/','_self')">
 商业广告
 <br><img src="https://zarandzjy.github.io/image/p3.png" width="100" style="border-radius: 21px;">
 <br><div align="left" id="k1in">&nbsp;&nbsp;&nbsp;&nbsp;
@@ -59,7 +58,7 @@ width: 399px;height: 333px; border: 2px solid #00000000;border-radius: 15px;disp
 
 </div>
 
-<div id="k1" class="k22" style="background-color: #770000;">
+<div id="k1" class="k22" style="background-color: #770000;" onclick="window.open('music/','_self')">
 音乐
 <br><img src="https://zarandzjy.github.io/image/music.png" width="100" style="border-radius: 21px;">
 <br><div align="left" id="k1in">&nbsp;&nbsp;&nbsp;&nbsp;
