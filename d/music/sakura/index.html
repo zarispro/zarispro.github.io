@@ -38,9 +38,9 @@ background-color: green;font-size: 34px;color: #fff;}
 
 @keyframes example {
   0%   {opacity: 1;}
-  25%  {opacity: 0.4;}
+  25%  {opacity: 0.1;}
   50%  {opacity: 1;}
-  75%  {opacity: 0.4;}
+  75%  {opacity: 0.1;}
   100% {opacity: 1;}
 }
 .tiao99:hover:{opacity: 1;}
@@ -73,32 +73,48 @@ transition-timing-function: linear;animation-iteration-count: 1.5;
 
 </div>
 <br><br><br>
-<h1 style="font-size: 53px;">音乐收录站</h1>
+<h1 style="font-size: 53px;">百变小樱音乐</h1>
 <style>
-#k1{transition: 0.32s;cursor:pointer;margin-left: 5px;margin-right: 5px;
-color:white;font-size: 47px;
-width: 399px;height: 333px; border: 2px solid #00000000;border-radius: 15px;display:inline-block;background-color: #8800ff;overflow: hidden;}
+#k1{transition: 0.32s;margin-left: 5px;margin-right: 5px;
+color:white;font-size: 36px;
+width: 389px;height: 112px; border: 2px solid #00000000;border-radius: 18px;display:inline-block;background-color: #8800ff;overflow: hidden;}
 #k1in{font-size:26px;margin-left: 10px;margin-right: 10px;
 
 
 }
 
-#k1:hover{transform: translate(0px, -8px);transition: 0.32s;}
-.k21:hover{box-shadow: 0 0 14px #8800ff;z-index: 99999;}
-.k2:hover{box-shadow: 0 0 14px #007777;z-index: 99999;}
-.k22:hover{box-shadow: 0 0 14px #770000;z-index: 99999;}
-.k82:hover{box-shadow: 0 0 14px #0066af;z-index: 99999;}
 </style>
-<div id="k1" class="k21" onclick="window.open('sakura/','_self')">百变小樱
-<br><img src="https://zarispro.github.io/music/sakura/logo.png" width="100" style="border-radius: 13px;">
-<br><div align="left" id="k1in">&nbsp;&nbsp;&nbsp;&nbsp;
-
-《百变小樱》又名《魔卡少女樱》。它被设计成一部比较柔和的作品，因此没有使用太多的网点，另外还画了很多种花。</div>
-
-
+<div id="k1" class="k21"">Catch You Catch Me
+<br><audio controls="controls" controlslist="nodownload" preload="auto">
+  <source src="https://zarispro.github.io/music/sakura/music/c.mp3" type="audio/mp3" class="audio" controls="controls" @play="(e) => audioPlay(e, item, index)">
+  
+</audio>
+</div>
+<div id="k1" class="k21"">扉をあけて
+<br><audio controls="controls" controlslist="nodownload" preload="auto">
+  <source src="https://zarispro.github.io/music/sakura/music/d.mp3" type="audio/mp3" class="audio" controls="controls" @play="(e) => audioPlay(e, item, index)">
+  
+</audio>
+</div>
+<div id="k1" class="k21"">プラチナ
+<br><audio controls="controls" controlslist="nodownload" preload="auto">
+  <source src="https://zarispro.github.io/music/sakura/music/e.mp3" type="audio/mp3" class="audio" controls="controls" @play="(e) => audioPlay(e, item, index)">
+  
+</audio>
+</div>
+<br>
+<div id="k1" class="k21"">CLEAR
+<br><audio controls="controls" controlslist="nodownload" preload="auto">
+  <source src="https://zarispro.github.io/music/sakura/music/f.mp3" type="audio/mp3" class="audio" controls="controls" @play="(e) => audioPlay(e, item, index)">
+  
+</audio>
 </div>
 
-
-
+<div id="k1" class="k21"">Rocket Beat
+<br><audio controls="controls" controlslist="nodownload" preload="auto">
+  <source src="https://zarispro.github.io/music/sakura/music/g.mp3" type="audio/mp3" class="audio" controls="controls" @play="(e) => audioPlay(e, item, index)">
+  
+</audio>
+</div>
 </center></body>
 </html>
