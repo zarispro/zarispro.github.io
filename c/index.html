@@ -17,10 +17,18 @@ transition: 0.6s;
 #backnew {
 
   animation-name: example;
-  animation-duration: 3s;
+  animation-duration: 3.1s;
 }</style></a>
 
-<div id="zar002">日历</div>
+<div id="zar002"><div class="dropdown" align="center">
+  <button class="dropbtn">&nbsp;&nbsp;&nbsp;日历&nbsp;&nbsp;&nbsp</button>
+ <center><div align="center" class="dropdown-content" style="border-radius: 25px;">
+  <a href="../fm/">心理FM</a>
+<a href="../ad/">商业广告</a>
+  <a href="../music/">音乐</a>
+  
+  </div></center>
+</div></div>
 
 
 <style>#zar002{width: 100%;font-size: 25px;background-color: #444444;position: fixed;left:0;top:0;z-index:1000;}
@@ -92,5 +100,44 @@ html{Background-attachment:fixed;background-color: #000;}
 
 <br><br><br><br>
 
+<style>.dropbtn {
+  background-color: #11111100;
+  color: white;
+  padding: 0px 18px;
+  font-size: 26px;
+  border: none;
+  cursor: pointer;
+}
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+闲置{}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffffcc;
+  min-width: 182;
+  box-shadow: 0px 8px 18px 0px rgba(0,0,0,0.2);
+  z-index: 1000;
+backdrop-filter: blur(23px);
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1dd;border-radius: 25px;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #11111100;
+}</style>
 </body></html>
