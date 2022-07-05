@@ -1,1 +1,4273 @@
-dw
+<!DOCTYPE html>
+<!-- saved from url=(0029)https://developers.google.cn/ -->
+<html lang="zh-CN" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="google-signin-client-id" content="721724668570-nbkv1cfusk7kk4eni4pjvepaus73b13t.apps.googleusercontent.com">
+    <meta name="google-signin-scope" content="profile email">
+    <meta property="og:site_name" content="Google Developers">
+    <meta property="og:type" content="website"><meta name="googlebot" content="noindex"><meta name="theme-color" content="#ffffff">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <link rel="manifest" href="https://developers.google.cn/_pwa/developers/manifest.json" crossorigin="use-credentials">
+    <link rel="preconnect" href="https://www.gstatic.cn/" crossorigin="">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin="">
+    <link rel="preconnect" href="https://apis.google.com/" crossorigin="">
+    <link rel="preconnect" href="https://www.google-analytics.com/" crossorigin=""><link rel="stylesheet" href="./index_files/css">
+      <link rel="stylesheet" href="./index_files/css(1)"><link rel="stylesheet" href="./index_files/app.css">
+      <link rel="shortcut icon" href="https://www.gstatic.cn/devrel-devsite/prod/v99fd0c828fa12c8e4ac5a683d534aa207353ab3b49583792c0a838c031276d00/developers/images/favicon.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.cn/devrel-devsite/prod/v99fd0c828fa12c8e4ac5a683d534aa207353ab3b49583792c0a838c031276d00/developers/images/touchicon-180.png"><link rel="canonical" href="https://developers.google.cn/?hl=zh-cn">
+      
+
+<title>Google Developers</title>
+
+<meta property="og:title" content="Google Developers"><meta name="description" content="为您提供构建更优质应用所需的一切资源。">
+  <meta property="og:description" content="为您提供构建更优质应用所需的一切资源。"><meta property="og:url" content="https://developers.google.cn/?hl=zh-cn"><meta property="og:locale" content="zh_cn"><meta name="baidu-site-verification" content="9WGJ9izQ82"><script type="text/javascript" async="" src="./index_files/linkid.js.下载" nonce=""></script><script async="" src="./index_files/app_loader.js.下载"></script><script type="application/ld+json">
+  {
+    "@context": "http://schema.org/",
+    "@type": "Organization",
+    "name": "Google Developers",
+    "logo": "https://www.gstatic.cn/devrel-devsite/prod/v99fd0c828fa12c8e4ac5a683d534aa207353ab3b49583792c0a838c031276d00/developers/images/touchicon-180.png",
+    "url": "https://developers.google.cn/"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Google Developers",
+    "url": "https://developers.google.cn/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://developers.google.cn/s/results?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+    <script src="./index_files/devsite_app_module__zh_cn.js.下载" nonce=""></script><script src="./index_files/devsite_app_custom_elements_module__zh_cn.js.下载" nonce=""></script><script src="./index_files/devsite_devsite_a11y_announce_module__zh_cn.js.下载" nonce=""></script><script src="./index_files/devsite_devsite_analytics_module__zh_cn.js.下载" nonce=""></script><script src="./index_files/devsite_devsite_book_nav_module__zh_cn.js.下载" nonce=""></script><script src="./index_files/devsite_devsite_content_module__zh_cn.js.下载" nonce=""></script><script src="./index_files/devsite_devsite_footer_linkboxes_module__zh_cn.js.下载" nonce=""></script><script src="./index_files/devsite_devsite_footer_promos_module__zh_cn.js.下载" nonce=""></script><script src="./index_files/devsite_devsite_footer_utility_module__zh_cn.js.下载" nonce=""></script><script src="./index_files/devsite_devsite_header_module__zh_cn.js.下载" nonce=""></script><script src="./index_files/devsite_devsite_heading_link_module__zh_cn.js.下载" nonce=""></script><script src="./index_files/devsite_devsite_iframe_module__zh_cn.js.下载" nonce=""></script><script src="./index_files/devsite_devsite_language_selector_module__zh_cn.js.下载" nonce=""></script><script src="./index_files/devsite_devsite_notification_module__zh_cn.js.下载" nonce=""></script><script src="./index_files/devsite_devsite_panel_module__zh_cn.js.下载" nonce=""></script><script src="./index_files/devsite_devsite_progress_module__zh_cn.js.下载" nonce=""></script><script src="./index_files/devsite_devsite_recommendations_sidebar_module__zh_cn.js.下载" nonce=""></script><script src="./index_files/devsite_devsite_search_module__zh_cn.js.下载" nonce=""></script><script src="./index_files/devsite_devsite_select_module__zh_cn.js.下载" nonce=""></script><script src="./index_files/devsite_devsite_sitemask_module__zh_cn.js.下载" nonce=""></script><script src="./index_files/devsite_devsite_snackbar_module__zh_cn.js.下载" nonce=""></script><script src="./index_files/devsite_devsite_tabs_module__zh_cn.js.下载" nonce=""></script><script src="./index_files/devsite_devsite_toc_module__zh_cn.js.下载" nonce=""></script><script src="./index_files/devsite_devsite_tooltip_module__zh_cn.js.下载" nonce=""></script><script src="./index_files/analytics.js.下载" nonce=""></script></head>
+  <body class="" template="landing" theme="white" type="article" layout="full" block-apix="" touch="" style="--devsite-js-header-height:49px;" ready="">
+    <devsite-progress id="app-progress"></devsite-progress>
+  
+    <section class="devsite-wrapper"><devsite-header no-lower-row="" top-row--height="49" bottom-row--height="0" bottom-tabs--height="0" bottom-row--hidden="" fixed="">
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-header--inner nocontent">
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu" class="devsite-header-icon-button button-flat material-icons gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Navigation menu button" aria-label="打开菜单">
+        </button>
+        <div class="devsite-product-name-wrapper">
+
+  <a href="https://developers.google.cn/" class="devsite-site-logo-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav" track-name="googleDevelopers" track-metadata-position="nav" track-metadata-eventdetail="nav">
+
+  
+    <img src="./index_files/lockup.svg" class="devsite-site-logo" alt="Google Developers">
+  
+
+</a>
+
+
+
+  
+  
+  <span class="devsite-product-name">
+    <ul class="devsite-breadcrumb-list">
+  
+  <li class="devsite-breadcrumb-item
+             devsite-has-google-wordmark">
+    
+    
+    
+      
+      
+    
+  </li>
+  
+</ul>
+  </span>
+
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+            
+              
+              
+  <devsite-tabs class="upper-tabs" connected="">
+
+    
+
+  <nav class="devsite-tabs-wrapper" aria-label="上面的标签页">
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    <tab overflow-tab=""><a href="https://developers.google.cn/#" class="devsite-icon devsite-icon-arrow-drop-down">更多</a><div class="devsite-tabs-overflow-menu" scrollbars="" hidden=""><tab dropdown="">
+  <a href="https://developers.google.cn/products" class="gc-analytics-event " track-type="nav" track-metadata-eventdetail="https://developers.google.cn/products" track-metadata-position="nav - 产品" track-metadata-module="primary nav" data-category="Site-Wide Custom Events" data-label="Tab: 产品" track-name="产品">
+  产品
+</a>
+
+  <a href="https://developers.google.cn/#" role="button" aria-haspopup="true" aria-expanded="false" aria-label="以下项的下拉菜单 产品" track-type="nav" track-metadata-eventdetail="https://developers.google.cn/products" track-metadata-position="nav - 产品" track-metadata-module="primary nav" data-category="Site-Wide Custom Events" data-label="Tab: 产品" track-name="产品" class="devsite-tabs-dropdown-toggle devsite-icon devsite-icon-arrow-drop-down"></a>
+
+  <div class="devsite-tabs-dropdown" aria-label="submenu" hidden="">
+    
+    <div class="devsite-tabs-dropdown-content">
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip="">开发</li>
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.android.google.cn/" track-type="nav" track-metadata-eventdetail="//developer.android.google.cn" track-metadata-position="nav - 产品" track-metadata-module="tertiary nav" track-metadata-module_headline="开发" tooltip="">
+                    
+                    <div class="devsite-nav-item-title">
+                      Android
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://cloud.google.com/" track-type="nav" track-metadata-eventdetail="//cloud.google.com" track-metadata-position="nav - 产品" track-metadata-module="tertiary nav" track-metadata-module_headline="开发" tooltip="">
+                    
+                    <div class="devsite-nav-item-title">
+                      Cloud
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.cn/" track-type="nav" track-metadata-eventdetail="//firebase.google.cn" track-metadata-position="nav - 产品" track-metadata-module="tertiary nav" track-metadata-module_headline="开发" tooltip="">
+                    
+                    <div class="devsite-nav-item-title">
+                      Firebase
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://flutter.dev/" track-type="nav" track-metadata-eventdetail="//flutter.dev" track-metadata-position="nav - 产品" track-metadata-module="tertiary nav" track-metadata-module_headline="开发" tooltip="">
+                    
+                    <div class="devsite-nav-item-title">
+                      Flutter
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.cn/assistant" track-type="nav" track-metadata-eventdetail="https://developers.google.cn/assistant" track-metadata-position="nav - 产品" track-metadata-module="tertiary nav" track-metadata-module_headline="开发" tooltip="">
+                    
+                    <div class="devsite-nav-item-title">
+                      Google 助理
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.cn/workspace" track-type="nav" track-metadata-eventdetail="https://developers.google.cn/workspace" track-metadata-position="nav - 产品" track-metadata-module="tertiary nav" track-metadata-module_headline="开发" tooltip="">
+                    
+                    <div class="devsite-nav-item-title">
+                      Google Workspace
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.cn/maps" track-type="nav" track-metadata-eventdetail="https://developers.google.cn/maps" track-metadata-position="nav - 产品" track-metadata-module="tertiary nav" track-metadata-module_headline="开发" tooltip="">
+                    
+                    <div class="devsite-nav-item-title">
+                      Maps Platform
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://tensorflow.google.cn/" track-type="nav" track-metadata-eventdetail="//tensorflow.google.cn" track-metadata-position="nav - 产品" track-metadata-module="tertiary nav" track-metadata-module_headline="开发" tooltip="">
+                    
+                    <div class="devsite-nav-item-title">
+                      TensorFlow
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.cn/web" track-type="nav" track-metadata-eventdetail="https://developers.google.cn/web" track-metadata-position="nav - 产品" track-metadata-module="tertiary nav" track-metadata-module_headline="开发" tooltip="">
+                    
+                    <div class="devsite-nav-item-title">
+                      Web
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.cn/youtube" track-type="nav" track-metadata-eventdetail="https://developers.google.cn/youtube" track-metadata-position="nav - 产品" track-metadata-module="tertiary nav" track-metadata-module_headline="开发" tooltip="">
+                    
+                    <div class="devsite-nav-item-title">
+                      YouTube
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip="">拓展</li>
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://firebase.google.cn/" track-type="nav" track-metadata-eventdetail="//firebase.google.cn" track-metadata-position="nav - 产品" track-metadata-module="tertiary nav" track-metadata-module_headline="拓展" tooltip="">
+                    
+                    <div class="devsite-nav-item-title">
+                      Firebase
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.cn/google-ads" track-type="nav" track-metadata-eventdetail="https://developers.google.cn/google-ads" track-metadata-position="nav - 产品" track-metadata-module="tertiary nav" track-metadata-module_headline="拓展" tooltip="">
+                    
+                    <div class="devsite-nav-item-title">
+                      Google Ads
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.cn/analytics" track-type="nav" track-metadata-eventdetail="https://developers.google.cn/analytics" track-metadata-position="nav - 产品" track-metadata-module="tertiary nav" track-metadata-module_headline="拓展" tooltip="">
+                    
+                    <div class="devsite-nav-item-title">
+                      Google Analytics（分析）
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.android.google.cn/distribute/" track-type="nav" track-metadata-eventdetail="//developer.android.google.cn/distribute/" track-metadata-position="nav - 产品" track-metadata-module="tertiary nav" track-metadata-module_headline="拓展" tooltip="">
+                    
+                    <div class="devsite-nav-item-title">
+                      Google Play
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.cn/search" track-type="nav" track-metadata-eventdetail="https://developers.google.cn/search" track-metadata-position="nav - 产品" track-metadata-module="tertiary nav" track-metadata-module_headline="拓展" tooltip="">
+                    
+                    <div class="devsite-nav-item-title">
+                      搜索
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.cn/web/fundamentals/engage-and-retain/push-notifications" track-type="nav" track-metadata-eventdetail="https://developers.google.cn/web/fundamentals/engage-and-retain/push-notifications" track-metadata-position="nav - 产品" track-metadata-module="tertiary nav" track-metadata-module_headline="拓展" tooltip="">
+                    
+                    <div class="devsite-nav-item-title">
+                      Web Push API 和 Notification API
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip="">创收</li>
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.cn/admob" track-type="nav" track-metadata-eventdetail="https://developers.google.cn/admob" track-metadata-position="nav - 产品" track-metadata-module="tertiary nav" track-metadata-module_headline="创收" tooltip="">
+                    
+                    <div class="devsite-nav-item-title">
+                      AdMob
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.cn/google-ads/api" track-type="nav" track-metadata-eventdetail="https://developers.google.cn/google-ads/api" track-metadata-position="nav - 产品" track-metadata-module="tertiary nav" track-metadata-module_headline="创收" tooltip="">
+                    
+                    <div class="devsite-nav-item-title">
+                      Google Ads API
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.cn/pay" track-type="nav" track-metadata-eventdetail="https://developers.google.cn/pay" track-metadata-position="nav - 产品" track-metadata-module="tertiary nav" track-metadata-module_headline="创收" tooltip="">
+                    
+                    <div class="devsite-nav-item-title">
+                      Google Pay
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.android.google.cn/google/play/billing/" track-type="nav" track-metadata-eventdetail="//developer.android.google.cn/google/play/billing/" track-metadata-position="nav - 产品" track-metadata-module="tertiary nav" track-metadata-module_headline="创收" tooltip="">
+                    
+                    <div class="devsite-nav-item-title">
+                      Google Play 结算服务
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.cn/interactive-media-ads" track-type="nav" track-metadata-eventdetail="https://developers.google.cn/interactive-media-ads" track-metadata-position="nav - 产品" track-metadata-module="tertiary nav" track-metadata-module_headline="创收" tooltip="">
+                    
+                    <div class="devsite-nav-item-title">
+                      互动式媒体广告
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+</tab><tab>
+            <a href="https://developers.google.cn/events" class="gc-analytics-event " track-type="nav" track-metadata-eventdetail="https://developers.google.cn/events" track-metadata-position="nav - 活动" track-metadata-module="primary nav" data-category="Site-Wide Custom Events" data-label="Tab: 活动" track-name="活动">
+  活动
+</a>
+
+          </tab><tab>
+            <a href="https://developers.google.cn/learn" class="gc-analytics-event " track-type="nav" track-metadata-eventdetail="https://developers.google.cn/learn" track-metadata-position="nav - 学习" track-metadata-module="primary nav" data-category="Site-Wide Custom Events" data-label="Tab: 学习" track-name="学习">
+  学习
+</a>
+
+          </tab><tab dropdown="">
+  <a href="https://developers.google.cn/community" class="gc-analytics-event " track-type="nav" track-metadata-eventdetail="https://developers.google.cn/community" track-metadata-position="nav - 开发者社区" track-metadata-module="primary nav" data-category="Site-Wide Custom Events" data-label="Tab: 开发者社区" track-name="开发者社区">
+  开发者社区
+</a>
+
+  <a href="https://developers.google.cn/#" role="button" aria-haspopup="true" aria-expanded="false" aria-label="以下项的下拉菜单 开发者社区" track-type="nav" track-metadata-eventdetail="https://developers.google.cn/community" track-metadata-position="nav - 开发者社区" track-metadata-module="primary nav" data-category="Site-Wide Custom Events" data-label="Tab: 开发者社区" track-name="开发者社区" class="devsite-tabs-dropdown-toggle devsite-icon devsite-icon-arrow-drop-down"></a>
+
+  <div class="devsite-tabs-dropdown" aria-label="submenu" hidden="">
+    
+    <div class="devsite-tabs-dropdown-content">
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.cn/community/gdg" track-type="nav" track-metadata-eventdetail="https://developers.google.cn/community/gdg" track-metadata-position="nav - 开发者社区" track-metadata-module="tertiary nav" tooltip="">
+                    
+                    <div class="devsite-nav-item-title">
+                      Google 开发者社区
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.cn/community/experts" track-type="nav" track-metadata-eventdetail="https://developers.google.cn/community/experts" track-metadata-position="nav - 开发者社区" track-metadata-module="tertiary nav" tooltip="">
+                    
+                    <div class="devsite-nav-item-title">
+                      Google 开发者专家
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://www.womentechmakers.com/" track-type="nav" track-metadata-eventdetail="https://www.womentechmakers.com/" track-metadata-position="nav - 开发者社区" track-metadata-module="tertiary nav" tooltip="">
+                    
+                    <div class="devsite-nav-item-title">
+                      Women Techmakers
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.cn/community/accelerators" track-type="nav" track-metadata-eventdetail="https://developers.google.cn/community/accelerators" track-metadata-position="nav - 开发者社区" track-metadata-module="tertiary nav" tooltip="">
+                    
+                    <div class="devsite-nav-item-title">
+                      加速器
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.cn/community/dsc" track-type="nav" track-metadata-eventdetail="https://developers.google.cn/community/dsc" track-metadata-position="nav - 开发者社区" track-metadata-module="tertiary nav" tooltip="">
+                    
+                    <div class="devsite-nav-item-title">
+                      Google 学生开发者俱乐部
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.cn/community/dsc-solution-challenge" track-type="nav" track-metadata-eventdetail="https://developers.google.cn/community/dsc-solution-challenge" track-metadata-position="nav - 开发者社区" track-metadata-module="tertiary nav" tooltip="">
+                    
+                    <div class="devsite-nav-item-title">
+                      2021 年解决方案挑战赛
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+</tab><tab>
+            <a href="https://developers.googleblog.com/" class="gc-analytics-event " track-type="nav" track-metadata-eventdetail="https://developers.googleblog.com" track-metadata-position="nav - 博客" track-metadata-module="primary nav" data-category="Site-Wide Custom Events" data-label="Tab: 博客" track-name="博客">
+  博客
+</a>
+
+          </tab></div></tab></nav></devsite-tabs>
+
+            
+           </div>
+          
+<devsite-search aria-expanded="false" aria-haspopup="listbox" enable-suggestions="" project-name="Google Developers" tenant-name="Google Developers" role="combobox">
+  <form class="devsite-search-form" action="https://developers.google.cn/s/results" method="GET">
+    <div class="devsite-search-container">
+      <div class="devsite-searchbox">
+        <input aria-activedescendant="" aria-autocomplete="list" aria-label="搜索" aria-haspopup="false" aria-multiline="false" autocomplete="off" class="devsite-search-field devsite-search-query" name="q" placeholder="搜索" role="searchbox" type="text" value="" aria-controls="devsite-search-popout-container-id-1">
+        <div class="devsite-search-image material-icons" aria-hidden="true"></div>
+      </div>
+      <button type="button" search-open="" class="devsite-search-button devsite-header-icon-button button-flat material-icons" aria-label="打开搜索框"></button>
+    </div>
+  <div class="devsite-popout" id="devsite-search-popout-container-id-1"><div class="devsite-popout-result devsite-suggest-results-container" devsite-hide=""></div></div></form>
+  <button type="button" search-close="" class="devsite-search-button devsite-header-icon-button button-flat material-icons" aria-label="关闭搜索框"></button>
+</devsite-search>
+
+        <div class="devsite-search-background" style="opacity: 1;"></div></div>
+
+        
+
+        
+
+        
+
+        
+<devsite-language-selector>
+  <devsite-select class="devsite-language-selector-menu">
+    
+    <select aria-label="选择您的语言偏好设置。" class="devsite-language-selector-select" name="language" track-name="click" track-type="languageSelector">
+    
+    
+      <option value="en" lang="en">
+        English
+      </option>
+    
+      <option value="id" lang="id">
+        Bahasa Indonesia
+      </option>
+    
+      <option value="de" lang="de">
+        Deutsch
+      </option>
+    
+      <option value="es" lang="es">
+        Español
+      </option>
+    
+      <option value="fr" lang="fr">
+        Français
+      </option>
+    
+      <option value="pt_br" lang="pt_br">
+        Português – Brasil
+      </option>
+    
+      <option value="ru" lang="ru">
+        Русский
+      </option>
+    
+      <option value="zh_cn" lang="zh_cn" selected="selected">
+        中文 – 简体
+      </option>
+    
+      <option value="ja" lang="ja">
+        日本語
+      </option>
+    
+      <option value="ko" lang="ko">
+        한국어
+      </option>
+    
+    </select>
+  <div class="devsite-select"><label id="devsite-select-18846091602308239-label" style="display:none;" aria-label="选择您的语言偏好设置。">请选择一个选项</label><button type="button" class="devsite-select-toggle" id="devsite-select-18846091602308239-button" aria-haspopup="true" aria-labelledby="devsite-select-18846091602308239-label devsite-select-18846091602308239-button" aria-controls="devsite-select-18846091602308239-popup"><span class="devsite-select-toggle-label">中文 – 简体</span><span class="devsite-icon devsite-icon-arrow-drop-down devsite-select-toggle-icon" aria-hidden="true"></span></button><ul class="devsite-select-list" id="devsite-select-18846091602308239-popup" tabindex="-1" role="listbox" scrollbars="" aria-labelledby="devsite-select-18846091602308239-button"><li role="option" lang="en" value="en" id="devsite-select-18846091602308239-0" class="devsite-select-item" data-index="0" aria-selected="false" aria-label="English">English</li><li role="option" lang="id" value="id" id="devsite-select-18846091602308239-1" class="devsite-select-item" data-index="1" aria-selected="false" aria-label="Bahasa Indonesia">Bahasa Indonesia</li><li role="option" lang="de" value="de" id="devsite-select-18846091602308239-2" class="devsite-select-item" data-index="2" aria-selected="false" aria-label="Deutsch">Deutsch</li><li role="option" lang="es" value="es" id="devsite-select-18846091602308239-3" class="devsite-select-item" data-index="3" aria-selected="false" aria-label="Español">Español</li><li role="option" lang="fr" value="fr" id="devsite-select-18846091602308239-4" class="devsite-select-item" data-index="4" aria-selected="false" aria-label="Français">Français</li><li role="option" lang="pt_br" value="pt_br" id="devsite-select-18846091602308239-5" class="devsite-select-item" data-index="5" aria-selected="false" aria-label="Português – Brasil">Português – Brasil</li><li role="option" lang="ru" value="ru" id="devsite-select-18846091602308239-6" class="devsite-select-item" data-index="6" aria-selected="false" aria-label="Русский">Русский</li><li role="option" lang="zh_cn" value="zh_cn" id="devsite-select-18846091602308239-7" class="devsite-select-item" data-index="7" data-selected="" aria-selected="true" aria-label="中文 – 简体，已选中">中文 – 简体</li><li role="option" lang="ja" value="ja" id="devsite-select-18846091602308239-8" class="devsite-select-item" data-index="8" aria-selected="false" aria-label="日本語">日本語</li><li role="option" lang="ko" value="ko" id="devsite-select-18846091602308239-9" class="devsite-select-item" data-index="9" aria-selected="false" aria-label="한국어">한국어</li></ul></div></devsite-select>
+</devsite-language-selector>
+
+
+        
+
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="devsite-collapsible-section
+    
+      devsite-header-no-lower-tabs
+    " style="transform: translate3d(0px, 0px, 0px);">
+    <div class="devsite-header-background">
+      
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+  
+</devsite-header>
+      <div class="devsite-book-nav-bg" fixed="" hidden=""></div><devsite-book-nav scrollbars="" hidden="" fixed="" style="top: 49px; max-height: 647px;" top-level-nav="">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-book-nav-filter
+            hidden">
+  <input type="text" placeholder="过滤条件" aria-label="输入文本以进行过滤" role="searchbox">
+  
+  <span class="filter-clear-button hidden" data-title="清除过滤条件" aria-label="清除过滤条件" role="button" tabindex="0"></span>
+</div>
+
+<nav class="devsite-book-nav devsite-nav nocontent" aria-label="侧边菜单">
+  <div class="devsite-mobile-header">
+    <button type="button" id="devsite-close-nav" class="devsite-header-icon-button button-flat material-icons gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Close navigation" aria-label="关闭导航栏">
+    </button>
+    <div class="devsite-product-name-wrapper">
+
+  <a href="https://developers.google.cn/" class="devsite-site-logo-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav" track-name="googleDevelopers" track-metadata-position="nav" track-metadata-eventdetail="nav">
+
+  
+    <img src="./index_files/lockup.svg" class="devsite-site-logo" alt="Google Developers">
+  
+
+</a>
+
+
+  
+      <span class="devsite-product-name">
+        
+        
+        <ul class="devsite-breadcrumb-list">
+  
+  <li class="devsite-breadcrumb-item
+             devsite-has-google-wordmark">
+    
+    
+    
+      
+      
+    
+  </li>
+  
+</ul>
+      </span>
+    
+
+</div>
+  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+      
+        <ul class="devsite-nav-list">
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="https://developers.google.cn/products" class="devsite-nav-title gc-analytics-event
+              
+              " data-category="Site-Wide Custom Events" data-label="Tab: 产品" track-name="产品" track-type="globalNav" track-metadata-eventdetail="globalMenu" track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip="">
+      产品
+   </span>
+    
+  
+  </a>
+  
+
+  
+    <ul class="devsite-nav-responsive-tabs devsite-nav-has-menu
+               ">
+      
+<li class="devsite-nav-item">
+
+  
+  <span class="devsite-nav-title" tooltip="" data-category="Site-Wide Custom Events" data-label="Tab: 产品" track-name="产品">
+  
+    <span class="devsite-nav-text" tooltip="" menu="产品">
+      更多
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward" menu="产品">
+    </span>
+    
+  
+  </span>
+  
+
+</li>
+
+    </ul>
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="https://developers.google.cn/events" class="devsite-nav-title gc-analytics-event
+              
+              " data-category="Site-Wide Custom Events" data-label="Tab: 活动" track-name="活动" track-type="globalNav" track-metadata-eventdetail="globalMenu" track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip="">
+      活动
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="https://developers.google.cn/learn" class="devsite-nav-title gc-analytics-event
+              
+              " data-category="Site-Wide Custom Events" data-label="Tab: 学习" track-name="学习" track-type="globalNav" track-metadata-eventdetail="globalMenu" track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip="">
+      学习
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="https://developers.google.cn/community" class="devsite-nav-title gc-analytics-event
+              
+              " data-category="Site-Wide Custom Events" data-label="Tab: 开发者社区" track-name="开发者社区" track-type="globalNav" track-metadata-eventdetail="globalMenu" track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip="">
+      开发者社区
+   </span>
+    
+  
+  </a>
+  
+
+  
+    <ul class="devsite-nav-responsive-tabs devsite-nav-has-menu
+               ">
+      
+<li class="devsite-nav-item">
+
+  
+  <span class="devsite-nav-title" tooltip="" data-category="Site-Wide Custom Events" data-label="Tab: 开发者社区" track-name="开发者社区">
+  
+    <span class="devsite-nav-text" tooltip="" menu="开发者社区">
+      更多
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward" menu="开发者社区">
+    </span>
+    
+  
+  </span>
+  
+
+</li>
+
+    </ul>
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="https://developers.googleblog.com/" class="devsite-nav-title gc-analytics-event
+              
+              " data-category="Site-Wide Custom Events" data-label="Tab: 博客" track-name="博客" track-type="globalNav" track-metadata-eventdetail="globalMenu" track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip="">
+      博客
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+          
+          
+        </ul>
+      
+    </div>
+    
+      <div class="devsite-mobile-nav-bottom" role="navigation">
+        
+        
+          
+    
+      
+      <ul class="devsite-nav-list" menu="产品" aria-label="侧边菜单" hidden="">
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span class="devsite-nav-title" tooltip="">
+  
+    <span class="devsite-nav-text" tooltip="">
+      开发
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://developer.android.com/" class="devsite-nav-title gc-analytics-event
+              
+              " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Android" track-type="navMenu" track-metadata-eventdetail="globalMenu" track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip="">
+      Android
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://cloud.google.com/" class="devsite-nav-title gc-analytics-event
+              
+              " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Cloud" track-type="navMenu" track-metadata-eventdetail="globalMenu" track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip="">
+      Cloud
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://firebase.google.com/" class="devsite-nav-title gc-analytics-event
+              
+              " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Firebase" track-type="navMenu" track-metadata-eventdetail="globalMenu" track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip="">
+      Firebase
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://flutter.dev/" class="devsite-nav-title gc-analytics-event
+              
+              " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Flutter" track-type="navMenu" track-metadata-eventdetail="globalMenu" track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip="">
+      Flutter
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://developers.google.cn/assistant" class="devsite-nav-title gc-analytics-event
+              
+              " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Google 助理" track-type="navMenu" track-metadata-eventdetail="globalMenu" track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip="">
+      Google 助理
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://developers.google.cn/workspace" class="devsite-nav-title gc-analytics-event
+              
+              " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Google Workspace" track-type="navMenu" track-metadata-eventdetail="globalMenu" track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip="">
+      Google Workspace
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://developers.google.cn/maps" class="devsite-nav-title gc-analytics-event
+              
+              " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Maps Platform" track-type="navMenu" track-metadata-eventdetail="globalMenu" track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip="">
+      Maps Platform
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://www.tensorflow.org/" class="devsite-nav-title gc-analytics-event
+              
+              " data-category="Site-Wide Custom Events" data-label="Responsive Tab: TensorFlow" track-type="navMenu" track-metadata-eventdetail="globalMenu" track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip="">
+      TensorFlow
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://developers.google.cn/web" class="devsite-nav-title gc-analytics-event
+              
+              " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Web" track-type="navMenu" track-metadata-eventdetail="globalMenu" track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip="">
+      Web
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://developers.google.cn/youtube" class="devsite-nav-title gc-analytics-event
+              
+              " data-category="Site-Wide Custom Events" data-label="Responsive Tab: YouTube" track-type="navMenu" track-metadata-eventdetail="globalMenu" track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip="">
+      YouTube
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span class="devsite-nav-title" tooltip="">
+  
+    <span class="devsite-nav-text" tooltip="">
+      拓展
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://firebase.google.com/" class="devsite-nav-title gc-analytics-event
+              
+              " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Firebase" track-type="navMenu" track-metadata-eventdetail="globalMenu" track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip="">
+      Firebase
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://developers.google.cn/google-ads" class="devsite-nav-title gc-analytics-event
+              
+              " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Google Ads" track-type="navMenu" track-metadata-eventdetail="globalMenu" track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip="">
+      Google Ads
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://developers.google.cn/analytics" class="devsite-nav-title gc-analytics-event
+              
+              " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Google Analytics（分析）" track-type="navMenu" track-metadata-eventdetail="globalMenu" track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip="">
+      Google Analytics（分析）
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://developer.android.com/distribute/" class="devsite-nav-title gc-analytics-event
+              
+              " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Google Play" track-type="navMenu" track-metadata-eventdetail="globalMenu" track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip="">
+      Google Play
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://developers.google.cn/search" class="devsite-nav-title gc-analytics-event
+              
+              " data-category="Site-Wide Custom Events" data-label="Responsive Tab: 搜索" track-type="navMenu" track-metadata-eventdetail="globalMenu" track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip="">
+      搜索
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://developers.google.cn/web/fundamentals/engage-and-retain/push-notifications" class="devsite-nav-title gc-analytics-event
+              
+              " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Web Push API 和 Notification API" track-type="navMenu" track-metadata-eventdetail="globalMenu" track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip="">
+      Web Push API 和 Notification API
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span class="devsite-nav-title" tooltip="">
+  
+    <span class="devsite-nav-text" tooltip="">
+      创收
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://developers.google.cn/admob" class="devsite-nav-title gc-analytics-event
+              
+              " data-category="Site-Wide Custom Events" data-label="Responsive Tab: AdMob" track-type="navMenu" track-metadata-eventdetail="globalMenu" track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip="">
+      AdMob
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://developers.google.cn/google-ads/api" class="devsite-nav-title gc-analytics-event
+              
+              " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Google Ads API" track-type="navMenu" track-metadata-eventdetail="globalMenu" track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip="">
+      Google Ads API
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://developers.google.cn/pay" class="devsite-nav-title gc-analytics-event
+              
+              " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Google Pay" track-type="navMenu" track-metadata-eventdetail="globalMenu" track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip="">
+      Google Pay
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://developer.android.com/google/play/billing/" class="devsite-nav-title gc-analytics-event
+              
+              " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Google Play 结算服务" track-type="navMenu" track-metadata-eventdetail="globalMenu" track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip="">
+      Google Play 结算服务
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://developers.google.cn/interactive-media-ads" class="devsite-nav-title gc-analytics-event
+              
+              " data-category="Site-Wide Custom Events" data-label="Responsive Tab: 互动式媒体广告" track-type="navMenu" track-metadata-eventdetail="globalMenu" track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip="">
+      互动式媒体广告
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+      </ul>
+    
+  
+    
+  
+    
+  
+    
+      
+      <ul class="devsite-nav-list" menu="开发者社区" aria-label="侧边菜单" hidden="">
+        
+          
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://developers.google.cn/community/gdg" class="devsite-nav-title gc-analytics-event
+              
+              " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Google 开发者社区" track-type="navMenu" track-metadata-eventdetail="globalMenu" track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip="">
+      Google 开发者社区
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://developers.google.cn/community/experts" class="devsite-nav-title gc-analytics-event
+              
+              " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Google 开发者专家" track-type="navMenu" track-metadata-eventdetail="globalMenu" track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip="">
+      Google 开发者专家
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://www.womentechmakers.com/" class="devsite-nav-title gc-analytics-event
+              
+              " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Women Techmakers" track-type="navMenu" track-metadata-eventdetail="globalMenu" track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip="">
+      Women Techmakers
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://developers.google.cn/community/accelerators" class="devsite-nav-title gc-analytics-event
+              
+              " data-category="Site-Wide Custom Events" data-label="Responsive Tab: 加速器" track-type="navMenu" track-metadata-eventdetail="globalMenu" track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip="">
+      加速器
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://developers.google.cn/community/dsc" class="devsite-nav-title gc-analytics-event
+              
+              " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Google 学生开发者俱乐部" track-type="navMenu" track-metadata-eventdetail="globalMenu" track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip="">
+      Google 学生开发者俱乐部
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://developers.google.cn/community/dsc-solution-challenge" class="devsite-nav-title gc-analytics-event
+              
+              " data-category="Site-Wide Custom Events" data-label="Responsive Tab: 2021 年解决方案挑战赛" track-type="navMenu" track-metadata-eventdetail="globalMenu" track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip="">
+      2021 年解决方案挑战赛
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+      </ul>
+    
+  
+    
+  
+        
+        
+      </div>
+    
+  </div>
+</nav>
+        
+      </devsite-book-nav><div class="devsite-book-nav-blur" hidden="" fixed="" style="--devsite-js-book-nav-scrollbar-width:0px;"></div><button class="devsite-book-nav-toggle" aria-haspopup="menu" hidden="" fixed="" aria-label="隐藏侧边导航栏" data-title="隐藏侧边导航栏" aria-expanded="true"><span class="material-icons devsite-book-nav-toggle-icon"></span></button>
+      <section id="gc-wrapper" style="margin-top: 49px;">
+        <main role="main" class="devsite-main-content">
+          
+          <div class="devsite-sidebar" fixed="" style="--devsite-js-sidebar-max-height:599px; --devsite-js-sidebar-offset:0;">
+            <div class="devsite-sidebar-content">
+              <devsite-toc class="devsite-nav" role="navigation" aria-label="本页内容" depth="2" scrollbars="" disabled=""></devsite-toc>
+              <devsite-recommendations-sidebar class="nocontent devsite-nav">
+              </devsite-recommendations-sidebar>
+            </div>
+          </div>
+          <devsite-content>
+            
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<article class="devsite-article"><style>
+      /* Styles inlined from /site-assets/styles/landing.css */
+/* Home page template - hero promo full bleed */
+.dgc-hero-promo-full-bleed,
+.dgc-hero-promo-full-bleed-black-text {
+  padding: 0;
+}
+
+.dgc-hero-promo-full-bleed-black-text
+.devsite-landing-row-item-description-content {
+  color: black;
+}
+
+.dgc-hero-promo-full-bleed .devsite-landing-row-inner,
+.dgc-hero-promo-full-bleed-black-text .devsite-landing-row-inner{
+  padding: 0 2.5rem;
+}
+
+.dgc-hero-promo-full-bleed-black-text a {
+  color: black !important;
+}
+
+.dgc-hero-promo-full-bleed img,
+.dgc-hero-promo-full-bleed-black-text img {
+  border-radius: .6rem;
+}
+
+.dgc-hero-promo-full-bleed .dgc-hero-promo-full-bleed-button {
+  background-color: transparent !important;
+  border: 1px solid var(--tenant-inverted-text-color, white) !important;
+  color: var(--tenant-inverted-text-color, white) !important;
+}
+
+.dgc-hero-promo-full-bleed-black-text .dgc-hero-promo-full-bleed-button {
+  background-color: transparent !important;
+  border: 1px solid var(--tenant-primary-text-color, black) !important;
+  color: var(--tenant-primary-text-color, black) !important;
+}
+
+.dgc-hero-promo-full-bleed-button:hover,
+.dgc-hero-promo-full-bleed-button:focus {
+  background-color: rgb(0,0,0,.15) !important;
+}
+
+@media screen and (max-width: 870px) {
+  .dgc-hero-promo-full-bleed,
+  .dgc-hero-promo-full-bleed-black-text {
+    padding: 24px 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .dgc-hero-promo-full-bleed,
+  .dgc-hero-promo-full-bleed-black-text {
+    padding: 1px 0 36px;
+  }
+}
+
+/* Home page template - hero promo full bleed with animation */
+.dgc-hero-promo-animated figure {
+  background-image: url(/homepage-assets/images/build-anything-with-google.png) !important;
+  background-size: contain !important;
+  border-radius: .6rem;
+}
+
+.dgc-hero-promo-animated img {
+  animation: heroPromo 4s;
+}
+
+@keyframes heroPromo {
+  0%, 50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Home page template - hero promo stories offset */
+.dgc-hero-offset-inner > div:first-child {
+  margin-inline-start: -10vw;
+  min-width: 50vw;
+  width: 880px;
+}
+
+/* [1] Ensure the row item description slightly overlaps its media. */
+.dgc-hero-offset-inner > div:last-child {
+  background-color: var(--tenant-background-1);
+  border-radius: 8px;
+  box-shadow: 0 0 30px -10px grey;
+  padding: 32px;
+  z-index: 1 /* [1] */;
+}
+
+.dgc-hero-offset > div {
+  padding: 0 48px;
+}
+
+.dgc-hero-offset img {
+  border-radius: 8px;
+  height: 400px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1310px) {
+  .dgc-hero-offset-inner > div:first-child {
+    margin-inline-start: -14vw;
+    width: 78vw;
+  }
+
+  .dgc-hero-offset-inner > div:last-child {
+    width: 40vw;
+  }
+
+  .dgc-hero-offset-inner h3 a {
+    display: inline-block;
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .dgc-hero-offset > div {
+    padding: 0;
+  }
+
+  /* [1] Forces hero to display in a column with flex centering rather than a
+   * row at 840px width */
+  .dgc-hero-offset-inner {
+    display: flex !important; /* [1] */
+  }
+
+  /* [1] Forces image container width to full screen width when resized to 840px
+   * rather than having small amounts of whitespace on each side. */
+  .dgc-hero-offset-inner > div:first-child {
+    margin-inline-start: 0;
+    width: 100% !important /* [1] */;
+  }
+
+  .dgc-hero-offset img {
+    border-radius: 0;
+    height: 50vh;
+  }
+
+  /* [1] Pull the description up in order to to overlap the image. */
+  /* [2] Adds padding to header/description card at lower resolution width
+   * because mobile breakpoints remove all padding. */
+  .dgc-hero-offset-inner > div:last-child {
+    margin-top: -144px !important; /* [1] */
+    padding: 32px !important; /* [2] */
+    width: calc(100% - 64px);
+  }
+}
+
+/* Home page template - I/O Fullscreen takeover */
+.dgc-hero-fullscreen {
+  --dgc-hero-grid:
+    '. . . .' 2fr
+    '. heading . .'
+    '. item . .'
+    '. . . .' 1fr / 80px 8fr 10fr 80px;
+  --dgc-hero-heading-font-size: 58px;
+  --dgc-hero-heading-line-height: 64px;
+  --dgc-hero-margin: 0 calc(-50vw + 50%);
+}
+
+@media screen and (max-width: 1000px) {
+  .dgc-hero-fullscreen {
+    --dgc-hero-grid:
+      '. .' 4fr
+      'heading .'
+      'item .'
+      '. .' 1fr / 2fr 1fr;
+    --dgc-hero-margin: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .dgc-hero-fullscreen {
+    --dgc-hero-grid:
+      '.' 5fr
+      'heading'
+      'item'
+      '.' 1fr / 1fr;
+    --dgc-hero-heading-font-size: 36px;
+    --dgc-hero-heading-line-height: 40px;
+  }
+}
+
+/* [1] Override default overflow hidden property to allow sticky properties,
+ * which allows fullscreen takeover to slide over the below content. */
+.dgc-hero-fullscreen .devsite-wrapper {
+  overflow: unset !important; /* [1] */
+}
+
+/* [1] Override primary color background so that the row has a transparent
+ * background that doesn't cover up the background image. */
+.dgc-hero-fullscreen-row {
+  background: transparent !important; /* [1]  */
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.dgc-hero-fullscreen-row::after,
+.dgc-hero-fullscreen-row .devsite-landing-row-html {
+  height: calc(100vh - 48px);
+}
+
+.dgc-hero-fullscreen-row::after {
+  background: url(/homepage-assets/images/io-promo.svg) 55% top / cover;
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100vw;
+}
+
+.dgc-hero-fullscreen-row .devsite-landing-row-html {
+  display: grid;
+  grid: var(--dgc-hero-grid);
+  margin: var(--dgc-hero-margin);
+}
+
+.dgc-hero-fullscreen-row h2,
+.dgc-hero-fullscreen-item {
+  z-index: 1;
+}
+
+.dgc-hero-fullscreen-row h2 {
+  color: white;
+  font-size: var(--dgc-hero-heading-font-size);
+  grid-area: heading;
+  line-height: var(--dgc-hero-heading-line-height);
+}
+
+.dgc-hero-fullscreen-item {
+  background: var(--tenant-background-1);
+  border: var(--tenant-primary-border);
+  border-radius: 8px;
+  grid-area: item;
+  padding: 16px;
+}
+
+/* Home page - logo garden following fullscreen hero */
+.dgc-hero-fullscreen-row + .dgc-logo-garden {
+  bottom: -30vh;
+  position: sticky;
+}
+
+/* Home page - hero */
+.dgc-hero {
+  border-bottom: 2px solid #f1f3f4;
+}
+
+.dgc-hero img {
+  aspect-ratio: 720 / 416;
+}
+
+.dgc-hero .devsite-landing-row-item .devsite-landing-row-item-body h3 {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.dgc-hero .devsite-landing-row-item-image {
+  margin: 40px auto;
+}
+
+.dgc-hero .devsite-landing-row-item-buttons {
+  padding-top: 38px;
+}
+
+/* Home page - recommended content */
+.dgc-recs,
+.dgc-recs-fallback {
+  border-block: var(--tenant-primary-border);
+}
+
+/* Home page - recommended content fallback */
+.dgc-recs-fallback h2 {
+  display: flex;
+  font-size: 16px;
+  line-height: 24px;
+  margin-block: 0 24px;
+}
+
+.dgc-recs-fallback[header-position='top']
+  .devsite-landing-row-header +
+  .devsite-landing-row-group {
+  margin: 0;
+}
+
+.dgc-recs-fallback .devsite-landing-row-item-no-media h3 {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.dgc-recs-fallback .devsite-landing-row-item-icon-container[size],
+.dgc-recs-fallback [size] .devsite-landing-row-item-icon {
+  height: 32px;
+  width: 32px;
+}
+
+/* Home page - logo garden */
+.dgc-logo-garden .devsite-landing-row-item-custom-image-icon {
+  width: 64px;
+}
+
+.dgc-logo-garden-cta {
+  padding-bottom: 100px;
+}
+
+@media screen and (max-width: 600px) {
+  .dgc-hero-fullscreen-row + .dgc-logo-garden {
+    bottom: -70vh;
+  }
+
+  .dgc-logo-garden-cta {
+    margin-top: 40px;
+  }
+}
+
+/* Home page - programs */
+.dgc-programs.devsite-landing-row-item {
+  overflow: visible;
+}
+
+.dgc-programs .devsite-landing-row-item-image {
+  position: relative;
+}
+
+.dgc-programs .devsite-landing-row-item-image::before {
+  background: center / contain no-repeat;
+  content: '';
+  display: block;
+  height: 160px;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 160px;
+}
+
+.dgc-programs--events .devsite-landing-row-item-image::before {
+  background-image: url(/site-assets/images/home/events-graphic.png);
+}
+
+.dgc-programs--community .devsite-landing-row-item-image::before {
+  background-image: url(/site-assets/images/home/community-graphic.png);
+}
+
+@media screen and (max-width: 840px) {
+  .dgc-programs .devsite-landing-row-item-media {
+    overflow: visible !important;
+  }
+}
+
+/* Home page - experts */
+.devsite-directory__wrapper {
+  padding: 0 12px 0;
+}
+
+.devsite-directory__content {
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: repeat(var(--directory-columns, 4), 1fr);
+}
+
+.devsite-directory__content__item {
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.experts-row {
+  overflow: hidden;
+}
+
+.experts-directory__item__profile {
+  padding: 20px 20px 0;
+  text-align: center;
+}
+
+.experts-directory__item__profile-pic-holder {
+  background-size: cover;
+  border-radius: 50%;
+  display: block;
+  height: 100px;
+  margin: 0 auto 20px;
+  overflow: hidden;
+  position: relative;
+  width: 100px;
+}
+
+.experts-directory__item__name {
+  margin: 0;
+}
+
+.experts-directory__item__name h3 {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  padding-top: 15px;
+  text-align: center;
+}
+
+.experts-directory__item__location,
+.experts-directory__item__experience {
+  font: 400 14px/20px;
+  margin-top: 0;
+}
+
+.experts-directory__item__expertise {
+  color: gray;
+}
+
+.experts-directory__item__view-profile {
+  margin: auto auto 16px;
+}
+
+@media screen and (max-width: 1000px) {
+  .devsite-directory__content {
+    --directory-columns: 2;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .devsite-directory__content {
+    --directory-columns: 1;
+  }
+}
+
+      </style>
+  
+  
+  
+
+  <div class="devsite-article-meta nocontent" role="navigation">
+    
+    
+    <ul class="devsite-breadcrumb-list" aria-label="面包屑导航">
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+  <a href="https://developers.google.cn/" class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="1" track-type="globalNav" track-name="breadcrumb" track-metadata-position="1" track-metadata-eventdetail="Google Developers">
+    
+        Google Developers
+      
+  </a>
+  
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+  <a href="https://developers.google.cn/products" class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="2" track-type="globalNav" track-name="breadcrumb" track-metadata-position="2" track-metadata-eventdetail="">
+    
+        产品
+      
+  </a>
+  
+    
+  </li>
+  
+</ul>
+    
+  </div>
+  
+  
+  
+  <devsite-toc class="devsite-nav" depth="2" devsite-toc-embedded="" disabled="">
+  </devsite-toc>
+
+  
+
+  <div class="devsite-article-body clearfix
+    devsite-no-page-title">
+
+    
+      
+  <section class="devsite-landing-row devsite-landing-row-1-up devsite-landing-row-hero devsite-landing-row-50 devsite-landing-row-no-image-background dgc-hero" header-position="top">
+    <div class="devsite-landing-row-inner">
+
+    
+      
+
+      
+
+        <div class="devsite-landing-row-group">
+        
+          <div class="devsite-landing-row-item" description-position="bottom">
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <figure class="devsite-landing-row-item-image">
+  
+  <a href="https://developers.google.cn/learn" data-category="Homepage Hero Banner" data-label="Learn on Google, Main Title" data-action="link">
+    
+  
+  
+    <img alt="" src="./index_files/learn_hero.jpg" srcset="https://developers.google.cn/site-assets/images/home/learn_hero_36.jpg 36w,https://developers.google.cn/site-assets/images/home/learn_hero_48.jpg 48w,https://developers.google.cn/site-assets/images/home/learn_hero_72.jpg 72w,https://developers.google.cn/site-assets/images/home/learn_hero_96.jpg 96w,https://developers.google.cn/site-assets/images/home/learn_hero_480.jpg 480w,https://developers.google.cn/site-assets/images/home/learn_hero_720.jpg 720w,https://developers.google.cn/site-assets/images/home/learn_hero_856.jpg 856w,https://developers.google.cn/site-assets/images/home/learn_hero_960.jpg 960w,https://developers.google.cn/site-assets/images/home/learn_hero_1440.jpg 1440w,https://developers.google.cn/site-assets/images/home/learn_hero_1920.jpg 1920w,https://developers.google.cn/site-assets/images/home/learn_hero_2880.jpg 2880w" sizes="(max-width: 600px) 100vw, (max-width: 840px) 50vw, 708px" loading="lazy">
+  
+  
+  </a>
+  
+</figure>
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description">
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="google" data-text="了解如何使用 Google 产品或服务构建应用" class="hide-from-toc no-link">
+      
+  <a href="https://developers.google.cn/learn" data-category="Homepage Hero Banner" data-label="Learn on Google, Main Title" data-action="link">
+    
+        了解如何使用 Google 产品或服务构建应用
+      
+  </a>
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            欢迎来到我们的一站式开发者平台，您可以在这里参加自助编程练习、阅读技术文章并观看视频教程，从而掌握利用 Google 技术开发应用所需的软件技能。
+
+          </div>
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-buttons">
+  
+
+  
+  <a href="https://developers.google.cn/learn" class="button button-primary
+      " data-category="Homepage Hero Banner" data-label="Learn on Google, Start learning">开始学习</a>
+
+</div>
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+        </div>
+      
+
+    
+    </div>
+  </section>
+
+  <section class="devsite-landing-row devsite-landing-row-4-up devsite-landing-row-header-centered devsite-landing-row-large-headings devsite-landing-row-logos dgc-logo-garden" background="white" header-position="top">
+    <div class="devsite-landing-row-inner">
+
+    
+      
+      <header class="devsite-landing-row-header">
+
+        
+
+        
+        <div class="devsite-landing-row-header-text">
+
+          
+    <h2 id="meta-contenttexthtml-charsetutf-8-http-equivcontent-type-google-strongstrong" data-text="使用 Google 产品或服务构建各种应用">
+      
+    
+        使用 Google 产品或服务构建<strong>各种应用</strong>
+      
+  
+    </h2>
+  
+
+          
+        </div>
+        
+
+        
+      </header>
+      
+
+      
+
+        <div class="devsite-landing-row-group">
+        
+          <div class="devsite-landing-row-item" description-position="bottom">
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <figure class="devsite-landing-row-item-custom-image">
+  <div class="devsite-landing-row-item-custom-image-icon-wrapper">
+  
+  <a href="https://developer.android.google.cn/" data-category="Homepage Logo Garden" data-label="Android">
+    
+    
+  
+    
+  <div class="devsite-landing-row-item-custom-image-icon-container" size="medium">
+  
+    
+      <img class="devsite-landing-row-item-custom-image-icon" alt="" src="./index_files/Android_Robot.png" srcset="https://developer.android.google.cn/images/brand/Android_Robot_36.png 36w,https://developer.android.google.cn/images/brand/Android_Robot_48.png 48w,https://developer.android.google.cn/images/brand/Android_Robot_72.png 72w,https://developer.android.google.cn/images/brand/Android_Robot_96.png 96w,https://developer.android.google.cn/images/brand/Android_Robot_480.png 480w,https://developer.android.google.cn/images/brand/Android_Robot_720.png 720w,https://developer.android.google.cn/images/brand/Android_Robot_856.png 856w,https://developer.android.google.cn/images/brand/Android_Robot_960.png 960w,https://developer.android.google.cn/images/brand/Android_Robot_1440.png 1440w,https://developer.android.google.cn/images/brand/Android_Robot_1920.png 1920w,https://developer.android.google.cn/images/brand/Android_Robot_2880.png 2880w" sizes="192px" loading="lazy">
+    
+  
+  </div>
+  
+  
+
+  
+  </a>
+  
+  </div>
+</figure>
+  
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description">
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            Android
+          </div>
+        
+
+        
+
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+          <div class="devsite-landing-row-item" description-position="bottom">
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <figure class="devsite-landing-row-item-custom-image">
+  <div class="devsite-landing-row-item-custom-image-icon-wrapper">
+  
+  <a href="https://cloud.google.com/developers" data-category="Homepage Logo Garden" data-label="Google Cloud">
+    
+    
+  
+    
+  <div class="devsite-landing-row-item-custom-image-icon-container" size="medium">
+  
+    
+      <img class="devsite-landing-row-item-custom-image-icon" alt="" src="./index_files/google_cloud_64dp.png" srcset="" sizes="192px" loading="lazy">
+    
+  
+  </div>
+  
+  
+
+  
+  </a>
+  
+  </div>
+</figure>
+  
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description">
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            Google Cloud
+          </div>
+        
+
+        
+
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+          <div class="devsite-landing-row-item" description-position="bottom">
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <figure class="devsite-landing-row-item-custom-image">
+  <div class="devsite-landing-row-item-custom-image-icon-wrapper">
+  
+  <a href="https://firebase.google.cn/docs" data-category="Homepage Logo Garden" data-label="Firebase">
+    
+    
+  
+    
+  <div class="devsite-landing-row-item-custom-image-icon-container" size="medium">
+  
+    
+      <img class="devsite-landing-row-item-custom-image-icon" alt="" src="./index_files/firebase_64dp.png" srcset="" sizes="192px" loading="lazy">
+    
+  
+  </div>
+  
+  
+
+  
+  </a>
+  
+  </div>
+</figure>
+  
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description">
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            Firebase
+          </div>
+        
+
+        
+
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+          <div class="devsite-landing-row-item" description-position="bottom">
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <figure class="devsite-landing-row-item-custom-image">
+  <div class="devsite-landing-row-item-custom-image-icon-wrapper">
+  
+  <a href="https://flutter.dev/docs" data-category="Homepage Logo Garden" data-label="Flutter">
+    
+    
+  
+    
+  <div class="devsite-landing-row-item-custom-image-icon-container" size="medium">
+  
+    
+      <img class="devsite-landing-row-item-custom-image-icon" alt="" src="./index_files/flutter_64dp.png" srcset="" sizes="192px" loading="lazy">
+    
+  
+  </div>
+  
+  
+
+  
+  </a>
+  
+  </div>
+</figure>
+  
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description">
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            Flutter
+          </div>
+        
+
+        
+
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+          <div class="devsite-landing-row-item" description-position="bottom">
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <figure class="devsite-landing-row-item-custom-image">
+  <div class="devsite-landing-row-item-custom-image-icon-wrapper">
+  
+  <a href="https://developers.google.cn/assistant" data-category="Homepage Logo Garden" data-label="Google Assistant">
+    
+    
+  
+    
+  <div class="devsite-landing-row-item-custom-image-icon-container" size="medium">
+  
+    
+      <img class="devsite-landing-row-item-custom-image-icon" alt="" src="./index_files/assistant_64dp.png" srcset="" sizes="192px" loading="lazy">
+    
+  
+  </div>
+  
+  
+
+  
+  </a>
+  
+  </div>
+</figure>
+  
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description">
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            Google 助理
+          </div>
+        
+
+        
+
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+          <div class="devsite-landing-row-item" description-position="bottom">
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <figure class="devsite-landing-row-item-custom-image">
+  <div class="devsite-landing-row-item-custom-image-icon-wrapper">
+  
+  <a href="https://developers.google.cn/maps" data-category="Homepage Logo Garden" data-label="Maps">
+    
+    
+  
+    
+  <div class="devsite-landing-row-item-custom-image-icon-container" size="medium">
+  
+    
+      <img class="devsite-landing-row-item-custom-image-icon" alt="" src="./index_files/maps_64dp.png" srcset="" sizes="192px" loading="lazy">
+    
+  
+  </div>
+  
+  
+
+  
+  </a>
+  
+  </div>
+</figure>
+  
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description">
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            Maps Platform
+          </div>
+        
+
+        
+
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+          <div class="devsite-landing-row-item" description-position="bottom">
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <figure class="devsite-landing-row-item-custom-image">
+  <div class="devsite-landing-row-item-custom-image-icon-wrapper">
+  
+  <a href="https://tensorflow.google.cn/tutorials" data-category="Homepage Logo Garden" data-label="TensorFlow">
+    
+    
+  
+    
+  <div class="devsite-landing-row-item-custom-image-icon-container" size="medium">
+  
+    
+      <img class="devsite-landing-row-item-custom-image-icon" alt="" src="./index_files/tensorflow-logo-196.png" srcset="https://developers.google.cn/site-assets/images/products/tensorflow-logo-196_36.png 36w,https://developers.google.cn/site-assets/images/products/tensorflow-logo-196_48.png 48w,https://developers.google.cn/site-assets/images/products/tensorflow-logo-196_72.png 72w,https://developers.google.cn/site-assets/images/products/tensorflow-logo-196_96.png 96w,https://developers.google.cn/site-assets/images/products/tensorflow-logo-196_480.png 480w,https://developers.google.cn/site-assets/images/products/tensorflow-logo-196_720.png 720w,https://developers.google.cn/site-assets/images/products/tensorflow-logo-196_856.png 856w,https://developers.google.cn/site-assets/images/products/tensorflow-logo-196_960.png 960w,https://developers.google.cn/site-assets/images/products/tensorflow-logo-196_1440.png 1440w,https://developers.google.cn/site-assets/images/products/tensorflow-logo-196_1920.png 1920w,https://developers.google.cn/site-assets/images/products/tensorflow-logo-196_2880.png 2880w" sizes="192px" loading="lazy">
+    
+  
+  </div>
+  
+  
+
+  
+  </a>
+  
+  </div>
+</figure>
+  
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description">
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            TensorFlow
+          </div>
+        
+
+        
+
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+          <div class="devsite-landing-row-item" description-position="bottom">
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <figure class="devsite-landing-row-item-custom-image">
+  <div class="devsite-landing-row-item-custom-image-icon-wrapper">
+  
+  <a href="https://developers.google.cn/web" data-category="Homepage Logo Garden" data-label="Web">
+    
+    
+  
+    
+  <div class="devsite-landing-row-item-custom-image-icon-container" size="medium">
+  
+    
+      <img class="devsite-landing-row-item-custom-image-icon" alt="" src="./index_files/web-fundamentals-icon192x192.png" srcset="https://developers.google.cn/web/images/web-fundamentals-icon192x192_36.png 36w,https://developers.google.cn/web/images/web-fundamentals-icon192x192_48.png 48w,https://developers.google.cn/web/images/web-fundamentals-icon192x192_72.png 72w,https://developers.google.cn/web/images/web-fundamentals-icon192x192_96.png 96w,https://developers.google.cn/web/images/web-fundamentals-icon192x192_480.png 480w,https://developers.google.cn/web/images/web-fundamentals-icon192x192_720.png 720w,https://developers.google.cn/web/images/web-fundamentals-icon192x192_856.png 856w,https://developers.google.cn/web/images/web-fundamentals-icon192x192_960.png 960w,https://developers.google.cn/web/images/web-fundamentals-icon192x192_1440.png 1440w,https://developers.google.cn/web/images/web-fundamentals-icon192x192_1920.png 1920w,https://developers.google.cn/web/images/web-fundamentals-icon192x192_2880.png 2880w" sizes="192px" loading="lazy">
+    
+  
+  </div>
+  
+  
+
+  
+  </a>
+  
+  </div>
+</figure>
+  
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description">
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            Web
+          </div>
+        
+
+        
+
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+          <div class="devsite-landing-row-item" description-position="bottom">
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <figure class="devsite-landing-row-item-custom-image">
+  <div class="devsite-landing-row-item-custom-image-icon-wrapper">
+  
+  <a href="https://developers.google.cn/google-ads" data-category="Homepage Logo Garden" data-label="Google Ads">
+    
+    
+  
+    
+  <div class="devsite-landing-row-item-custom-image-icon-container" size="medium">
+  
+    
+      <img class="devsite-landing-row-item-custom-image-icon" alt="" src="./index_files/ads_192px_clr.svg" srcset="" sizes="192px" loading="lazy">
+    
+  
+  </div>
+  
+  
+
+  
+  </a>
+  
+  </div>
+</figure>
+  
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description">
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            Google Ads
+          </div>
+        
+
+        
+
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+          <div class="devsite-landing-row-item" description-position="bottom">
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <figure class="devsite-landing-row-item-custom-image">
+  <div class="devsite-landing-row-item-custom-image-icon-wrapper">
+  
+  <a href="https://developers.google.cn/analytics" data-category="Homepage Logo Garden" data-label="Google Analytics">
+    
+    
+  
+    
+  <div class="devsite-landing-row-item-custom-image-icon-container" size="medium">
+  
+    
+      <img class="devsite-landing-row-item-custom-image-icon" alt="" src="./index_files/analytics_64dp.png" srcset="" sizes="192px" loading="lazy">
+    
+  
+  </div>
+  
+  
+
+  
+  </a>
+  
+  </div>
+</figure>
+  
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description">
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            Google Analytics（分析）
+          </div>
+        
+
+        
+
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+          <div class="devsite-landing-row-item" description-position="bottom">
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <figure class="devsite-landing-row-item-custom-image">
+  <div class="devsite-landing-row-item-custom-image-icon-wrapper">
+  
+  <a href="https://play.google.com/console/about/" data-category="Homepage Logo Garden" data-label="Google Play">
+    
+    
+  
+    
+  <div class="devsite-landing-row-item-custom-image-icon-container" size="medium">
+  
+    
+      <img class="devsite-landing-row-item-custom-image-icon" alt="" src="./index_files/play_prism_64dp.png" srcset="" sizes="192px" loading="lazy">
+    
+  
+  </div>
+  
+  
+
+  
+  </a>
+  
+  </div>
+</figure>
+  
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description">
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            Google Play
+          </div>
+        
+
+        
+
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+          <div class="devsite-landing-row-item" description-position="bottom">
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <figure class="devsite-landing-row-item-custom-image">
+  <div class="devsite-landing-row-item-custom-image-icon-wrapper">
+  
+  <a href="https://developers.google.cn/youtube" data-category="Homepage Logo Garden" data-label="YouTube">
+    
+    
+  
+    
+  <div class="devsite-landing-row-item-custom-image-icon-container" size="medium">
+  
+    
+      <img class="devsite-landing-row-item-custom-image-icon" alt="" src="./index_files/youtube_64dp.png" srcset="" sizes="192px" loading="lazy">
+    
+  
+  </div>
+  
+  
+
+  
+  </a>
+  
+  </div>
+</figure>
+  
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description">
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            YouTube
+          </div>
+        
+
+        
+
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+        </div>
+      
+
+    
+    </div>
+  </section>
+
+  <section class="devsite-landing-row devsite-landing-row-1-up devsite-landing-row-item-centered devsite-landing-row-100 dgc-logo-garden-cta" header-position="top">
+    <div class="devsite-landing-row-inner">
+
+    
+      
+
+      
+
+        <div class="devsite-landing-row-group">
+        
+          <div class="devsite-landing-row-item devsite-landing-row-item-no-media" description-position="bottom">
+
+  
+
+    
+
+    
+    <div class="devsite-landing-row-item-description">
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-buttons">
+  
+
+  
+  <a href="https://developers.google.cn/products" class="button button-primary
+      " data-label="View all developer products" data-category="Homepage Logo Garden">查看所有开发者产品</a>
+
+</div>
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+        </div>
+      
+
+    
+    </div>
+  </section>
+
+  <section class="devsite-landing-row devsite-landing-row-2-up devsite-landing-row-cards devsite-landing-row-header-centered devsite-landing-row-no-image-background" header-position="top">
+    <div class="devsite-landing-row-inner">
+
+    
+      
+
+      
+
+        <div class="devsite-landing-row-group">
+        
+          <div class="devsite-landing-row-item dgc-programs dgc-programs--events" description-position="bottom">
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <figure class="devsite-landing-row-item-image">
+  
+  <a href="https://developers.google.cn/events" data-category="Homepage Promo Banner" data-label="Events, Main Title" data-action="link">
+    
+  
+  
+    <img alt="" src="./index_files/card-header-grid.png" srcset="https://developers.google.cn/site-assets/images/home/card-header-grid_36.png 36w,https://developers.google.cn/site-assets/images/home/card-header-grid_48.png 48w,https://developers.google.cn/site-assets/images/home/card-header-grid_72.png 72w,https://developers.google.cn/site-assets/images/home/card-header-grid_96.png 96w,https://developers.google.cn/site-assets/images/home/card-header-grid_480.png 480w,https://developers.google.cn/site-assets/images/home/card-header-grid_720.png 720w,https://developers.google.cn/site-assets/images/home/card-header-grid_856.png 856w,https://developers.google.cn/site-assets/images/home/card-header-grid_960.png 960w,https://developers.google.cn/site-assets/images/home/card-header-grid_1440.png 1440w,https://developers.google.cn/site-assets/images/home/card-header-grid_1920.png 1920w,https://developers.google.cn/site-assets/images/home/card-header-grid_2880.png 2880w" sizes="(max-width: 600px) 100vw, (max-width: 840px) 50vw, 708px" loading="lazy">
+  
+  
+  </a>
+  
+</figure>
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description">
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="" data-text="活动" class="hide-from-toc no-link">
+      
+  <a href="https://developers.google.cn/events" data-category="Homepage Promo Banner" data-label="Events, Main Title" data-action="link">
+    
+        活动
+      
+  </a>
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            无论线上或线下，开发者都可集聚一堂。及时了解即将举办的活动、补看错过的内容，并与 Google 专家建立联系。
+
+          </div>
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-buttons">
+  
+
+  
+  <a href="https://developers.google.cn/events" class="button
+      " data-category="Homepage Promo Banner" data-label="Events, See Events">查看活动</a>
+
+</div>
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+          <div class="devsite-landing-row-item dgc-programs dgc-programs--community" description-position="bottom">
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <figure class="devsite-landing-row-item-image">
+  
+  <a href="https://developers.google.cn/community" data-category="Homepage Promo Banner" data-label="Community, Main Title" data-action="link">
+    
+  
+  
+    <img alt="" src="./index_files/card-header-grid.png" srcset="https://developers.google.cn/site-assets/images/home/card-header-grid_36.png 36w,https://developers.google.cn/site-assets/images/home/card-header-grid_48.png 48w,https://developers.google.cn/site-assets/images/home/card-header-grid_72.png 72w,https://developers.google.cn/site-assets/images/home/card-header-grid_96.png 96w,https://developers.google.cn/site-assets/images/home/card-header-grid_480.png 480w,https://developers.google.cn/site-assets/images/home/card-header-grid_720.png 720w,https://developers.google.cn/site-assets/images/home/card-header-grid_856.png 856w,https://developers.google.cn/site-assets/images/home/card-header-grid_960.png 960w,https://developers.google.cn/site-assets/images/home/card-header-grid_1440.png 1440w,https://developers.google.cn/site-assets/images/home/card-header-grid_1920.png 1920w,https://developers.google.cn/site-assets/images/home/card-header-grid_2880.png 2880w" sizes="(max-width: 600px) 100vw, (max-width: 840px) 50vw, 708px" loading="lazy">
+  
+  
+  </a>
+  
+</figure>
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description">
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="" data-text="社区" class="hide-from-toc no-link">
+      
+  <a href="https://developers.google.cn/community" data-category="Homepage Promo Banner" data-label="Community, Main Title" data-action="link">
+    
+        社区
+      
+  </a>
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            与当地的其他开发者和初创公司沟通交流，听取行业专家的意见和建议，分享您的技能以及学习新知识。
+
+          </div>
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-buttons">
+  
+
+  
+  <a href="https://developers.google.cn/community" class="button
+      " data-label="Community, Find community" data-category="Homepage Promo Banner">查找社区</a>
+
+</div>
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+        </div>
+      
+
+    
+    </div>
+  </section>
+
+  <section class="devsite-landing-row devsite-landing-row-4-up devsite-landing-row-cards devsite-landing-row-header-centered" background="grey" header-position="top">
+    <div class="devsite-landing-row-inner">
+
+    
+      
+      <header class="devsite-landing-row-header">
+
+        
+
+        
+        <div class="devsite-landing-row-header-text">
+
+          
+    <h2 id="" data-text="资讯">
+      
+    
+        资讯
+      
+  
+    </h2>
+  
+
+          
+        </div>
+        
+
+        
+      </header>
+      
+
+      
+
+        <div class="devsite-landing-row-group">
+        
+          <div class="devsite-landing-row-item" description-position="bottom">
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <figure class="devsite-landing-row-item-custom-image" background="white">
+  <div class="devsite-landing-row-item-custom-image-icon-wrapper">
+  
+  <a href="https://developers.google.cn/learn/topics/on-device-ml" data-category="Homepage Promo Banner" data-label="Get started with Google On-Device ML, Main title" data-action="link">
+    
+    
+  
+    
+  <div class="devsite-landing-row-item-custom-image-icon-container" background="white" size="medium">
+  
+    
+      <img class="devsite-landing-row-item-custom-image-icon" alt="" src="./index_files/odml_logo.png" srcset="https://developers.google.cn/site-assets/images/news/odml_logo_36.png 36w,https://developers.google.cn/site-assets/images/news/odml_logo_48.png 48w,https://developers.google.cn/site-assets/images/news/odml_logo_72.png 72w,https://developers.google.cn/site-assets/images/news/odml_logo_96.png 96w,https://developers.google.cn/site-assets/images/news/odml_logo_480.png 480w,https://developers.google.cn/site-assets/images/news/odml_logo_720.png 720w,https://developers.google.cn/site-assets/images/news/odml_logo_856.png 856w,https://developers.google.cn/site-assets/images/news/odml_logo_960.png 960w,https://developers.google.cn/site-assets/images/news/odml_logo_1440.png 1440w,https://developers.google.cn/site-assets/images/news/odml_logo_1920.png 1920w,https://developers.google.cn/site-assets/images/news/odml_logo_2880.png 2880w" sizes="192px" loading="lazy">
+    
+  
+  </div>
+  
+  
+
+  
+  </a>
+  
+  </div>
+</figure>
+  
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description">
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="google" data-text="Google 设备端机器学习入门" class="hide-from-toc no-link">
+      
+  <a href="https://developers.google.cn/learn/topics/on-device-ml" data-category="Homepage Promo Banner" data-label="Get started with Google On-Device ML, Main title" data-action="link">
+    
+        Google 设备端机器学习入门
+      
+  </a>
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            我们推出了新的设备端机器学习专题网站。该网站介绍了您为什么应该考虑设备端机器学习，同时清晰概述了 Google 的解决方案和工具，可帮助您快速将此技术用到自己的应用中。
+          </div>
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-buttons">
+  
+
+  
+  <a href="https://developers.google.cn/learn/topics/on-device-ml" class="button
+             button-white
+             " data-category="Homepage Promo Banner" data-label="Get started with Google On-Device ML, Learn more" data-action="button">了解详情</a>
+
+</div>
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+          <div class="devsite-landing-row-item" description-position="bottom">
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <figure class="devsite-landing-row-item-custom-image" background="white">
+  <div class="devsite-landing-row-item-custom-image-icon-wrapper">
+  
+  <a href="https://developers.google.cn/learn/certificates" data-category="Homepage Promo Banner" data-label="Certification vouchers for Black+ developers, Main title" data-action="link">
+    
+    
+  
+    
+  <div class="devsite-landing-row-item-custom-image-icon-container" background="white" size="medium">
+  
+    
+      <img class="devsite-landing-row-item-custom-image-icon" alt="" src="./index_files/certification-logo.svg" srcset="" sizes="192px" loading="lazy">
+    
+  
+  </div>
+  
+  
+
+  
+  </a>
+  
+  </div>
+</figure>
+  
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description">
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="" data-text="“黑人+”开发者认证代金券" class="hide-from-toc no-link">
+      
+  <a href="https://developers.google.cn/learn/certificates" data-category="Homepage Promo Banner" data-label="Certification vouchers for Black+ developers, Main title" data-action="link">
+    
+        “黑人+”开发者认证代金券
+      
+  </a>
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            如果您是自认属于“黑人+”人群的美国开发者，现在可以申请代金券，在参加 Android、TensorFlow 和/或 Cloud 认证考试时免交费用或享受折扣价。参加认证考试是您展现个人技能并提高信誉度的好机会。
+
+          </div>
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-buttons">
+  
+
+  
+  <a href="https://developers.google.cn/learn/certificates" class="button
+             button-white
+             " data-label="Certification vouchers for Black+ developers, Learn more" data-category="Homepage Promo Banner" data-action="button">了解详情</a>
+
+</div>
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+          <div class="devsite-landing-row-item" description-position="bottom">
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <figure class="devsite-landing-row-item-custom-image" background="white">
+  <div class="devsite-landing-row-item-custom-image-icon-wrapper">
+  
+  <a href="https://flutter.dev/" data-category="Homepage Promo Banner" data-label="New in multi-platform Flutter, Main title" data-action="link">
+    
+    
+  
+    
+  <div class="devsite-landing-row-item-custom-image-icon-container" background="white" size="medium">
+  
+    
+      <img class="devsite-landing-row-item-custom-image-icon" alt="" src="./index_files/flutter_96dp.png" srcset="" sizes="192px" loading="lazy">
+    
+  
+  </div>
+  
+  
+
+  
+  </a>
+  
+  </div>
+</figure>
+  
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description">
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="flutter" data-text="多平台 Flutter 最新资讯" class="hide-from-toc no-link">
+      
+  <a href="https://flutter.dev/" data-category="Homepage Promo Banner" data-label="New in multi-platform Flutter, Main title" data-action="link">
+    
+        多平台 Flutter 最新资讯
+      
+  </a>
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            Flutter 让开发者可用同一套代码覆盖移动设备、Web、桌面设备和嵌入式设备等多种平台，其 2.0 和 2.2 版本是标志 Flutter 走向成熟并不断发展的重要里程碑。
+          </div>
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-buttons">
+  
+
+  
+  <a href="https://flutter.dev/" class="button
+             button-white
+             " data-action="button" data-category="Homepage Promo Banner" data-label="New in multi-platform Flutter, Learn more">了解详情</a>
+
+</div>
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+          <div class="devsite-landing-row-item" description-position="bottom">
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <figure class="devsite-landing-row-item-custom-image" background="white">
+  <div class="devsite-landing-row-item-custom-image-icon-wrapper">
+  
+  <a href="https://events.withgoogle.com/exchange-with-google-developers/#content" data-category="Homepage Promo Banner" data-label="Apply for Exchange with Google Developers, Main title" data-action="link">
+    
+    
+  
+    
+  <div class="devsite-landing-row-item-custom-image-icon-container" background="white" size="medium">
+  
+    
+      <img class="devsite-landing-row-item-custom-image-icon" alt="" src="./index_files/developers_64dp.png" srcset="https://developers.google.cn/site-assets/developers_64dp_36.png 36w,https://developers.google.cn/site-assets/developers_64dp_48.png 48w,https://developers.google.cn/site-assets/developers_64dp_72.png 72w,https://developers.google.cn/site-assets/developers_64dp_96.png 96w,https://developers.google.cn/site-assets/developers_64dp_480.png 480w,https://developers.google.cn/site-assets/developers_64dp_720.png 720w,https://developers.google.cn/site-assets/developers_64dp_856.png 856w,https://developers.google.cn/site-assets/developers_64dp_960.png 960w,https://developers.google.cn/site-assets/developers_64dp_1440.png 1440w,https://developers.google.cn/site-assets/developers_64dp_1920.png 1920w,https://developers.google.cn/site-assets/developers_64dp_2880.png 2880w" sizes="192px" loading="lazy">
+    
+  
+  </div>
+  
+  
+
+  
+  </a>
+  
+  </div>
+</figure>
+  
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description">
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="exchange-with-google-developers" data-text="申请加入 Exchange with Google Developers 计划" class="hide-from-toc no-link">
+      
+  <a href="https://events.withgoogle.com/exchange-with-google-developers/#content" data-category="Homepage Promo Banner" data-label="Apply for Exchange with Google Developers, Main title" data-action="link">
+    
+        申请加入 Exchange with Google Developers 计划
+      
+  </a>
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            想要分享、获得或提供技术指导？不妨加入这项免费计划。该计划旨在将开发者聚集到一起，使其能够充分受益于 Google Developers 社区的技术和专业知识。
+          </div>
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-buttons">
+  
+
+  
+  <a href="https://events.withgoogle.com/exchange-with-google-developers/#content" class="button
+             button-white
+             " data-label="Apply for Exchange with Google Developers, Apply now" data-category="Homepage Promo Banner" data-action="button">立即申请</a>
+
+</div>
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+          <div class="devsite-landing-row-item" description-position="bottom">
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <figure class="devsite-landing-row-item-custom-image" background="white">
+  <div class="devsite-landing-row-item-custom-image-icon-wrapper">
+  
+  <a href="https://support.google.com/googleplay/android-developer/answer/10632485" data-category="Homepage Promo Banner" data-label="15% Google Play service fee tier, Main title" data-action="link">
+    
+    
+  
+    
+  <div class="devsite-landing-row-item-custom-image-icon-container" background="white" size="medium">
+  
+    
+      <img class="devsite-landing-row-item-custom-image-icon" alt="" src="./index_files/play_logo.png" srcset="https://developers.google.cn/site-assets/images/news/play_logo_36.png 36w,https://developers.google.cn/site-assets/images/news/play_logo_48.png 48w,https://developers.google.cn/site-assets/images/news/play_logo_72.png 72w,https://developers.google.cn/site-assets/images/news/play_logo_96.png 96w,https://developers.google.cn/site-assets/images/news/play_logo_480.png 480w,https://developers.google.cn/site-assets/images/news/play_logo_720.png 720w,https://developers.google.cn/site-assets/images/news/play_logo_856.png 856w,https://developers.google.cn/site-assets/images/news/play_logo_960.png 960w,https://developers.google.cn/site-assets/images/news/play_logo_1440.png 1440w,https://developers.google.cn/site-assets/images/news/play_logo_1920.png 1920w,https://developers.google.cn/site-assets/images/news/play_logo_2880.png 2880w" sizes="192px" loading="lazy">
+    
+  
+  </div>
+  
+  
+
+  
+  </a>
+  
+  </div>
+</figure>
+  
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description">
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="15-google-play" data-text="15% Google Play 服务费层级" class="hide-from-toc no-link">
+      
+  <a href="https://support.google.com/googleplay/android-developer/answer/10632485" data-category="Homepage Promo Banner" data-label="15% Google Play service fee tier, Main title" data-action="link">
+    
+        15% Google Play 服务费层级
+      
+  </a>
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            自 2021 年 7 月 1 日起，对于开发者的前 100 万美元收入，服务费费率将从 30% 降低到 15%。如要注册，请在 Google Play 管理中心内创建一个帐号群组。
+          </div>
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-buttons">
+  
+
+  
+  <a href="https://support.google.com/googleplay/android-developer/answer/10632485" class="button
+             button-white
+             " data-label="15% Google Play service fee tier, Learn more" data-action="button" data-category="Homepage Promo Banner">了解详情</a>
+
+</div>
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+          <div class="devsite-landing-row-item" description-position="bottom">
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <figure class="devsite-landing-row-item-custom-image" background="white">
+  <div class="devsite-landing-row-item-custom-image-icon-wrapper">
+  
+  <a href="https://www.youtube.com/watch?v=qKkjCQlS1g4" data-category="Homepage Promo Banner" data-label="Whats new in Machine Learning, Main title" data-action="link">
+    
+    
+  
+    
+  <div class="devsite-landing-row-item-custom-image-icon-container" background="white" size="medium">
+  
+    
+      <img class="devsite-landing-row-item-custom-image-icon" alt="" src="./index_files/tensorflow-logo-196.png" srcset="https://developers.google.cn/site-assets/images/products/tensorflow-logo-196_36.png 36w,https://developers.google.cn/site-assets/images/products/tensorflow-logo-196_48.png 48w,https://developers.google.cn/site-assets/images/products/tensorflow-logo-196_72.png 72w,https://developers.google.cn/site-assets/images/products/tensorflow-logo-196_96.png 96w,https://developers.google.cn/site-assets/images/products/tensorflow-logo-196_480.png 480w,https://developers.google.cn/site-assets/images/products/tensorflow-logo-196_720.png 720w,https://developers.google.cn/site-assets/images/products/tensorflow-logo-196_856.png 856w,https://developers.google.cn/site-assets/images/products/tensorflow-logo-196_960.png 960w,https://developers.google.cn/site-assets/images/products/tensorflow-logo-196_1440.png 1440w,https://developers.google.cn/site-assets/images/products/tensorflow-logo-196_1920.png 1920w,https://developers.google.cn/site-assets/images/products/tensorflow-logo-196_2880.png 2880w" sizes="192px" loading="lazy">
+    
+  
+  </div>
+  
+  
+
+  
+  </a>
+  
+  </div>
+</figure>
+  
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description">
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="" data-text="机器学习最新资讯" class="hide-from-toc no-link">
+      
+  <a href="https://www.youtube.com/watch?v=qKkjCQlS1g4" data-category="Homepage Promo Banner" data-label="Whats new in Machine Learning, Main title" data-action="link">
+    
+        机器学习最新资讯
+      
+  </a>
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            了解 Google 最新、最强大的机器学习 (ML) 产品！我们将介绍一些有助于开发者针对各种应用场景创建、理解和部署模型的产品。从 Responsible AI 到 TensorFlow 2.5、移动设备、微控制器，干货满满不容错过。
+
+          </div>
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-buttons">
+  
+
+  
+  <a href="https://www.youtube.com/watch?v=qKkjCQlS1g4" class="button
+             button-white
+             " data-action="button" data-category="Homepage Promo Banner" data-label="Whats new in Machine Learning, Learn more">了解详情</a>
+
+</div>
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+          <div class="devsite-landing-row-item" description-position="bottom">
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <figure class="devsite-landing-row-item-custom-image" background="white">
+  <div class="devsite-landing-row-item-custom-image-icon-wrapper">
+  
+  <a href="https://developers.googleblog.com/2021/07/launching-our-new-google-identity-services-apis.html" data-category="Homepage Promo Banner" data-label="Get Started With Google Identity Services, Main title" data-action="link">
+    
+    
+  
+    
+  <div class="devsite-landing-row-item-custom-image-icon-container" background="white" size="medium">
+  
+    
+      <img class="devsite-landing-row-item-custom-image-icon" alt="" src="./index_files/identity_shield.png" srcset="https://developers.google.cn/site-assets/images/news/identity_shield_36.png 36w,https://developers.google.cn/site-assets/images/news/identity_shield_48.png 48w,https://developers.google.cn/site-assets/images/news/identity_shield_72.png 72w,https://developers.google.cn/site-assets/images/news/identity_shield_96.png 96w,https://developers.google.cn/site-assets/images/news/identity_shield_480.png 480w,https://developers.google.cn/site-assets/images/news/identity_shield_720.png 720w,https://developers.google.cn/site-assets/images/news/identity_shield_856.png 856w,https://developers.google.cn/site-assets/images/news/identity_shield_960.png 960w,https://developers.google.cn/site-assets/images/news/identity_shield_1440.png 1440w,https://developers.google.cn/site-assets/images/news/identity_shield_1920.png 1920w,https://developers.google.cn/site-assets/images/news/identity_shield_2880.png 2880w" sizes="192px" loading="lazy">
+    
+  
+  </div>
+  
+  
+
+  
+  </a>
+  
+  </div>
+</figure>
+  
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description">
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="google-identity-services" data-text="Google Identity Services 使用入门" class="hide-from-toc no-link">
+      
+  <a href="https://developers.googleblog.com/2021/07/launching-our-new-google-identity-services-apis.html" data-category="Homepage Promo Banner" data-label="Get Started With Google Identity Services, Main title" data-action="link">
+    
+        Google Identity Services 使用入门
+      
+  </a>
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            Google 的全新身份产品套件 Google Identity Services 现已推出，它可为您的平台用户提供安全可靠的身份验证方式，同时提高登录率和注册率。
+          </div>
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-buttons">
+  
+
+  
+  <a href="https://developers.googleblog.com/2021/07/launching-our-new-google-identity-services-apis.html" class="button
+             button-white
+             " data-action="button" data-label="Get Started With Google Identity Services, Learn more" data-category="Homepage Promo Banner">了解详情</a>
+
+</div>
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+          <div class="devsite-landing-row-item" description-position="bottom">
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <figure class="devsite-landing-row-item-image">
+  
+  <a href="https://developers.google.cn/china" data-category="Homepage Promo Banner" data-label="China, promo 7" data-action="link" tabindex="-1">
+    
+  
+  
+    <img alt="" src="./index_files/google-developers-china.png" srcset="https://developers.google.cn/china/images/google-developers-china_36.png 36w,https://developers.google.cn/china/images/google-developers-china_48.png 48w,https://developers.google.cn/china/images/google-developers-china_72.png 72w,https://developers.google.cn/china/images/google-developers-china_96.png 96w,https://developers.google.cn/china/images/google-developers-china_480.png 480w,https://developers.google.cn/china/images/google-developers-china_720.png 720w,https://developers.google.cn/china/images/google-developers-china_856.png 856w,https://developers.google.cn/china/images/google-developers-china_960.png 960w,https://developers.google.cn/china/images/google-developers-china_1440.png 1440w,https://developers.google.cn/china/images/google-developers-china_1920.png 1920w,https://developers.google.cn/china/images/google-developers-china_2880.png 2880w" sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px" loading="lazy">
+  
+  
+  </a>
+  
+</figure>
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description">
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="google" data-text="Google 为中国开发者提供的资源" class="hide-from-toc no-link">
+      
+  <a href="https://developers.google.cn/china" data-category="Homepage Promo Banner" data-label="China, promo 7" data-action="link" tabindex="-1">
+    
+        Google 为中国开发者提供的资源
+      
+  </a>
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            <p><a href="https://developers.google.cn/china">developers.google.cn/china</a></p> <p>无论您的产品是针对国内还是面向国际市场，您都可以在这里找到最相关的 Google 产品和技术资源。</p>
+
+          </div>
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-buttons">
+  
+
+  
+  <a href="https://developers.google.cn/china" class="button button-white gc-analytics-event
+      " data-label="China, Promo 7" data-action="button" data-category="Homepage Promo Banner">了解详情</a>
+
+</div>
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+        </div>
+      
+
+    
+    </div>
+  </section>
+
+  <section class="devsite-landing-row devsite-landing-row-1-up devsite-landing-row-header-centered" header-position="top">
+    <div class="devsite-landing-row-inner">
+
+    
+      
+      <header class="devsite-landing-row-header">
+
+        
+
+        
+        <div class="devsite-landing-row-header-text">
+
+          
+    <h2 id="google" data-text="寻找 Google 开发者专家">
+      
+    
+        寻找 Google 开发者专家
+      
+  
+    </h2>
+  
+
+          
+            <div class="devsite-landing-row-description">
+              浏览我们的开发者专家名录，他们凭借深厚的技术知识和高超的技能水平而得到 Google 的认可。
+            </div>
+          
+        </div>
+        
+
+        
+          <div class="devsite-landing-row-header-buttons">
+  
+
+  
+  <a href="https://developers.google.cn/community/experts/directory" class="button
+      " data-label="Find a Google Developers Expert" data-category="Homepage Google Developers Expert">查看所有开发者专家</a>
+
+</div>
+        
+      </header>
+      
+
+      
+
+    
+    </div>
+  </section>
+
+  <section class="devsite-landing-row devsite-landing-row-1-up" header-position="top">
+    <div class="devsite-landing-row-inner">
+
+    
+      <div class="devsite-landing-row-html">
+        <devsite-iframe class="devsite-directory" height="1456px" style="height: 1456px;"><iframe src="./index_files/root_9d75af78667bba87b5164acd97605d87faee3c5d4645e307bf93aed9a7cb868d.html" allow="clipboard-write" allowfullscreen="" name="goog_831173779"></iframe></devsite-iframe>
+
+      </div>
+
+    
+    </div>
+  </section>
+
+    
+
+    
+  </div>
+
+  
+
+  
+
+  
+  
+</article>
+
+
+
+<devsite-notification>
+</devsite-notification>
+
+
+  
+<div class="devsite-content-data">
+  <template class="devsite-thumb-rating-down-categories"></template>
+  <template class="devsite-thumb-rating-up-categories"></template>
+  
+</div>
+            
+          </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+          
+            
+          
+        </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+          
+            
+<nav class="devsite-footer-linkboxes nocontent" aria-label="页脚链接">
+  
+  <ul class="devsite-footer-linkboxes-list">
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">关注</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <h3 class="devsite-footer-linkbox-heading no-link">
+          
+            博客
+          
+          </h3>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.facebook.com/Google-Developers-967415219957038" class="devsite-footer-linkbox-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 2)">
+            
+          
+            Facebook
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://medium.com/google-developers" class="devsite-footer-linkbox-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 3)">
+            
+          
+            Medium
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <h3 class="devsite-footer-linkbox-heading no-link">
+          
+            Twitter
+          
+          </h3>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <h3 class="devsite-footer-linkbox-heading no-link">
+          
+            YouTube
+          
+          </h3>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">计划</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.womentechmakers.com/" class="devsite-footer-linkbox-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 1)">
+            
+          
+            Women Techmakers
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developers.google.cn/community/gdg" class="devsite-footer-linkbox-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 2)">
+            
+          
+            Google Developer Groups
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developers.google.cn/community/experts" class="devsite-footer-linkbox-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 3)">
+            
+          
+            Google Developers Experts
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developers.google.cn/community/accelerators" class="devsite-footer-linkbox-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 4)">
+            
+          
+            Accelerators
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developers.google.cn/community/gdsc" class="devsite-footer-linkbox-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 5)">
+            
+              
+              
+            
+          
+            Google Developer Student Clubs
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">开发者控制台</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://console.developers.google.com/" class="devsite-footer-linkbox-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 1)">
+            
+          
+            Google API Console
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://console.cloud.google.com/" class="devsite-footer-linkbox-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 2)">
+            
+          
+            Google Cloud Platform Console
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://play.google.com/apps/publish" class="devsite-footer-linkbox-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 3)">
+            
+          
+            Google Play 管理中心
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://console.firebase.google.com/" class="devsite-footer-linkbox-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 4)">
+            
+          
+            Firebase Console
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://console.actions.google.com/" class="devsite-footer-linkbox-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 5)">
+            
+          
+            Actions on Google Console
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://cast.google.com/publish" class="devsite-footer-linkbox-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 6)">
+            
+          
+            Cast SDK Developer Console
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://chrome.google.com/webstore/developer/dashboard" class="devsite-footer-linkbox-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 7)">
+            
+              
+              
+            
+          
+            Chrome Web Store Dashboard
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+  
+</nav>
+          
+        </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+          
+            
+
+<div class="devsite-footer-utility nocontent">
+  
+  
+  <nav class="devsite-footer-sites" aria-label="其他 Google Developers 网站">
+    <a href="https://developers.google.cn/" class="devsite-footer-sites-logo-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Google Developers Link">
+      <img class="devsite-footer-sites-logo" src="./index_files/lockup-developers.svg" loading="lazy" alt="Google Developers">
+    </a>
+    <ul class="devsite-footer-sites-list">
+      
+      <li class="devsite-footer-sites-item">
+        <a href="https://developer.android.google.cn/" class="devsite-footer-sites-link
+                  gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Android Link">
+          Android
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="https://developer.chrome.com/home" class="devsite-footer-sites-link
+                  gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Chrome Link">
+          Chrome
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="https://firebase.google.cn/" class="devsite-footer-sites-link
+                  gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Firebase Link">
+          Firebase
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="https://cloud.google.com/" class="devsite-footer-sites-link
+                  gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Google Cloud Platform Link">
+          Google Cloud Platform
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="https://developers.google.cn/products" class="devsite-footer-sites-link
+                  gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer All products Link">
+          所有产品
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+  
+
+  
+  <nav class="devsite-footer-utility-links" aria-label="实用程序链接">
+    
+    <ul class="devsite-footer-utility-list">
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event" href="https://developers.google.cn/terms/site-terms" data-category="Site-Wide Custom Events" data-label="Footer Terms link">
+          条款
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event" href="https://policies.google.cn/privacy" data-category="Site-Wide Custom Events" data-label="Footer Privacy link">
+          隐私权政策
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <span>ICP证合字B2-20070004号</span>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 devsite-footer-utility-button">
+        
+        <span class="devsite-footer-utility-description">订阅 Google Developers 简报</span>
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event" href="https://services.google.com/fb/forms/googledevelopersnewsletter/?utm_medium=referral&amp;utm_source=google-products&amp;utm_team=googledevs&amp;utm_campaign=201611-newsletter-launch" data-category="Site-Wide Custom Events" data-label="Footer Subscribe link">
+          订阅
+        </a>
+        
+      </li>
+      
+    </ul>
+    
+    
+<devsite-language-selector>
+  <devsite-select class="devsite-language-selector-menu">
+    
+    <select aria-label="选择您的语言偏好设置。" class="devsite-language-selector-select" name="language" track-name="click" track-type="languageSelector">
+    
+    
+      <option value="en" lang="en">
+        English
+      </option>
+    
+      <option value="id" lang="id">
+        Bahasa Indonesia
+      </option>
+    
+      <option value="de" lang="de">
+        Deutsch
+      </option>
+    
+      <option value="es" lang="es">
+        Español
+      </option>
+    
+      <option value="fr" lang="fr">
+        Français
+      </option>
+    
+      <option value="pt_br" lang="pt_br">
+        Português – Brasil
+      </option>
+    
+      <option value="ru" lang="ru">
+        Русский
+      </option>
+    
+      <option value="zh_cn" lang="zh_cn" selected="selected">
+        中文 – 简体
+      </option>
+    
+      <option value="ja" lang="ja">
+        日本語
+      </option>
+    
+      <option value="ko" lang="ko">
+        한국어
+      </option>
+    
+    </select>
+  <div class="devsite-select"><label id="devsite-select-2827750777136615-label" style="display:none;" aria-label="选择您的语言偏好设置。">请选择一个选项</label><button type="button" class="devsite-select-toggle" id="devsite-select-2827750777136615-button" aria-haspopup="true" aria-labelledby="devsite-select-2827750777136615-label devsite-select-2827750777136615-button" aria-controls="devsite-select-2827750777136615-popup"><span class="devsite-select-toggle-label">中文 – 简体</span><span class="devsite-icon devsite-icon-arrow-drop-down devsite-select-toggle-icon" aria-hidden="true"></span></button><ul class="devsite-select-list" id="devsite-select-2827750777136615-popup" tabindex="-1" role="listbox" scrollbars="" aria-labelledby="devsite-select-2827750777136615-button"><li role="option" lang="en" value="en" id="devsite-select-2827750777136615-0" class="devsite-select-item" data-index="0" aria-selected="false" aria-label="English">English</li><li role="option" lang="id" value="id" id="devsite-select-2827750777136615-1" class="devsite-select-item" data-index="1" aria-selected="false" aria-label="Bahasa Indonesia">Bahasa Indonesia</li><li role="option" lang="de" value="de" id="devsite-select-2827750777136615-2" class="devsite-select-item" data-index="2" aria-selected="false" aria-label="Deutsch">Deutsch</li><li role="option" lang="es" value="es" id="devsite-select-2827750777136615-3" class="devsite-select-item" data-index="3" aria-selected="false" aria-label="Español">Español</li><li role="option" lang="fr" value="fr" id="devsite-select-2827750777136615-4" class="devsite-select-item" data-index="4" aria-selected="false" aria-label="Français">Français</li><li role="option" lang="pt_br" value="pt_br" id="devsite-select-2827750777136615-5" class="devsite-select-item" data-index="5" aria-selected="false" aria-label="Português – Brasil">Português – Brasil</li><li role="option" lang="ru" value="ru" id="devsite-select-2827750777136615-6" class="devsite-select-item" data-index="6" aria-selected="false" aria-label="Русский">Русский</li><li role="option" lang="zh_cn" value="zh_cn" id="devsite-select-2827750777136615-7" class="devsite-select-item" data-index="7" data-selected="" aria-selected="true" aria-label="中文 – 简体，已选中">中文 – 简体</li><li role="option" lang="ja" value="ja" id="devsite-select-2827750777136615-8" class="devsite-select-item" data-index="8" aria-selected="false" aria-label="日本語">日本語</li><li role="option" lang="ko" value="ko" id="devsite-select-2827750777136615-9" class="devsite-select-item" data-index="9" aria-selected="false" aria-label="한국어">한국어</li></ul></div></devsite-select>
+</devsite-language-selector>
+
+  </nav>
+</div>
+          
+        </devsite-footer-utility>
+        <devsite-panel style="height: auto;"></devsite-panel>
+      </section></section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar style="bottom: 0px;">
+</devsite-snackbar>
+    
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics analytics-iframe="">
+      
+        <script type="application/json" analytics="">[{"dimensions": {"dimension9": false, "dimension5": "zh-cn", "dimension6": "zh-cn", "dimension4": "Google Developers", "dimension3": false, "dimension1": "Signed out"}, "gaid": "UA-24532603-11", "metrics": {}}]</script>
+<script type="application/json" gtm="">{"parameters": {"internalUser": "False", "language": {"machineTranslated": "False", "requested": "zh-cn", "served": "zh-cn"}, "pageType": "article", "projectName": "Google Developers", "signedIn": "False", "tenant": "developers_china", "recommendations": {"sourcePage": "", "sourceType": 0, "sourceRank": 0, "sourceIdenticalDescriptions": 0, "sourceTitleWords": 0, "sourceDescriptionWords": 0, "experiment": ""}, "experiment": {"ids": ""}}, "tags": []}</script>
+      
+    <iframe src="./index_files/analytics-iframe.html"></iframe></devsite-analytics>
+    
+    
+    <script nonce="">
+  
+  (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+    t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+    E.parentNode.insertBefore(t,E);})(window, document, 'script',
+    'https://www.gstatic.cn/devrel-devsite/prod/v99fd0c828fa12c8e4ac5a683d534aa207353ab3b49583792c0a838c031276d00/developers/js/app_loader.js', '[20,"zh_cn",null,"/js/devsite_app_module.js","https://www.gstatic.cn/devrel-devsite/prod/v99fd0c828fa12c8e4ac5a683d534aa207353ab3b49583792c0a838c031276d00","https://www.gstatic.cn/devrel-devsite/prod/v99fd0c828fa12c8e4ac5a683d534aa207353ab3b49583792c0a838c031276d00/developers","https://google-developers.gonglchuangl.net",1,null,["/_pwa/developers/manifest.json","https://www.gstatic.cn/devrel-devsite/prod/v99fd0c828fa12c8e4ac5a683d534aa207353ab3b49583792c0a838c031276d00/images/video-placeholder.svg","https://www.gstatic.cn/devrel-devsite/prod/v99fd0c828fa12c8e4ac5a683d534aa207353ab3b49583792c0a838c031276d00/developers/images/favicon.png","https://www.gstatic.cn/devrel-devsite/prod/v99fd0c828fa12c8e4ac5a683d534aa207353ab3b49583792c0a838c031276d00/developers/images/lockup.svg","https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap"],1,null,[1,6,8,12,14,17,21,25,40,50,63,70,75,76,80,87,91,92,93,97,98,100,101,102,103,104,105,107,108,109,110,111,112,113,115,116,117,118,120,122,124,125,126,127,129,130,131,132,133,134,135,136,138,140,141,144,147,148,149,150,151,152,154,155,156,157,158,159,161,163,164,165,168,169,170,172,173,179,180,182,183,186,190,191,193],"AIzaSyAP-jjEJBzmIyKR4F-3XITp8yM9T1gEEI8","AIzaSyB6xiKGDR5O3Ak2okS4rLkauxGUG7XP0hg","developers.google.cn","AIzaSyAQk0fBONSGUqCNznf6Krs82Ap1-NV6J4o","AIzaSyCCxcqdrZ_7QMeLCRY20bh_SXdAYqy70KY"]')
+  
+</script>
+    <devsite-a11y-announce aria-live="assertive" aria-atomic="true"></devsite-a11y-announce>
+  
+</body></html>
