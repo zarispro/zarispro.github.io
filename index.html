@@ -146,6 +146,22 @@ box-shadow: 0 0 7px #666;display: inline-block;color:black;margin: 5px;
 
 #yuan3{margin-top: 5px;}
 
+
+.da{animation-name: dada;
+animation-duration: 1.56s;
+animation-iteration-count: 5;
+}
+
+
+@keyframes dada {
+  0%{transform: translate(0px, 0px);box-shadow: 0 0 7px #666;}
+  20%{transform: translate(0px, -9px);box-shadow: 0 0 26px #28f;}
+  40%{transform: translate(0px, 0px);box-shadow: 0 0 7px #666;}
+  60%{transform: translate(0px, -9px);box-shadow: 0 0 26px #28f;}
+  80%{transform: translate(0px, 0px);box-shadow: 0 0 7px #666;}
+  100%{transform: translate(0px, 0px);box-shadow: 0 0 7px #666;}
+}
+
 </style>
  <div id="welcome">
 <img src="image/fem.png" style="width: 100%;height:100%; object-fit: cover;">
@@ -153,7 +169,7 @@ box-shadow: 0 0 7px #666;display: inline-block;color:black;margin: 5px;
  </div>
  
 <div id="divbody" style="width: 100%;height: 450px;color: #fefefef2;margin-top: -33px;">
-<br><br><div style="text-shadow: 0 0 10px #53ffff;font-size: 25px;margin-top: 9px;margin-bottom: 8px;"><strong>欢迎访问我的个人网站！<br>网站更新时间 2022/7/14 10:59</strong></div>
+<br><br><div style="text-shadow: 0 0 10px #53ffff;font-size: 25px;margin-top: 9px;margin-bottom: 8px;"><strong>欢迎访问我的个人网站！<br>网站更新时间 2022/7/14 18:37</strong></div>
 
 <div id="gonggao" style="color:white;font-size:19px;"><img src="image/mail.png" width="106"><h1 style="margin-bottom: 4px;margin-top: -8px;text-shadow: 0 0 1px #00ff00">我的联系方式</h1><br>邮箱：msdn1.cn@outlook.com<br>微信：Microsoft_21H1<br><br></div>
 
@@ -162,7 +178,7 @@ box-shadow: 0 0 7px #666;display: inline-block;color:black;margin: 5px;
 </audio>
 </div>
 <br><a href="ad/">
- <div id="yuan">
+ <div id="yuan" class="da">
   <img src="image/ytb.png" id="yuan3" width="101"><br>
 <div style="font-size: 30px;display: inline-block;margin-top: -13px;">商业广告</div></div></a>
 <a href="fm/">
