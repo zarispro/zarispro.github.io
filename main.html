@@ -24,7 +24,23 @@ body { font-family: love, yy, sans-serif; }
 audio{background-color: #ffffffbf;border-radius: 20px;}
 
 </style><br>
+<!--电脑自动跳转-->
+<script type="text/javascript">
+  var system = {};
+  var p = navigator.platform;
+  var u = navigator.userAgent;
 
+  system.win = p.indexOf("Win") == 0;
+  system.mac = p.indexOf("Mac") == 0;
+  system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+  if (system.win || system.mac || system.xll) {//如果是PC转
+    if (u.indexOf('Windows Phone') > -1) {  //win手机端
+
+    }else {
+      window.location.href = " https://zarispro.github.io/d/";
+    }
+  }
+</script>
 <style>#zar002{width: 100%;font-size: 25px;background-color: #000000;position: fixed;left:0;top:0;z-index:1000;}#google{position: fixed;left:13;top: 3;}
 #zar003{font-size: 22px;}
 @keyframes example {
