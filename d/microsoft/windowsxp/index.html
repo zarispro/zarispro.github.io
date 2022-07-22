@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html align="center" style="cursor:default;background-color: #002;font-family: yy;" leftmargin="0" topmargin="0" οncοntextmenu="return false" οndragstart="return false" onselectstart="return false" οnselect="document.selection.empty()" οncοpy="document.selection.empty()" onbeforecopy="return false" οnmοuseup="document.selection.empty()" ondragstart="return false;" oncontextmenu="return false;"><head><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"><meta charset="utf-8">
+
+  <head><title>Windows XP</title>
+
+    <script>
+        document.onkeydown = function(){
+        
+            if(window.event && window.event.keyCode == 123) {
+                alert;
+                event.keyCode=0;
+                event.returnValue=false;
+            }
+            if(window.event && window.event.keyCode == 13) {
+                window.event.keyCode = 505;
+            }
+            if(window.event && window.event.keyCode == 8) {
+                alert;
+                window.event.returnValue=false;
+            }
+        
+        }
+        document.onpaste = function (event){
+        if(window.event){
+        event = window.event;
+        }try{
+        var the = event.srcElement;
+        if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")){
+        return false;
+        }
+        return true;
+        }catch (e){
+        return false;
+        }
+        }
+        document.oncopy = function (event){
+        if(window.event){
+        event = window.event;
+        }try{
+        var the = event.srcElement;
+        if(!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")){
+        return false;
+        }
+        return true;
+        }catch (e){
+        return false;
+        }
+        }
+        document.oncut = function (event){
+        if(window.event){
+        event = window.event;
+        }try{
+        var the = event.srcElement;
+        if(!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")){
+        return false;
+        }
+        return true;
+        }catch (e){
+        return false;
+        }
+        }
+        document.onselectstart = function (event){
+        if(window.event){
+        event = window.event;
+        }try{
+        var the = event.srcElement;
+        if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")){
+        return false;
+        }
+        return true;
+        } catch (e) {
+        return false;
+        }
+        }</script>
+        <script>
+            webkit-playsInline={true}  // ios
+x5-playsInline ={true} // android
+playsInline ={true} //ios10
+
+        </script>
+    <script>
+     
+    /*
+    PC:     Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36
+    移动端: Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+    移动端: Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36
+    * */
+    // let userAgentInfo = navigator.userAgent;
+    // console.log(userAgentInfo);
+    function isPc() {
+        let userAgentInfo = navigator.userAgent;
+        if(/iphone/i.test(userAgentInfo)){
+            return false;
+        }else if(/android/i.test(userAgentInfo)){
+            return false;
+        }
+        return true;
+    }
+    if(!isPc()){
+        location.href = "https://zarispro.github.io/";
+    }
+</script><!-- @font-face {
+    font-family: love;
+    src: url(https://zarispro.github.io/image/rubik.ttf);
+    }-->
+<style>
+    video {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  background-color: green;
+  border: 2px solid #4CAF50;
+}
+
+  @font-face {
+  font-family: yy;
+  src: url(https://zarispro.github.io/image/lanting.TTF);
+}
+video::-webkit-media-controls-fullscreen-button {
+
+display: none;
+}
+video::-webkit-media-controls-mute-button {
+
+display: none;
+}
+
+video{border-radius: 25px;margin-bottom: 59px;}
+#dinglan{position: fixed; left: 10px; top: 9px; z-index: 90;
+width: auto;height: auto;padding: 10px;padding-left:40px;border-radius: 99px;display: inline-block;padding-right: 40px;transition: 0.3s;
+background-color: #e97100f8;font-size: 28px;color: #fff;backdrop-filter: blur(18px);}
+#dinglan:hover{background-color: #103300;}}
+
+
+#wechat{width: auto;height: auto;position: fixed;padding: 6px;backdrop-filter: blur(15px);background-color: #ffffff33;
+right: 22px;bottom: 12px;border-radius: 50%;
+}
+
+.music{width: auto;height: auto;position: fixed;padding: 3px;backdrop-filter: blur(15px);background-color: #ffffff33;
+left: 22px;bottom: 12px;border-radius: 5px;color: #fff;font-size: 25px;
+}
+.div1{width: 293px;height: 137px;background-color: #ffffff36;display: inline-block;overflow: hidden;border-radius: 33px;
+margin-right: 4px;margin-left: 4px;padding: 10px;font-size: 62px;color: #fff;backdrop-filter: blur(20px);
+
+margin-bottom: 9px;transition: 0.299s;
+}
+
+#div0{width:auto;height: auto;padding:38px;border: 2px solid #9999ff;display: inline-block;border-radius: 23px;transition: 0.2s;}
+#div0:hover{border: 2px solid #eeeeff;}
+
+.div1:hover{background-color: #0000ee69;box-shadow: 0 0 90px #000055; transform: translate(0px, -9px);}
+#yjtp{border-radius: 20px;}
+#sp{width: 500;height: auto;}
+
+</style>
+</head>
+<body><center>
+    <a href="../"><div id="dinglan">返回</div></a>
+  
+
+
+<br><h1 style="font-size: 58px;color:white">Windows XP</h1>
+
+<video controls controlslist="nodownload" id="sp">
+<source src="https://zarispro.github.io/ad/microsoft/windowsxp/xp.mp4">
+
+
+</video>
+
+
+<div style="color: white;font-size: 31px;" align="left">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Windows XP是微软公司研发的计算机操作系统，于2001年10月25日正式发布。其名字中“XP”的意思来自英文中的“体验”（Experience）。
+<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Windows XP使用了Luna图形用户界面和双列开始菜单，提升了系统的安全性和工作性能，提供了WiFi支持，简化了软件的安装和运行，并增加了远程桌面功能。
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;截至2008年4月21日，Windows XP已更新至Service Pack 3版本；2014年4月8日，微软终止对Windows XP的技术支持，但在“Wannacry”勒索蠕虫事件依然为Windows XP发布特别补丁。
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Windows XP集Windows 2000的安全性、可靠性和管理功能以及Windows 98的即插即用功能、简单用户界面和创新支持服务等各种先进功能于一身。微软公司把很多以前由第三方提供的软件整合到Windows XP操作系统中，这些软件包括防火墙、媒体播放器（Windows Media Player），即时通信软件（Windows Messenger）以及它与Microsoft Passport网络服务的紧密结合，这都被很多计算机专家认为是安全风险以及对个人隐私的潜在威胁。这些特性的增加被认为是微软传统的垄断行为的持续。
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Windows XP在网络方面提升显著，提供了更好的WiFi支持，并在SP2中加入了原生的蓝牙支持。Windows XP还加入了网络QoS安全机制，Internet Connection Sharing服务和简单网络文件共享。
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Windows XP在销售时不用开启防火墙，但隐藏在电脑中的默认配置会阻止黑客打开数字入口。软件实现这一点，是通过一个简单办法，即忽略未经过内部防火墙初始化的所有请求。黑客的第一步是找到一台机器，然而Windows XP的防火墙甚至不会对"Ping"的命令有任何反应。
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在Windows XP中，系统自动恢复功能仅支持专业版。该功能与单纯的系统备份还原不同。系统自动恢复可以在系统崩溃或者发生重大错误，系统不能正常启动的时候，帮助系统恢复到之前正常工作的状态。不过与现在的系统恢复相比，当时Windows XP所配备的系统自动恢复并不是全程自动的，比如说需要手动在自动备份中打开该功能才可使用。
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Windows XP实现了从旧的文件分配表（FAT）形式向更新的NTFS文件系统的转变。新系统的硬盘上有两个文件系统，它们追踪分别储存在不同位置的文件。新的NT文件系统可让系统管理员指定谁可以进入或改变系统中的文件，还可对文件目录系统加密。
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2002年，微软推出了平板电脑和Media Center，对应专门的硬件。这些设备仅为商务设计，而且并没有触摸屏。小型上网本早期主要基于Linux系统，而微软为此推出了简化版的Windows XP与之抗衡。Windows XP对早期便携设备贡献颇多。
+ 
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+</center></body>
+</html>
