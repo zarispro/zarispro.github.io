@@ -117,7 +117,13 @@ video::-webkit-media-controls-mute-button {
 
 display: none;
 }
-
+video{
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  background-color: green;
+  border: 2px solid #4CAF50;
+}
 video{border-radius: 25px;margin-bottom: 59px;}
 #dinglan{position: fixed; left: 10px; top: 9px; z-index: 90;
 width: auto;height: auto;padding: 10px;padding-left:40px;border-radius: 99px;display: inline-block;padding-right: 40px;transition: 0.3s;
