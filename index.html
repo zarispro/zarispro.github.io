@@ -176,8 +176,8 @@ backdrop-filter: blur(10px);background-color: #ffffff25;
 
 
 .da{animation-name: dada;
-animation-duration: 1.56s;
-animation-iteration-count: 5;
+animation-duration: 1.5s;
+animation-iteration-count: 6;
 }
 @keyframes dada {
   0%{transform: translate(0px, 0px);box-shadow: 0 0 7px #666;}
@@ -190,6 +190,14 @@ animation-iteration-count: 5;
 #yinyue{width: 300px;height: 100px;padding: 7px;background-color: #ffffff23;backdrop-filter: blur(35px);font-size: 25px;display: inline-block;margin-top: 7px;border-radius: 21px;}
 
 
+@keyframes de11{
+0%{box-shadow:0px 0px 15px #ffff00;}
+21%{box-shadow:0 0 16px #00f00f;}
+41%{box-shadow:0  0 16px #0868f9;}
+61%{box-shadow: 0 0 16px #ff0000;}
+81%{box-shadow: 0 0 16px #ff34ff;}
+100%{box-shadow: 0 0 15px #ffff00;}
+}
 
 
 
@@ -197,6 +205,7 @@ audio::-webkit-media-controls-mute-button {
 display: none;
 width:0px;height;0px;
 }
+#yuan{overflow: hidden;}
 </style>
  <div id="welcome">
 <img src="image/fem.png" style="width: 100%;height:100%; object-fit: cover;background-color: #000;">
@@ -204,9 +213,9 @@ width:0px;height;0px;
  </div>
  
 <div id="divbody" style="width: 100%;height: 450px;color: #fefefef2;margin-top: -33px;">
-<br><br><div style="text-shadow: 0 0 10px #53ffff;font-size: 25px;margin-top: 9px;margin-bottom: 8px;"><strong>欢迎访问我的个人网站！<br>网站更新时间 2022/7/29 22:35</strong></div>
+<br><br><div style="text-shadow: 0 0 10px #53ffff;font-size: 25px;margin-top: 9px;margin-bottom: 8px;"><strong>欢迎访问我的个人网站<br>网站更新时间 2022/7/30 17:09</strong></div>
 
-<div class="boli" id="gonggao" style="color:white;font-size:19px;"><img src="image/mail.png" width="106"><h1 style="margin-bottom: 4px;margin-top: -8px;text-shadow: 0 0 6px #4747ff">我的联系方式</h1><br>邮箱：msdn1.cn@outlook.com<br>微信：Microsoft_21H1<br><br></div>
+<div class="de1" id="gonggao" style="color:white;font-size:19px;"><img src="image/mail.png" width="106"><h1 style="margin-bottom: 4px;margin-top: -8px;text-shadow: 0 0 6px #8156ee">我的联系方式</h1><br>邮箱：msdn1.cn@outlook.com<br>微信：Microsoft_21H1<br><br></div>
 <div id="yinyue">Sailor Star Song - 花沢加絵<br>
 <audio allow="autoplay" autoplay controls="controls" controlslist="nomute nodownload" preload="auto" style="margin-top: 5px;" loop>
   <source src="https://zarispro.github.io/image/728.mp3" type="audio/mp3" class="audio" controls="controls" @play="(e) =&gt; audioPlay(e, item, index)">
@@ -217,7 +226,7 @@ width:0px;height;0px;
   <img src="image/ytb.png" id="yuan3" width="101"><br>
 <div style="font-size: 30px;display: inline-block;margin-top: -13px;">商业广告</div></div></a>
 <a href="fm/">
-<div id="yuan">
+<div id="yuan" class="de2">
   <img src="image/xl.png" id="yuan3" width="101"><br>
 <div style="font-size: 30px;display: inline-block;margin-top: -13px;">心理FM</div></div><br>
 </a>
@@ -226,7 +235,7 @@ width:0px;height;0px;
   <img src="image/yy.png" id="yuan3" width="101"><br>
 <div style="font-size: 30px;display: inline-block;margin-top: -13px;">音乐</div></div>
 -->
-<a href="c/"><div id="yuan">
+<a href="c/"><div id="yuan" class="de3">
   <img src="image/rl.png" id="yuan3" width="101"><br>
 <div style="font-size: 30px;display: inline-block;margin-top: -13px;">日历</div></div></a>
 <br><br>
@@ -249,18 +258,18 @@ a{text-decoration:none}
     html{
         overflow-x:hidden;
     } 
-    #powered{font-size: 33px;color:white;position: fixed;width: 60%;bottom: -273px;
+    #powered{font-size: 33px;color:white;position: fixed;width: 217px;bottom: -273px;
     z-index: 2147483646;
     animation-name: powered;
-    animation-duration: 2.4s;
-    text-shadow: 0 0 21px #00cc00;
-    background-color: #038;border-top-right-radius: 41px;
+    animation-duration: 2.59s;
+    text-shadow: 0 0 21px #00ffff;
+    background-color: #081;border-top-right-radius: 33px;
     }
 
     @keyframes powered{
 
 0%{opacity: 1;display: inline;bottom: 0px;}
-75%{opacity: 1;bottom: 0px;display: inline;}
+82%{opacity: 1;bottom: 0px;display: inline;}
 100%{opacity: 0;bottom: 0px;display: inline;}
 
 
