@@ -57,20 +57,30 @@ audio::-webkit-media-controls {
     overflow: hidden !important
 }
 audio::-webkit-media-controls-enclosure {
-    width: calc(100% + 68px);
+    width: calc(100% + 67px);
     margin-left: auto;
 border-radius: 0px;
 background-color: #ffffffd5;
 
 }
-html{Background-attachment:fixed;background-color: #fff;background-image: url(image/221130.jpg);background-size: 345% auto;Background-attachment:fixed;}
-#ding{width: 100%;height: 50px;position: fixed;left:0px;top:0px;background-color: #00ffff95;backdrop-filter: blur(25px);color: #fff;font-size: 40px;text-shadow: 0 0 20px #111;font-feature-settings: "tnum";}
+@keyframes dwa {
+  0%{transform: translate(0px, 0px);}
+  35%{transform: translate(0px, 0px);}
+  50%{transform: translate(0px, -9px);}
+  65%{transform: translate(0px, 0px);}
+  100%{transform: translate(0px, 0px);}
+}
+#m4415{animation-name: dwa;animation-duration: 1.9s;animation-iteration-count: infinite;}
+
+html{Background-attachment:fixed;background-color: #fff;background-image: url(image/0118.jpg);background-size: 137% auto;Background-attachment:fixed;}
+#ding{width: 100%;height: 52px;position: fixed;left:0px;top:0px;background-color: #00ffff95;backdrop-filter: blur(25px);color: #fff;font-size: 40px;text-shadow: 0 0 20px #111;font-feature-settings: "tnum";z-index: 54154112;}
 #bk1{width: 303px;height: auto;box-shadow: 7px 7px 3px #555500; background-color: #040;font-size: 19px;border-radius: 14px;}
 #bk2{width: 275px;height: auto;box-shadow: 7px 7px 3px #660000; background-color: #004;padding: 12px;border-radius: 14px;margin: 15px;}
+#kk{font-feature-settings: "tnum";}
 </style></head><body align="center">
 
 <div id="ding" align="center">
-
+<b>zarispro</b><!--
   <strong>
     <div class="box"></div>
     <script>
@@ -92,9 +102,55 @@ html{Background-attachment:fixed;background-color: #fff;background-image: url(im
             document.querySelector('.box').innerHTML = getTime();
         }, 500)
     </script>
-</strong>
+</strong>-->
 
 </div>
+<div style="position: fixed;left: 20%;right: 20%;top: 3px;z-index: -30;">
+  <div class="box" style="font-size: 170px;margin-top: 80px;" id="kk"></div>
+  <script>
+      function getTime() {
+          var date = new Date();
+          var year = date.getFullYear(); //获取年份
+          var month = date.getMonth() + 1; //获取月份
+          var day = date.getDate(); //获取日期
+          var hour = date.getHours(); //获取小时
+          hour = hour < 10 ? '0' + hour : hour;
+          var minute = date.getMinutes(); // 获取分
+          minute = minute < 10 ? '0' + minute : minute;
+          var seconds = date.getSeconds(); //获取秒
+          seconds = seconds < 10 ? '0' + seconds : seconds;
+          return hour;
+      }
+
+      setInterval(function() {
+          document.querySelector('.box').innerHTML = getTime();
+      }, 1000)
+  </script>
+
+
+
+  <div class="box2" style="font-size: 170px;margin-top: -52px;" id="kk"></div>
+  <script>
+      function getTime3() {
+          var date = new Date();
+          var year = date.getFullYear(); //获取年份
+          var month = date.getMonth() + 1; //获取月份
+          var day = date.getDate(); //获取日期
+          var hour = date.getHours(); //获取小时
+          hour = hour < 10 ? '0' + hour : hour;
+          var minute = date.getMinutes(); // 获取分
+          minute = minute < 10 ? '0' + minute : minute;
+          var seconds = date.getSeconds(); //获取秒
+          seconds = seconds < 10 ? '0' + seconds : seconds;
+          return minute;
+      }
+
+      setInterval(function() {
+          document.querySelector('.box2').innerHTML = getTime3();
+      }, 1000)
+  </script>
+<img src="image/top.png" width="63" style="margin-top: -22px;filter: invert(100%);" id="m4415"></div>
+<div>
 <div align="center" style="width: 100%;padding: 0px;" id="powered">
 
   <div id="powered1" align="center" style="width: 20%;border-radius: 113px;"></div>
@@ -108,7 +164,7 @@ html{Background-attachment:fixed;background-color: #fff;background-image: url(im
   
   <img src="https://zarispro.github.io/image/fem.png" style="width: 100%;height:100%; object-fit: cover;background-color: #000000;border-radius: 50%;">
    </div>
-<center>
+<center style="margin-top: 150%;"><div style="backdrop-filter: blur(20px);">
 <div style="font-size: 31px;margin-top: 69px;text-shadow: 0 0 10px #000000;">zarispro<br>我的个人网站</div>
 <div id="bk1" style="margin-top: 22px;padding: 12px;margin-bottom: 30px;" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本网站成立于2022年5月25日，截至今天，拥有2个免费服务在正常运行。各位来宾可以通过以下方式联系站长：
   <br><br><span style="text-shadow:0 0 3px #ffff0069">邮箱 msdn1.cn@outlook.com<br>微信 Microsoft_21H1</span><br></div>
@@ -116,7 +172,7 @@ html{Background-attachment:fixed;background-color: #fff;background-image: url(im
        <a href="ad/"><div id="bk2"><span style="font-size: 35px;"><img src="https://zarispro.github.io/media/image/ms.png" width="115"><br>商业广告</span></div></a>
        <a href="fm/"><div id="bk2" style="box-shadow: 7px 7px 3px #003410; background-color: #503;"><span style="font-size: 35px;"><img src="https://zarispro.github.io/media/image/fm.webp" width="115"><br>心理FM</span></div></a>
        <a href="c/"><div id="bk2" style="box-shadow: 7px 7px 3px #333; background-color: #111;"><span style="font-size: 35px;"><img src="https://zarispro.github.io/image/rl.png" width="115"><br>日历</span></div></a>
-
+</div>
 </center>
 <div id="yinyue" style="background-color: #fff;width: 77%;position: fixed;left: 10%;bottom: 12px;z-index: 214748365;box-shadow: 0px 2px 18px #000;height: 82px;overflow: hidden;color: #000;">千千阙歌 - 陈慧娴<br>
   <audio allow="autoplay" autoplay controls="controls" preload="auto" style="margin-top: 3px;width: 100%;" loop>
@@ -128,5 +184,5 @@ html{Background-attachment:fixed;background-color: #fff;background-image: url(im
     <span><b>Powered by zarispro</b></span><br>
     <span>©2022-2023 zarispro , lnc</span></span>
     <br><br><br><br><br><br><br><br><br></div>
-
+  </div>
 </body></html>
