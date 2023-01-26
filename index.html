@@ -2,7 +2,11 @@
 <html align="center" style="font-family: monospace;cursor:default;color: #fff;background-color: #f9d;" leftmargin="0" topmargin="0" οncοntextmenu="return false" οndragstart="return false" onselectstart="return false" οnselect="document.selection.empty()" οncοpy="document.selection.empty()" onbeforecopy="return false" οnmοuseup="document.selection.empty()" ondragstart="return false;" oncontextmenu="return false;">
 <head><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" charset="utf-8">
 <title>ZARISPRO - 我的个人网站</title>
+<script>document.addEventListener('touchmove', e => {
+  e.preventDefalut();
+}, {passive: false})</script>
 <style>
+  
     @font-face {
   font-family: f1;
   src: url(https://zarispro.github.io/play/rubik.ttf);
@@ -167,6 +171,7 @@ html{Background-attachment:fixed;background-color: #fff;background-image: url(im
           document.querySelector('.box2').innerHTML = getTime3();
       }, 1000)
   </script>
+ 
 <img src="image/top.png" width="63" style="margin-top: -22px;filter: invert(100%);" id="m4415"></div>
 <div>
 <div align="center" style="width: 100%;padding: 0px;" id="powered">
