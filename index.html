@@ -29,24 +29,24 @@ animation-duration: 1.5s;animation-timing-function: ease-out;
 }
 @keyframes poweredf{
 0%{opacity: 1;display: inline;top: -140px;}
-23%{opacity: 1;display: inline;top: 60px;}
-100%{opacity: 0;display: inline;top: 60px;}
+23%{opacity: 1;display: inline;top: 130px;}
+100%{opacity: 0;display: inline;top: 130px;}
     }
     #powered{font-size: 33px;color:white;position: fixed;width: 217px;padding: 22px;box-align: center;
     z-index: 2147483646;
     animation-name: poweredf;
     animation-duration: 2.2s;
-    text-shadow: 0 0 21px #00ffff;
+    text-shadow: 0 0 21px #ff77cc;
     margin: 0px;
   top: -140px;
     }
     #powered6{ animation-name: powered;
     animation-duration: 2.59s;}
     @keyframes powered{
-0%{box-shadow: 0 0 63px #0f0;background-color: #08b;}
-22%{box-shadow: 0 0 63px #0f0;background-color: #08b;}
-71%{box-shadow: 0 0 63px #0f0;background-color: #08b;}
-100%{box-shadow: 0 0 0px #00f;background-color: #f8b;}
+0%{box-shadow: 0 0 63px #f3c;background-color: #f8b;}
+22%{box-shadow: 0 0 63px #f3c;background-color: #f8b;}
+71%{box-shadow: 0 0 63px #f3c;background-color: #f8b;}
+100%{box-shadow: 0 0 0px #f0f;background-color: #f8b;}
     }
    
 a{cursor: default;color: #fff;text-decoration:none}
@@ -81,9 +81,9 @@ ohtml{background-attachment:fixed;background-color: #fff;background-image: url(h
   -ms-background-attachment: fixed;
 }
 
-#ding{width: 100%;height: 33px;position: fixed;left:0px;top:0px;background-color: rgb(200,13,133);backdrop-filter: blur(25px);-webkit-backdrop-filter: blur(25px);color: #fff;font-size: 29px;z-index: 54154112;}
+#ding{width: 100%;height: 33px;position: fixed;left:0px;top:0px;background-color: rgb(200,13,133);backdrop-filter: blur(25px);-webkit-backdrop-filter: blur(25px);color: #fff;font-size: 29px;z-index: 54154112;background-image: linear-gradient(to right, #dd0034, #ff77ab);}
 #bk1{width: 303px;height: auto;font-size: 19px;border-radius: 14px;box-shadow: 0 0 14px #ff22cc63;}
-#bk2{width: 275px;height: auto;box-shadow: 1px 1px 43px #00ff00; background-color: #00ff0089;padding: 12px;border-radius: 14px;margin: 35px;text-shadow: 0 0 10px #ff22cc;}
+#bk2{width: 275px;height: auto;box-shadow: 1px 1px 43px #00ff00;padding: 12px;border-radius: 14px;margin: 35px;text-shadow: 0 0 10px #ff22cc;}
 #kk{font-feature-settings: "tnum";text-shadow: 0 0 39px #ff22cc;}
 </style></head><body align="center"><img src="image/328.jpg" style="width: 136%;height: auto;position: fixed;left: 0px;top:0px;z-index: -999;">
 <div class="margin: 0px;padding: 0px;overflow: scroll;position: fixed;width: 100%;height: 100%;">
@@ -100,7 +100,25 @@ ohtml{background-attachment:fixed;background-color: #fff;background-image: url(h
     background-size: cover;
 }
 -->
-<div id="ding" align="center" style="padding-bottom: 4px;">我的个人网站</div>
+<div id="ding" align="center" style="padding-bottom: 4px;"><b><div class="box138" style="margin-top: 0px;font-feature-settings: 'tnum';z-index: 800;"></div><script>
+  function getTimeb5() {
+      var date = new Date();
+      var year = date.getFullYear(); //获取年份
+      var month = date.getMonth() + 1; //获取月份
+      var day = date.getDate(); //获取日期
+      var hour = date.getHours(); //获取小时
+      hour = hour < 10 ? '0' + hour : hour;
+      var minute = date.getMinutes(); // 获取分
+      minute = minute < 10 ? '0' + minute : minute;
+      var seconds = date.getSeconds(); //获取秒
+      seconds = seconds < 10 ? '0' + seconds : seconds;
+      return year + '-' + month + '-' + day;
+  }
+
+  setInterval(function() {
+      document.querySelector('.box138').innerHTML = getTimeb5();
+  }, 1000)
+</script></b></div>
 <!--
   <strong>
     <div class="box"></div>
@@ -239,7 +257,7 @@ ohtml{background-attachment:fixed;background-color: #fff;background-image: url(h
 
   <div id="powered1" align="center" style="width: 20%;border-radius: 113px;"></div>
 
-<div id="powered6" align="center" style="width: 60%;border-radius: 113px;background-color: #08b;box-shadow: 0 0 63px #0f0;">Powered by<br><span style="font-size: 51px;">zarispro</span></div>
+<div id="powered6" align="center" style="width: 60%;border-radius: 113px;background-color: #f8a;box-shadow: 0 0 63px #f8a;">Powered by<br><span style="font-size: 51px;">zarispro</span></div>
 
 <div id="powered1" align="center" style="width: 20%;border-radius: 113px;"></div>
 
@@ -249,11 +267,9 @@ ohtml{background-attachment:fixed;background-color: #fff;background-image: url(h
   <img src="https://zarispro.github.io/image/fem.png" style="width: 100%;height:100%; object-fit: cover;background-color: #000000;border-radius: 50%;">
    </div>
   <style>
-    #huludao{backdrop-filter: blur(30px);background-color: #ffffff40;border-radius: 50px;
-    -webkit-backdrop-filter: blur(30px);
-    -moz-backdrop-filter: blur(30px);
-    -ms-backdrop-filter: blur(30px);
-    }
+    #huludao{backdrop-filter: blur(22px);background-color: #ffffff40;border-radius: 50px;
+    -webkit-backdrop-filter: blur(22px);
+      }
   </style><!--
   #grad {
     background-image: linear-gradient(to bottom right, #ff00ff71, #ff22cc63);
@@ -264,9 +280,9 @@ ohtml{background-attachment:fixed;background-color: #fff;background-image: url(h
 <div id="bk1" style="margin-top: 22px;padding: 12px;margin-bottom: 30px;background-image: linear-gradient(to bottom right, #ff00ff71, #ff88cc63);" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本网站成立于2022年5月25日，截至今天，拥有2个免费服务在正常运行。各位来宾可以通过以下方式联系站长：
   <br><br><span style="text-shadow:0 0 3px #ff35e478">邮箱 pixel347619251@outlook.com<br>微信 Microsoft_21H1</span><br></div>
 
-       <a href="ad/"><div id="bk2"><span style="font-size: 35px;"><img src="https://i.imgtg.com/2023/02/09/ciSKP.png" width="115"><br>商业广告</span></div></a>
-       <a href="fm/"><div id="bk2" style="box-shadow: 1px 1px 43px #00ffff; background-color: #00ffff89;"><span style="font-size: 35px;"><img src="https://i.imgtg.com/2023/02/09/ciQ56.webp" width="115"><br>心理FM</span></div></a>
-       <a href="c/"><div id="bk2" style="box-shadow: 1px 1px 43px #ffff00; background-color: #ffff0084;"><span style="font-size: 35px;"><img src="https://i.imgtg.com/2023/02/09/ciVHB.png" width="115"><br>日历</span></div></a>
+       <a href="ad/"><div id="bk2" style="background-image: linear-gradient(to bottom right, #00ff00cf, #00ff0073);"><span style="font-size: 35px;"><img src="https://i.imgtg.com/2023/02/09/ciSKP.png" width="115"><br>商业广告</span></div></a>
+       <a href="fm/"><div id="bk2" style="box-shadow: 1px 1px 43px #00ffff;background-image: linear-gradient(to bottom right, #00ffffaa, #00fff063);"><span style="font-size: 35px;"><img src="https://i.imgtg.com/2023/02/09/ciQ56.webp" width="115"><br>心理FM</span></div></a>
+       <a href="c/"><div id="bk2" style="box-shadow: 1px 1px 43px #ffff00; background-image: linear-gradient(to bottom right, #ffff00ac, #ffff0083);"><span style="font-size: 35px;"><img src="https://i.imgtg.com/2023/02/09/ciVHB.png" width="115"><br>日历</span></div></a>
   <div style="color: #fff;background-color: #000;text-shadow: 0 0 2px #fff;"><br><span>
     <span>本网站由zarispro提供支持</span><br>
     <span><b>Powered by zarispro</b></span><br>
