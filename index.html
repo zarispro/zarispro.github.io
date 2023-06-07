@@ -43,10 +43,10 @@ animation-duration: 1.5s;animation-timing-function: ease-out;
     #powered6{ animation-name: powered;
     animation-duration: 2.59s;}
     @keyframes powered{
-0%{box-shadow: 0 0 63px #f3c;background-color: #f1b;}
-22%{box-shadow: 0 0 63px #f3c;background-color: #f4b;}
+0%{box-shadow: 0 0 63px #f3c;background-color: #f0f;}
+22%{box-shadow: 0 0 119px #fff;background-color: #f4b;}
 71%{box-shadow: 0 0 63px #f3c;background-color: #f8b;}
-100%{box-shadow: 0 0 0px #f0f;background-color: #f8b;}
+100%{box-shadow: 0 0 89px #f0f;background-color: #f8b;}
     }
 a{cursor: default;color: #fff;text-decoration:none}
 body{margin:0px;padding:0px;}
@@ -88,7 +88,7 @@ ohtml{background-attachment:fixed;background-color: #fff;background-image: url(h
 #bk2{width: 275px;height: auto;box-shadow: 1px 1px 43px #00ff00;padding: 12px;border-radius: 14px;margin: 35px;text-shadow: 0 0 10px #ff22cc;}
 #kk{font-feature-settings: "tnum";text-shadow: 0 0 39px #ff22cc;}
 </style>
-<div id="yinyue" style="background-image: linear-gradient(to right, #ff000099, #0000ff99);width: 75%;position: fixed;left: 11%;bottom: 21px;z-index: 214748365;box-shadow: 0px 0px 15px #fff;height: 79px;overflow: hidden;color: #fdf;text-shadow: 1px 1px 4px #4b7dff;backdrop-filter: blur(8px);border-radius: 70px;-webkit-backdrop-filter: blur(8px);">
+<div id="yinyue" style="background-image: linear-gradient(to right, #ff00ff99, #00ffff99);width: 75%;position: fixed;left: 11%;bottom: 21px;z-index: 214748365;box-shadow: 0px 0px 15px #fff;height: 79px;overflow: hidden;color: #fdf;text-shadow: 1px 1px 4px #4b7dff;backdrop-filter: blur(8px);border-radius: 70px;-webkit-backdrop-filter: blur(8px);">
   <b>永远等待 - Beyond</b><br>
   <audio id="eventAudio" allow="autoplay" autoplay controls="controls" preload="auto" style="margin-top: 3px;" loop>
     <source src="image/a9/1.mp3" type="audio/mp3" class="audio" controls="controls" @play="(e) =&gt; audioPlay(e, item, index)" style="background-color: #fff;">
@@ -128,7 +128,7 @@ animation-iteration-count: infinite;
       minute = minute < 10 ? '0' + minute : minute;
       var seconds = date.getSeconds(); //1
       seconds = seconds < 10 ? '0' + seconds : seconds;
-      return year + ' 年 ' + month + ' 月 ' + day + ' 日 ';
+      return year + '/' + month + '/' + day;
   }
 
   setInterval(function() {
