@@ -55,7 +55,25 @@ hr{box-shadow: 0px 0px 13px #0f0;}
 -->
 <!--<img src="d.jpg" style="width: 133%;height: auto;position: fixed;left: 0px;top:0px;filter:blur(0px);z-index: -89;">-->
 <div id="din" ondragstart="return false" oncontextmenu="return false" onselectstart="return false" onselectstart="return false" onselect="document.selection.empty()">
-<b>P式娱乐房 房规接口</b>
+<b><div class="box138" style="margin-top: -6px;font-feature-settings: 'tnum';z-index: 800;color: #fffff0;font-size: 35px;font-family: simsun , system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"></div><script>
+  function getTimeb5() {
+      var date = new Date();
+      var year = date.getFullYear() + 0; //1
+      var month = date.getMonth() - -1; //1
+      var day = date.getDate() + 0;//1
+      var hour = date.getHours(); //1
+      hour = hour < 10 ? '0' + hour : hour;
+      var minute = date.getMinutes(); // 1
+      minute = minute < 10 ? '0' + minute : minute;
+      var seconds = date.getSeconds(); //1
+      seconds = seconds < 10 ? '0' + seconds : seconds;
+      return hour + ':' + minute + ':' + seconds;
+  }
+
+  setInterval(function() {
+      document.querySelector('.box138').innerHTML = getTimeb5();
+  }, 1000)
+</script></b>
 </div>
 
 <img src="fg.png" style="filter: invert(1);margin-top: 57px;" width="202" ondragstart="return false" oncontextmenu="return false" onselectstart="return false" onselectstart="return false" onselect="document.selection.empty()">
