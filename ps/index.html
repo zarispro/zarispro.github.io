@@ -137,7 +137,7 @@ audio{visibility: hidden;height: 0px;}
 // 我的根html字体是 font-size:calc(100vw/7.5);
 function countFont1(){
     var originRootFontSize = parseFloat(window.getComputedStyle(document.documentElement, null).getPropertyValue('font-size'));
-    var realSize =  document.documentElement.clientWidth/7.5; // 这里的7.5是我自己，你看着调
+    var realSize =  document.documentElement.clientWidth/7.5; // 6
     
     console.log("originRootFontSize："+originRootFontSize + "realSize:" + realSize); //  系统字体放大缩小，originRootFontSize 和 realSize相等的话就可以了
     
@@ -147,30 +147,30 @@ function countFont1(){
     // 计算原字体和放大后字体的比例
     var scaleFactor = realSize / originRootFontSize ;
 
-    // 取html元素的字体大小
-    // 注意，这个大小也经过缩放了
+    // 取
+    // 注
     // 所以
-    // 再次 *scaledFontSize才是我们要设置的大小
+    // 再
     if (scaleFactor !== 1) {
         document.getElementsByTagName('html')[0].style.cssText = 'font-size:' + originRootFontSize * scaleFactor * scaleFactor  + 'px !important';
     }
 }
 
 $(window).resize(function() {
-    setTimeout(() =>{ // 我这里是设置延时覆盖原先全局 html 的font-size
+    setTimeout(() =>{ // 我
         countFont1();
     },0)
 });
 
 (function(){
-   setTimeout(() =>{  // 我这里是设置延时覆盖原先全局 html 的font-size
+   setTimeout(() =>{  // 我
     countFont1();
    },0)
 })();
 
 </script></b>
 </div><div id="ps"></div>
-<!--底栏
+<!--底
 <div id="din2">
 <span style="color: #ff0">P娱内部房规</span>&nbsp;&nbsp;&nbsp;<a href="15.html">15+授权房规</a>
 
@@ -259,11 +259,11 @@ $(window).resize(function() {
                                               <div id="dian1"></div>G11<div id="safar"><marquee>金钱鼠保卫战</marquee></div></center>
                                               </div></a>          
               
-              </b><h1 ondragstart="return false" oncontextmenu="return false" onselectstart="return false" onselectstart="return false" onselect="document.selection.empty()">房规 36.2</h1>
+              </b><h1 ondragstart="return false" oncontextmenu="return false" onselectstart="return false" onselectstart="return false" onselect="document.selection.empty()">房规 36.3</h1>
 <!--
                 <br>
                 <a href="#q1"><div id="dian" align="center" style="font-size: 28px;"><center>
-                  <div id="dian1"></div>条约</center>
+                  <div id="dian1"></div>4</center>
                   </div></a>
             
             
@@ -298,6 +298,7 @@ $(window).resize(function() {
 <div id="p21" align="left"><hr><b>
 </a><h2><div id="dian1" class="ii"></div>F1 守卫白狼王</h2>
 ·本房间娱乐房，可以自刀/空刀<br>
+
 ·女巫守卫不受限制<br>
 ·白狼王自爆时间不受限制<br>
 ·不允许恶意黑麦<br>
@@ -306,6 +307,8 @@ $(window).resize(function() {
 ·贴脸、骂人点杀<br>
 ·夜间送礼点杀<br>
 ·点杀无需四空<br>
+·房主有判决交牌的权力<br>
+·禁止起哄<br>
 ·尊重自爆，自爆吞发言<br><a id="f2"></a>
 ·猎人触发第一天的bug请向房员报告<br>
 <br>
@@ -320,6 +323,8 @@ $(window).resize(function() {
   ·贴脸、骂人点杀<br>
   ·夜间送礼点杀<br>
   ·点杀无需四空<br>
+  ·房主有判决交牌的权力<br>
+·禁止起哄<br>
   ·尊重自爆，自爆吞发言<br><a id="f3"></a>
   ·禁止跳盗宝沾边<br>
   <br>
@@ -333,7 +338,9 @@ $(window).resize(function() {
     ·禁止仇杀<br>
     ·贴脸、骂人点杀<br>
     ·夜间送礼点杀<br>
-    ·点杀无需四空<br><a id="f4"></a>
+    ·点杀无需四空<br>
+    ·房主有判决交牌的权力<br>
+·禁止起哄<br><a id="f4"></a>
     ·尊重自爆，自爆吞发言<br>
     <br><hr>
     <b>
@@ -344,7 +351,9 @@ $(window).resize(function() {
 ·禁止仇杀<br>
 ·贴脸、骂人点杀<br>
 ·夜间送礼点杀<br>
-·点杀无需四空<br><a id="f5"></a>
+·点杀无需四空<br>
+·房主有判决交牌的权力<br>
+·禁止起哄<br><a id="f5"></a>
 ·不尊重打字自爆<br>
       <br>
    
@@ -358,6 +367,8 @@ $(window).resize(function() {
         ·贴脸、骂人点杀<br>
         ·夜间送礼点杀<br>
         ·点杀无需四空<br>
+        ·房主有判决交牌的权力<br>
+·禁止起哄<br>
         ·尊重自爆，自爆吞发言<br><a id="f6"></a>
         <br>
       
@@ -373,6 +384,8 @@ $(window).resize(function() {
           ·贴脸、骂人点杀<br>
           ·夜间送礼点杀<br>
           ·点杀无需四空<br>
+          ·房主有判决交牌的权力<br>
+·禁止起哄<br>
           ·尊重猎人自爆，自爆吞发言<br><a id="g1"></a>
           <br>
 
@@ -385,6 +398,8 @@ $(window).resize(function() {
 ·贴脸、骂人点杀<br>
 ·夜间送礼点杀<br>
 ·点杀无需四空<br>
+·房主有判决交牌的权力<br>
+·禁止起哄<br>
 ·狼美人不允许自爆<br><br>
 <div id="sf" class="bl" onselectstart="return false" onselect="document.selection.empty()" ondragstart="return false" oncontextmenu="return false" onselectstart="return false"><div id="sff">2</div></div>
 <div id="sf" class="blw"></div>
@@ -408,6 +423,8 @@ $(window).resize(function() {
               ·贴脸、骂人点杀<br>
               ·夜间送礼点杀<br>
               ·点杀无需四空<br>
+              ·房主有判决交牌的权力<br>
+·禁止起哄<br>
               ·不尊重打字自爆，只允许白狼自爆<br>
               <br>
               <div id="sf" class="lr"></div>
@@ -451,6 +468,8 @@ $(window).resize(function() {
       ·贴脸、骂人点杀<br>
       ·夜间送礼点杀<br>
       ·点杀无需四空<br>
+      ·房主有判决交牌的权力<br>
+·禁止起哄<br>
       ·尊重自爆，自爆吞发言<br>
       <br>
       <div id="sf" class="lr"></div>
@@ -475,6 +494,8 @@ $(window).resize(function() {
                     ·贴脸、骂人点杀<br>
                     ·夜间送礼点杀<br>
                     ·点杀无需四空<br>
+                    ·房主有判决交牌的权力<br>
+·禁止起哄<br>
                     ·只允许跳本房间存在好人身份<br>      
                     <br>
                
@@ -504,6 +525,8 @@ $(window).resize(function() {
                       ·贴脸、骂人点杀<br>
                       ·夜间送礼点杀<br>
                       ·点杀无需四空<br>
+                      ·房主有判决交牌的权力<br>
+·禁止起哄<br>
                       ·尊重自爆，自爆吞发言<br>
 ·狼美人不能自爆<br>
 <br>
@@ -532,6 +555,8 @@ $(window).resize(function() {
 ·贴脸、骂人点杀<br>
 ·夜间送礼点杀<br>
 ·点杀无需四空<br>
+·房主有判决交牌的权力<br>
+·禁止起哄<br>
 ·不尊重打字自爆，只允许白狼暴狼自爆<br>
   <br>
   
@@ -561,6 +586,8 @@ $(window).resize(function() {
     ·夜间送礼点杀<br>
     ·点杀无需四空<br>
     ·警上不能自爆<br>
+    ·房主有判决交牌的权力<br>
+·禁止起哄<br>
     ·其余时间尊重自爆，吞发言<br>
     <br>
 
@@ -587,6 +614,8 @@ $(window).resize(function() {
       ·贴脸、骂人点杀<br>
       ·夜间送礼点杀<br>
       ·点杀无需四空<br>
+      ·房主有判决交牌的权力<br>
+·禁止起哄<br>
       ·警上不能自爆<br>
 ·狼王不能自爆<br>
    <br>
@@ -610,6 +639,8 @@ $(window).resize(function() {
   ·贴脸、骂人点杀<br>
   ·夜间送礼点杀<br>
   ·点杀无需四空<br>
+  ·房主有判决交牌的权力<br>
+·禁止起哄<br>
 <br>
 
 <div id="sf" class="bl" onselectstart="return false" onselect="document.selection.empty()" ondragstart="return false" oncontextmenu="return false" onselectstart="return false"><div id="sff">3</div></div>
@@ -628,6 +659,8 @@ $(window).resize(function() {
   ·骂人点杀<br>
   ·夜间送礼点杀<br>
   ·点杀无需四空<br>
+  ·房主有判决交牌的权力<br>
+·禁止起哄<br>
 <br>
 <div id="sf" class="lr"></div>
 <br>
