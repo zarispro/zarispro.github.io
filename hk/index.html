@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html align="center" style="font-family: monospace;cursor:default;color: #fff;background-color: #000;overflow: scroll;" leftmargin="0" topmargin="0" οncοntextmenu="return false" οndragstart="return false" onselectstart="return false" οnselect="document.selection.empty()" οncοpy="document.selection.empty()" onbeforecopy="return false" οnmοuseup="document.selection.empty()" ondragstart="return false;" oncontextmenu="return false;">
+<head><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" charset="utf-8">
+<title>挑战200元过一学期 倒计时</title>
+  <meta name="theme-color" content="#000037">
+<style>
+ 
+  @font-face {
+  font-family: bb;
+  src: url(https://zarispro.github.io/image/lanting.TTF);
+}
+body { font-family: bb, monospace;
+  font-variant-numeric: tabular-nums;margin:0px;padding:0px;color:#fff;
+  font-size: 30px;text-shadow: 0 0 19px #9f9;
+  padding-top: 90px;
+}
+a{cursor: default;color: #fff;text-decoration:none}
+</style>
+</head><body align="center">
+  挑战200元过一学期<br>时间剩余<br><br><b><span style="font-size: 59px;text-shadow: 0 0 11px #faf;"><span class="count4"></span></span></b><br>
+<!--br>生活费剩余<span style="font-size: 57px;text-shadow: 0 0 19px #f77;">200</span>元
+
+-->
+  <script>
+      window.onload = function () {
+          countDown();
+          function addZero(i) {
+              return i < 10 ? "0" + i: i + "";
+          }
+          function countDown() {
+              var nowtime = new Date();
+              var endtime = new Date("2024/01/08,21:05:00");
+              var lefttime = parseInt((endtime.getTime() - nowtime.getTime()) / 1000);
+              var d = parseInt(lefttime / (24*60*60))
+              var h = parseInt(lefttime / (60 * 60) % 24);
+              var m = parseInt(lefttime / 60 % 60);
+              var s = parseInt(lefttime % 60);
+              d = addZero(d)
+              h = addZero(h);
+              m = addZero(m);
+              s = addZero(s);
+              document.querySelector(".count4").innerHTML = `${d}天<br>
+              ${h}:${m}:${s}`;
+              if (lefttime <= 0) {
+                  document.querySelector(".count4").innerHTML = "0";
+                  return;
+              }
+              setTimeout(countDown, 1000);
+            }
+        }
+    </script>
+  <!--<p class="count"></p>
+  <script>
+      window.onload = function () {
+          countDown();
+          function addZero(i) {
+              return i < 10 ? "0" + i: i + "";
+          }
+          function countDown() {
+              var nowtime = new Date();
+              var endtime = new Date("2024/01/06,05:00:00");
+              var lefttime = parseInt((endtime.getTime() - nowtime.getTime()) / 1000);
+              var d = parseInt(lefttime / (24*60*60))
+              var h = parseInt(lefttime / (60 * 60) % 24);
+              var m = parseInt(lefttime / 60 % 60);
+              var s = parseInt(lefttime % 60);
+              d = addZero(d)
+              h = addZero(h);
+              m = addZero(m);
+              s = addZero(s);
+              document.querySelector(".count").innerHTML = `${d}天 ${h} 时 ${m} 分 ${s} 秒`;
+              if (lefttime <= 0) {
+                  document.querySelector(".count").innerHTML = "活动已结束";
+                  return;
+              }
+              setTimeout(countDown, 1000);
+            }
+        }
+    </script>-->
+
+</body></html>
