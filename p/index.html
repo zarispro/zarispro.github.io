@@ -43,12 +43,15 @@ a{cursor: default;color: #fff;text-decoration:none}
   </div><br>
   <!--2025年5月1日之前更新
     2025年5月1日之前更新2025年5月1日前更新2025年5月1日之前更新
--->
-  <div id="jieri" style="text-shadow: none;">
-    <div id="ding">其它倒计时</div><br>
-        <div id="activityText1"></div>
+--> 
+
+
+<div id="activityText1"></div>
+  
       
-      <!--暂无 a-->
+      <!--暂无<div id="jieri" style="text-shadow: none;">
+    <div id="ding">其它倒计时</div><br>
+        a-->
       </div><br>
 
 
@@ -130,7 +133,7 @@ a{cursor: default;color: #fff;text-decoration:none}
       ${hour}:${minute}:${second}`;
       timer = setTimeout(countDown1, 1000);
     } else if (leftTime <= 0) {
-      activityText.innerText = '冰封期已结束';
+      activityText.innerText = '';
       clearTimeout(timer);
     } else {
       activityText.innerText = `距冰封期结束
