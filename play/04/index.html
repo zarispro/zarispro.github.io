@@ -1,3 +1,754 @@
-script language="javascript" type="text/javascript">
-    window.location.href = "https://zarispro.github.io/ad/google/pixel4/";
+<!DOCTYPE html>
+<html align="center" style="font-family: monospace;cursor:default;color: #fff;background-color: #000;overflow: scroll;" leftmargin="0" topmargin="0" οncοntextmenu="return false" οndragstart="return false" onselectstart="return false" οnselect="document.selection.empty()" οncοpy="document.selection.empty()" onbeforecopy="return false" οnmοuseup="document.selection.empty()" ondragstart="return false;" oncontextmenu="return false;">
+<head><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" charset="utf-8">
+<title>P式娱乐房倒计时接口</title>
+<style>
+ 
+  @font-face {
+  font-family: bb;
+  src: url(https://zarispro.github.io/ps/2.woff2);
+}
+body { font-family: bb, monospace;
+  font-variant-numeric: tabular-nums;margin:0px;padding:0px;color:#fff;
+  font-size: 30px;text-shadow: 0 0 19px #9f9;
+  padding-top: 30px;
+}
+a{cursor: default;color: #fff;text-decoration:none}
+
+.jr{position: absolute;top:41px;left:0px;width: 100%;height: auto;background-color: #205;}
+#ding{width: 100%;margin: 0px;height: 35px;background-color: #900;color: #fff;position: absolute;z-index: 3;top:0px;left:0px;}
+#jieri{width: 300px;height: 134px;padding: 10px;border-radius: 30px;background-color: #205;overflow: hidden;position: relative;}
+</style>
+</head><body align="center">
+<center>
+  <div id="jieri" style="text-shadow: none;">
+<div id="ding">节假日倒计时</div><br>
+    <div class="jr" id="activityText"style="z-index: 3999;"></div>
+    <div id="xx10" class="jr" style="z-index: 2999;"></div>
+    <div id="xx11" class="jr" style="z-index: 2998;"></div>
+    <div id="xx12" class="jr" style="z-index: 2997;"></div>
+    <div id="xx13" class="jr" style="z-index: 2996;"></div>
+    <div id="xx14" class="jr" style="z-index: 2995;"></div>
+    <div id="xx15" class="jr" style="z-index: 2994;"></div>
+    <div id="xx16" class="jr" style="z-index: 2993;"></div>
+    <div id="xx17" class="jr" style="z-index: 2992;"></div>
+    <div id="xx18" class="jr" style="z-index: 2991;"></div>
+    <div id="xx19" class="jr" style="z-index: 2990;"></div>
+    <div id="xx1a" class="jr" style="z-index: 2989;"></div>
+    <div id="xx1b" class="jr" style="z-index: 2988;"></div>
+    <div id="xx1c" class="jr" style="z-index: 2987;"></div>
+    <div id="xx1d" class="jr" style="z-index: 2986;"></div>
+    <div id="xx1e" class="jr" style="z-index: 2985;"></div>
+  </div><br>
+  <!--2025年5月1日之前更新
+    2025年5月1日之前更新2025年5月1日之前更新2025年5月1日之前更新2025年5月1日之前更新2025年5月1日之前更新2025年5月1日之前更新2025年5月1日之前更新
+    2025年5月1日之前更新2025年5月1日之前更新2025年5月1日之前更新2025年5月1日之前更新
+-->
+  <div id="jieri" style="text-shadow: none;">
+    <div id="ding">其它倒计时</div><br>
+        <div id="activityText1"></div>
+      
+      <!--暂无 a-->
+      </div><br>
+
+
+</center>
+
+  <script>
+    countDown();
+    function countDown() {
+      function addZero(i) {
+        return i < 10 ? "0" + i : i;
+      }
+      let activityText = document.querySelector('#activityText');
+      let timer = null;
+      const startTime = new Date('2023-09-28 20:00:00');
+      const endTime = new Date('2023-10-06 22:30:00');
+      // 注：这里是直接使用用户本地系统时间做演示
+      const nowTime = new Date();
+      // 当前时间距离活动开始时间的差值
+      const beginDiff = parseInt((startTime.getTime() - nowTime.getTime()) / 1000);
+      //当前时间距离活动结束时间的差值
+      const endDiff = parseInt((endTime.getTime() - nowTime.getTime()) / 1000);
+      // 剩余时间
+      const leftTime = beginDiff > 0 ? beginDiff : endDiff;
+      let day = parseInt(leftTime / (24 * 60 * 60))
+      let hour = parseInt(leftTime / (60 * 60) % 24);
+      let minute = parseInt(leftTime / 60 % 60);
+      let second = parseInt(leftTime % 60);
+      day = addZero(day);
+      hour = addZero(hour);
+      minute = addZero(minute);
+      second = addZero(second);
+
+      if (beginDiff > 0) {
+        activityText.innerText = `距2023中秋国庆假期
+        ${day}天
+        ${hour}:${minute}:${second}`;
+        timer = setTimeout(countDown, 1000);
+      } else if (leftTime <= 0) {
+        activityText.innerText = '';
+        clearTimeout(timer);
+      } else {
+        activityText.innerText = `距本次假期结束
+        ${day}天
+        ${hour}:${minute}:${second}`;
+        timer = setTimeout(countDown, 1000);
+      }
+    }
+  </script>
+ <script>
+  countDown1();
+  function countDown1() {
+    function addZero(i) {
+      return i < 10 ? "0" + i : i;
+    }
+    let activityText = document.querySelector('#activityText1');
+    let timer = null;
+    const startTime = new Date('2023-08-22 20:00:00');
+    const endTime = new Date('2024-01-02 07:40:00');
+    // 第二次冰封期
+    const nowTime = new Date();
+    // 当前时间距离活动开始时间的差值
+    const beginDiff = parseInt((startTime.getTime() - nowTime.getTime()) / 1000);
+    //当前时间距离活动结束时间的差值
+    const endDiff = parseInt((endTime.getTime() - nowTime.getTime()) / 1000);
+    // 剩余时间
+    const leftTime = beginDiff > 0 ? beginDiff : endDiff;
+    let day = parseInt(leftTime / (24 * 60 * 60))
+    let hour = parseInt(leftTime / (60 * 60) % 24);
+    let minute = parseInt(leftTime / 60 % 60);
+    let second = parseInt(leftTime % 60);
+    day = addZero(day);
+    hour = addZero(hour);
+    minute = addZero(minute);
+    second = addZero(second);
+
+    if (beginDiff > 0) {
+      activityText.innerText = `距冰封期开始
+      ${day}天
+      ${hour}:${minute}:${second}`;
+      timer = setTimeout(countDown1, 1000);
+    } else if (leftTime <= 0) {
+      activityText.innerText = '冰封期已结束';
+      clearTimeout(timer);
+    } else {
+      activityText.innerText = `距冰封期结束
+      ${day}天
+      ${hour}:${minute}:${second}`;
+      timer = setTimeout(countDown1, 1000);
+    }
+  }
 </script>
+<script>
+  countDown2();
+  function countDown2() {
+    function addZero(i) {
+      return i < 10 ? "0" + i : i;
+    }
+    let activityText = document.querySelector('#xx10');
+    let timer = null;
+    const startTime = new Date('2023-12-29 20:00:00');
+    const endTime = new Date('2024-01-01 23:30:00');
+    // 第二次冰封期
+    const nowTime = new Date();
+    // 当前时间距离活动开始时间的差值
+    const beginDiff = parseInt((startTime.getTime() - nowTime.getTime()) / 1000);
+    //当前时间距离活动结束时间的差值
+    const endDiff = parseInt((endTime.getTime() - nowTime.getTime()) / 1000);
+    // 剩余时间
+    const leftTime = beginDiff > 0 ? beginDiff : endDiff;
+    let day = parseInt(leftTime / (24 * 60 * 60))
+    let hour = parseInt(leftTime / (60 * 60) % 24);
+    let minute = parseInt(leftTime / 60 % 60);
+    let second = parseInt(leftTime % 60);
+    day = addZero(day);
+    hour = addZero(hour);
+    minute = addZero(minute);
+    second = addZero(second);
+
+    if (beginDiff > 0) {
+      activityText.innerText = `距元旦假期
+      ${day}天
+      ${hour}:${minute}:${second}`;
+      timer = setTimeout(countDown2, 1000);
+    } else if (leftTime <= 0) {
+      activityText.innerText = '';
+      clearTimeout(timer);
+    } else {
+      activityText.innerText = `距本次假期结束
+      ${day}天
+      ${hour}:${minute}:${second}`;
+      timer = setTimeout(countDown2, 1000);
+    }
+  }
+</script>
+<script>
+  countDown3();
+  function countDown3() {
+    function addZero(i) {
+      return i < 10 ? "0" + i : i;
+    }
+    let activityText = document.querySelector('#xx11');
+    let timer = null;
+    const startTime = new Date('2024-01-07 20:00:00');
+    const endTime = new Date('2024-02-19 23:00:00');
+    // 寒假
+    const nowTime = new Date();
+
+    const beginDiff = parseInt((startTime.getTime() - nowTime.getTime()) / 1000);
+
+    const endDiff = parseInt((endTime.getTime() - nowTime.getTime()) / 1000);
+
+    const leftTime = beginDiff > 0 ? beginDiff : endDiff;
+    let day = parseInt(leftTime / (24 * 60 * 60))
+    let hour = parseInt(leftTime / (60 * 60) % 24);
+    let minute = parseInt(leftTime / 60 % 60);
+    let second = parseInt(leftTime % 60);
+    day = addZero(day);
+    hour = addZero(hour);
+    minute = addZero(minute);
+    second = addZero(second);
+
+    if (beginDiff > 0) {
+      activityText.innerText = `距寒假
+      ${day}天
+      ${hour}:${minute}:${second}`;
+      timer = setTimeout(countDown3, 1000);
+    } else if (leftTime <= 0) {
+      activityText.innerText = '';
+      clearTimeout(timer);
+    } else {
+      activityText.innerText = `距本次假期结束
+      ${day}天
+      ${hour}:${minute}:${second}`;
+      timer = setTimeout(countDown3, 1000);
+    }
+  }
+</script>
+<script>
+  countDownr();
+  function countDownr() {
+    function addZero(i) {
+      return i < 10 ? "0" + i : i;
+    }
+    let activityText = document.querySelector('#xx12');
+    let timer = null;
+    const startTime = new Date('2024-04-03 20:00:00');
+    const endTime = new Date('2024-04-06 23:00:00');
+   
+    const nowTime = new Date();
+
+    const beginDiff = parseInt((startTime.getTime() - nowTime.getTime()) / 1000);
+
+    const endDiff = parseInt((endTime.getTime() - nowTime.getTime()) / 1000);
+
+    const leftTime = beginDiff > 0 ? beginDiff : endDiff;
+    let day = parseInt(leftTime / (24 * 60 * 60))
+    let hour = parseInt(leftTime / (60 * 60) % 24);
+    let minute = parseInt(leftTime / 60 % 60);
+    let second = parseInt(leftTime % 60);
+    day = addZero(day);
+    hour = addZero(hour);
+    minute = addZero(minute);
+    second = addZero(second);
+
+    if (beginDiff > 0) {
+      activityText.innerText = `距清明节
+      ${day}天
+      ${hour}:${minute}:${second}`;
+      timer = setTimeout(countDownr, 1000);
+    } else if (leftTime <= 0) {
+      activityText.innerText = '';
+      clearTimeout(timer);
+    } else {
+      activityText.innerText = `距本次假期结束
+      ${day}天
+      ${hour}:${minute}:${second}`;
+      timer = setTimeout(countDownr, 1000);
+    }
+  }
+</script>
+<script>
+  countDown4();
+  function countDown4() {
+    function addZero(i) {
+      return i < 10 ? "0" + i : i;
+    }
+    let activityText = document.querySelector('#xx13');
+    let timer = null;
+    const startTime = new Date('2024-04-30 20:00:00');
+    const endTime = new Date('2024-05-05 23:00:00');
+   
+    const nowTime = new Date();
+
+    const beginDiff = parseInt((startTime.getTime() - nowTime.getTime()) / 1000);
+
+    const endDiff = parseInt((endTime.getTime() - nowTime.getTime()) / 1000);
+
+    const leftTime = beginDiff > 0 ? beginDiff : endDiff;
+    let day = parseInt(leftTime / (24 * 60 * 60))
+    let hour = parseInt(leftTime / (60 * 60) % 24);
+    let minute = parseInt(leftTime / 60 % 60);
+    let second = parseInt(leftTime % 60);
+    day = addZero(day);
+    hour = addZero(hour);
+    minute = addZero(minute);
+    second = addZero(second);
+
+    if (beginDiff > 0) {
+      activityText.innerText = `距劳动节
+      ${day}天
+      ${hour}:${minute}:${second}`;
+      timer = setTimeout(countDown4, 1000);
+    } else if (leftTime <= 0) {
+      activityText.innerText = '';
+      clearTimeout(timer);
+    } else {
+      activityText.innerText = `距本次假期结束
+      ${day}天
+      ${hour}:${minute}:${second}`;
+      timer = setTimeout(countDown4, 1000);
+    }
+  }
+</script>
+<script>
+  countDown5();
+  function countDown5() {
+    function addZero(i) {
+      return i < 10 ? "0" + i : i;
+    }
+    let activityText = document.querySelector('#xx14');
+    let timer = null;
+    const startTime = new Date('2024-06-07 18:00:00');
+    const endTime = new Date('2024-06-10 23:00:00');
+   
+    const nowTime = new Date();
+
+    const beginDiff = parseInt((startTime.getTime() - nowTime.getTime()) / 1000);
+
+    const endDiff = parseInt((endTime.getTime() - nowTime.getTime()) / 1000);
+
+    const leftTime = beginDiff > 0 ? beginDiff : endDiff;
+    let day = parseInt(leftTime / (24 * 60 * 60))
+    let hour = parseInt(leftTime / (60 * 60) % 24);
+    let minute = parseInt(leftTime / 60 % 60);
+    let second = parseInt(leftTime % 60);
+    day = addZero(day);
+    hour = addZero(hour);
+    minute = addZero(minute);
+    second = addZero(second);
+
+    if (beginDiff > 0) {
+      activityText.innerText = `距端午节
+      ${day}天
+      ${hour}:${minute}:${second}`;
+      timer = setTimeout(countDown5, 1000);
+    } else if (leftTime <= 0) {
+      activityText.innerText = '';
+      clearTimeout(timer);
+    } else {
+      activityText.innerText = `距本次假期结束
+      ${day}天
+      ${hour}:${minute}:${second}`;
+      timer = setTimeout(countDown5, 1000);
+    }
+  }
+</script>
+<script>
+  countDown6();
+  function countDown6() {
+    function addZero(i) {
+      return i < 10 ? "0" + i : i;
+    }
+    let activityText = document.querySelector('#xx15');
+    let timer = null;
+    const startTime = new Date('2024-07-02 00:00:00');
+    const endTime = new Date('2024-07-03 00:00:00');
+   
+    const nowTime = new Date();
+
+    const beginDiff = parseInt((startTime.getTime() - nowTime.getTime()) / 1000);
+
+    const endDiff = parseInt((endTime.getTime() - nowTime.getTime()) / 1000);
+
+    const leftTime = beginDiff > 0 ? beginDiff : endDiff;
+    let day = parseInt(leftTime / (24 * 60 * 60))
+    let hour = parseInt(leftTime / (60 * 60) % 24);
+    let minute = parseInt(leftTime / 60 % 60);
+    let second = parseInt(leftTime % 60);
+    day = addZero(day);
+    hour = addZero(hour);
+    minute = addZero(minute);
+    second = addZero(second);
+
+    if (beginDiff > 0) {
+      activityText.innerText = `距P式娱乐房
+      ${day}天
+      ${hour}:${minute}:${second}`;
+      timer = setTimeout(countDown6, 1000);
+    } else if (leftTime <= 0) {
+      activityText.innerText = '';
+      clearTimeout(timer);
+    } else {
+      activityText.innerText = `距P式娱乐房生日结束
+      还有
+      ${hour}:${minute}:${second}`;
+      timer = setTimeout(countDown6, 1000);
+    }
+  }
+</script>
+<script>
+  countDown7();
+  function countDown7() {
+    function addZero(i) {
+      return i < 10 ? "0" + i : i;
+    }
+    let activityText = document.querySelector('#xx16');
+    let timer = null;
+    const startTime = new Date('2024-07-08 00:00:00');
+    const endTime = new Date('2024-08-20 00:00:00');
+   
+    const nowTime = new Date();
+
+    const beginDiff = parseInt((startTime.getTime() - nowTime.getTime()) / 1000);
+
+    const endDiff = parseInt((endTime.getTime() - nowTime.getTime()) / 1000);
+
+    const leftTime = beginDiff > 0 ? beginDiff : endDiff;
+    let day = parseInt(leftTime / (24 * 60 * 60))
+    let hour = parseInt(leftTime / (60 * 60) % 24);
+    let minute = parseInt(leftTime / 60 % 60);
+    let second = parseInt(leftTime % 60);
+    day = addZero(day);
+    hour = addZero(hour);
+    minute = addZero(minute);
+    second = addZero(second);
+
+    if (beginDiff > 0) {
+      activityText.innerText = `距暑假
+      ${day}天
+      ${hour}:${minute}:${second}`;
+      timer = setTimeout(countDown7, 1000);
+    } else if (leftTime <= 0) {
+      activityText.innerText = '';
+      clearTimeout(timer);
+    } else {
+      activityText.innerText = `距本次假期结束
+      ${day}天
+      ${hour}:${minute}:${second}`;
+      timer = setTimeout(countDown7, 1000);
+    }
+  }
+</script>
+<script>
+  countDown8();
+  function countDown8() {
+    function addZero(i) {
+      return i < 10 ? "0" + i : i;
+    }
+    let activityText = document.querySelector('#xx17');
+    let timer = null;
+    const startTime = new Date('2024-09-29 20:00:00');
+    const endTime = new Date('2024-10-05 23:00:00');
+   
+    const nowTime = new Date();
+
+    const beginDiff = parseInt((startTime.getTime() - nowTime.getTime()) / 1000);
+
+    const endDiff = parseInt((endTime.getTime() - nowTime.getTime()) / 1000);
+
+    const leftTime = beginDiff > 0 ? beginDiff : endDiff;
+    let day = parseInt(leftTime / (24 * 60 * 60))
+    let hour = parseInt(leftTime / (60 * 60) % 24);
+    let minute = parseInt(leftTime / 60 % 60);
+    let second = parseInt(leftTime % 60);
+    day = addZero(day);
+    hour = addZero(hour);
+    minute = addZero(minute);
+    second = addZero(second);
+
+    if (beginDiff > 0) {
+      activityText.innerText = `距国庆节
+      ${day}天
+      ${hour}:${minute}:${second}`;
+      timer = setTimeout(countDown8, 1000);
+    } else if (leftTime <= 0) {
+      activityText.innerText = '';
+      clearTimeout(timer);
+    } else {
+      activityText.innerText = `距本次假期结束
+      ${day}天
+      ${hour}:${minute}:${second}`;
+      timer = setTimeout(countDown8, 1000);
+    }
+  }
+</script>
+<script>
+  countDown9();
+  function countDown9() {
+    function addZero(i) {
+      return i < 10 ? "0" + i : i;
+    }
+    let activityText = document.querySelector('#xx18');
+    let timer = null;
+    const startTime = new Date('2024-12-31 20:00:00');
+    const endTime = new Date('2025-01-01 23:00:00');
+   
+    const nowTime = new Date();
+
+    const beginDiff = parseInt((startTime.getTime() - nowTime.getTime()) / 1000);
+
+    const endDiff = parseInt((endTime.getTime() - nowTime.getTime()) / 1000);
+
+    const leftTime = beginDiff > 0 ? beginDiff : endDiff;
+    let day = parseInt(leftTime / (24 * 60 * 60))
+    let hour = parseInt(leftTime / (60 * 60) % 24);
+    let minute = parseInt(leftTime / 60 % 60);
+    let second = parseInt(leftTime % 60);
+    day = addZero(day);
+    hour = addZero(hour);
+    minute = addZero(minute);
+    second = addZero(second);
+
+    if (beginDiff > 0) {
+      activityText.innerText = `距元旦
+      ${day}天
+      ${hour}:${minute}:${second}`;
+      timer = setTimeout(countDown9, 1000);
+    } else if (leftTime <= 0) {
+      activityText.innerText = '';
+      clearTimeout(timer);
+    } else {
+      activityText.innerText = `距本次假期结束
+      ${day}天
+      ${hour}:${minute}:${second}`;
+      timer = setTimeout(countDown9, 1000);
+    }
+  }
+</script>
+<script>
+  countDown91();
+  function countDown91() {
+    function addZero(i) {
+      return i < 10 ? "0" + i : i;
+    }
+    let activityText = document.querySelector('#xx19');
+    let timer = null;
+    const startTime = new Date('2025-01-08 20:00:00');
+    const endTime = new Date('2025-02-16 23:00:00');
+   
+    const nowTime = new Date();
+
+    const beginDiff = parseInt((startTime.getTime() - nowTime.getTime()) / 1000);
+
+    const endDiff = parseInt((endTime.getTime() - nowTime.getTime()) / 1000);
+
+    const leftTime = beginDiff > 0 ? beginDiff : endDiff;
+    let day = parseInt(leftTime / (24 * 60 * 60))
+    let hour = parseInt(leftTime / (60 * 60) % 24);
+    let minute = parseInt(leftTime / 60 % 60);
+    let second = parseInt(leftTime % 60);
+    day = addZero(day);
+    hour = addZero(hour);
+    minute = addZero(minute);
+    second = addZero(second);
+
+    if (beginDiff > 0) {
+      activityText.innerText = `距寒假
+      ${day}天
+      ${hour}:${minute}:${second}`;
+      timer = setTimeout(countDown91, 1000);
+    } else if (leftTime <= 0) {
+      activityText.innerText = '';
+      clearTimeout(timer);
+    } else {
+      activityText.innerText = `距本次假期结束
+      ${day}天
+      ${hour}:${minute}:${second}`;
+      timer = setTimeout(countDown91, 1000);
+    }
+  }
+</script>
+<script>
+  countDown92();
+  function countDown92() {
+    function addZero(i) {
+      return i < 10 ? "0" + i : i;
+    }
+    let activityText = document.querySelector('#xx1a');
+    let timer = null;
+    const startTime = new Date('2025-04-03 20:00:00');
+    const endTime = new Date('2025-04-06 23:00:00');
+   
+    const nowTime = new Date();
+
+    const beginDiff = parseInt((startTime.getTime() - nowTime.getTime()) / 1000);
+
+    const endDiff = parseInt((endTime.getTime() - nowTime.getTime()) / 1000);
+
+    const leftTime = beginDiff > 0 ? beginDiff : endDiff;
+    let day = parseInt(leftTime / (24 * 60 * 60))
+    let hour = parseInt(leftTime / (60 * 60) % 24);
+    let minute = parseInt(leftTime / 60 % 60);
+    let second = parseInt(leftTime % 60);
+    day = addZero(day);
+    hour = addZero(hour);
+    minute = addZero(minute);
+    second = addZero(second);
+
+    if (beginDiff > 0) {
+      activityText.innerText = `距清明节
+      ${day}天
+      ${hour}:${minute}:${second}`;
+      timer = setTimeout(countDown92, 1000);
+    } else if (leftTime <= 0) {
+      activityText.innerText = '';
+      clearTimeout(timer);
+    } else {
+      activityText.innerText = `距本次假期结束
+      ${day}天
+      ${hour}:${minute}:${second}`;
+      timer = setTimeout(countDown92, 1000);
+    }
+  }
+</script>
+<script>
+  countDown93();
+  function countDown93() {
+    function addZero(i) {
+      return i < 10 ? "0" + i : i;
+    }
+    let activityText = document.querySelector('#xx1b');
+    let timer = null;
+    const startTime = new Date('2025-04-30 20:00:00');
+    const endTime = new Date('2025-05-04 23:00:00');
+   
+    const nowTime = new Date();
+
+    const beginDiff = parseInt((startTime.getTime() - nowTime.getTime()) / 1000);
+
+    const endDiff = parseInt((endTime.getTime() - nowTime.getTime()) / 1000);
+
+    const leftTime = beginDiff > 0 ? beginDiff : endDiff;
+    let day = parseInt(leftTime / (24 * 60 * 60))
+    let hour = parseInt(leftTime / (60 * 60) % 24);
+    let minute = parseInt(leftTime / 60 % 60);
+    let second = parseInt(leftTime % 60);
+    day = addZero(day);
+    hour = addZero(hour);
+    minute = addZero(minute);
+    second = addZero(second);
+
+    if (beginDiff > 0) {
+      activityText.innerText = `距劳动节
+      ${day}天
+      ${hour}:${minute}:${second}`;
+      timer = setTimeout(countDown93, 1000);
+    } else if (leftTime <= 0) {
+      activityText.innerText = '';
+      clearTimeout(timer);
+    } else {
+      activityText.innerText = `距本次假期结束
+      ${day}天
+      ${hour}:${minute}:${second}`;
+      timer = setTimeout(countDown93, 1000);
+    }
+  }
+</script>
+ <!--br>生活费剩余<span style="font-size: 57px;text-shadow: 0 0 19px #f77;">200</span>元
+
+ 挑战200元过一学期<br>时间剩余<br><br><b><span style="font-size: 59px;text-shadow: 0 0 11px #faf;"><span class="count4"></span></span></b><br>
+
+-->
+
+
+  <!--
+挑战200元过一学期<br>时间剩余<br><br><b><span style="font-size: 59px;text-shadow: 0 0 11px #faf;"><span class="count2"></span></span></b><br>
+
+  <script>
+      window.onload = function () {
+          countDown();
+          function addZero(i) {
+              return i < 10 ? "0" + i: i + "";
+          }
+          function countDown() {
+              var nowtime = new Date();
+              var endtime = new Date("2024/01/08,21:05:00");
+              var lefttime = parseInt((endtime.getTime() - nowtime.getTime()) / 1000);
+              var d = parseInt(lefttime / (24*60*60))
+              var h = parseInt(lefttime / (60 * 60) % 24);
+              var m = parseInt(lefttime / 60 % 60);
+              var s = parseInt(lefttime % 60);
+              d = addZero(d)
+              h = addZero(h);
+              m = addZero(m);
+              s = addZero(s);
+              document.querySelector(".count4").innerHTML = `${d}天<br>
+              ${h}:${m}:${s}`;
+              if (lefttime <= 0) {
+                  document.querySelector(".count4").innerHTML = "0";
+                  return;
+              }
+              setTimeout(countDown, 1000);
+            }
+        }
+    </script>
+
+<script>
+  window.onload = function () {
+      countDown2();
+      function addZero1(i) {
+          return i < 10 ? "0" + i: i + "";
+      }
+      function countDown2() {
+          var nowtime = new Date();
+          var endtime = new Date("2026/01/08,21:05:00");
+          var lefttime = parseInt((endtime.getTime() - nowtime.getTime()) / 1000);
+          var d1 = parseInt(lefttime / (24*60*60))
+          var h1 = parseInt(lefttime / (60 * 60) % 24);
+          var m1 = parseInt(lefttime / 60 % 60);
+          var s1 = parseInt(lefttime % 60);
+          d1 = addZero1(d1)
+          h1 = addZero1(h1);
+          m1 = addZero1(m1);
+          s1 = addZero1(s1);
+          document.querySelector(".count2").innerHTML = `${d1}天<br>
+          ${h1}:${m1}:${s1}`;
+          if (lefttime <= 0) {
+              document.querySelector(".count2").innerHTML = "0";
+              return;
+          }
+          setTimeout(countDown2, 1000);
+        }
+    }
+</script><p class="count"></p>
+  <script>
+      window.onload = function () {
+          countDown();
+          function addZero(i) {
+              return i < 10 ? "0" + i: i + "";
+          }
+          function countDown() {
+              var nowtime = new Date();
+              var endtime = new Date("2024/01/06,05:00:00");
+              var lefttime = parseInt((endtime.getTime() - nowtime.getTime()) / 1000);
+              var d = parseInt(lefttime / (24*60*60))
+              var h = parseInt(lefttime / (60 * 60) % 24);
+              var m = parseInt(lefttime / 60 % 60);
+              var s = parseInt(lefttime % 60);
+              d = addZero(d)
+              h = addZero(h);
+              m = addZero(m);
+              s = addZero(s);
+              document.querySelector(".count").innerHTML = `${d}天 ${h} 时 ${m} 分 ${s} 秒`;
+              if (lefttime <= 0) {
+                  document.querySelector(".count").innerHTML = "活动已结束";
+                  return;
+              }
+              setTimeout(countDown, 1000);
+            }
+        }
+    </script>-->
+
+</body></html>
