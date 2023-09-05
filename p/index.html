@@ -56,7 +56,48 @@ a{cursor: default;color: #fff;text-decoration:none}
 
 
 </center>
+<script>
+  // Set date to countdown til
+  var countDownDate = new Date("<?php echo $dbDate; ?>").getTime();
+  
+  // Update every second
+  var x = setInterval(function() {
+  
+    // Get current date and time
+    var now = new Date().getTime();
+  
+    // Calculate distance between then and now
+    var distance = countDownDate - now;
+  
+    // Calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+    // Output result with id="countdown"
+    document.getElementById("countdown-top").innerHTML = days + "d : " + hours + "h";
+    document.getElementById("countdown-bottom").innerHTML = minutes + "m : " + seconds + "s ";
+  
+    // If countdown ended show text
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("countdown-top").innerHTML = "Coutdown Has Ended,";
+      document.getElementById("countdown-bottom").innerHTML = "Not Long Left!";
+    }
+  }, 1000);
+  new Date("2017/04/28 23:59:59")
 
+// 改
+var time = "2017-04-28 23:59:59"
+new Date(time.replace(/\-/g, '/'))
+;var date =new Date("2016-05-31 08:00");
+function GetDateDiff(startDiffTime, endDiffTime) {
+  startTime = startDiffTime.replace(/\-/g, "/");endTime = endDiffTime.replace(/\-/g, "/");};
+import moment from ‘moment/moment‘
+let time = moment(date).format(‘YYYY/MM/DD HH:mm:ss‘)
+console.log(transTime)
+  </script>
   <script>
     countDown();
     function countDown() {
@@ -65,8 +106,8 @@ a{cursor: default;color: #fff;text-decoration:none}
       }
       let activityText = document.querySelector('#activityText');
       let timer = null;
-      const startTime = new Date('2023-09-28 20:00:00');
-      const endTime = new Date('2023-10-06 22:30:00');
+      const startTime = new Date('2023/09/28 20:00:00');
+      const endTime = new Date('2023/10/06 22:30:00');
       // 注：这里是直接使用用户本地系统时间做演示
       const nowTime = new Date();
       // 当前时间距离活动开始时间的差值
@@ -108,8 +149,8 @@ a{cursor: default;color: #fff;text-decoration:none}
     }
     let activityText = document.querySelector('#activityText1');
     let timer = null;
-    const startTime = new Date('2023-08-22 20:00:00');
-    const endTime = new Date('2024-01-02 07:40:00');
+    const startTime = new Date('2023/08/22 20:00:00');
+    const endTime = new Date('2024/01/02 07:40:00');
     // 第二次冰封期
     const nowTime = new Date();
     // 当前时间距离活动开始时间的差值
@@ -151,8 +192,8 @@ a{cursor: default;color: #fff;text-decoration:none}
     }
     let activityText = document.querySelector('#xx10');
     let timer = null;
-    const startTime = new Date('2023-12-29 20:00:00');
-    const endTime = new Date('2024-01-01 23:30:00');
+    const startTime = new Date('2023/12/29 20:00:00');
+    const endTime = new Date('2024/01/01 23:30:00');
     // 第二次冰封期
     const nowTime = new Date();
     // 当前时间距离活动开始时间的差值
@@ -194,8 +235,8 @@ a{cursor: default;color: #fff;text-decoration:none}
     }
     let activityText = document.querySelector('#xx11');
     let timer = null;
-    const startTime = new Date('2024-01-07 20:00:00');
-    const endTime = new Date('2024-02-19 23:00:00');
+    const startTime = new Date('2024/01/07 20:00:00');
+    const endTime = new Date('2024/02/19 23:00:00');
     // 寒假
     const nowTime = new Date();
 
@@ -237,8 +278,8 @@ a{cursor: default;color: #fff;text-decoration:none}
     }
     let activityText = document.querySelector('#xx12');
     let timer = null;
-    const startTime = new Date('2024-04-03 20:00:00');
-    const endTime = new Date('2024-04-06 23:00:00');
+    const startTime = new Date('2024/04/-03 20:00:00');
+    const endTime = new Date('2024/04/06 23:00:00');
    
     const nowTime = new Date();
 
@@ -280,8 +321,8 @@ a{cursor: default;color: #fff;text-decoration:none}
     }
     let activityText = document.querySelector('#xx13');
     let timer = null;
-    const startTime = new Date('2024-04-30 20:00:00');
-    const endTime = new Date('2024-05-05 23:00:00');
+    const startTime = new Date('2024/04/30 20:00:00');
+    const endTime = new Date('2024/05/05 23:00:00');
    
     const nowTime = new Date();
 
@@ -323,8 +364,8 @@ a{cursor: default;color: #fff;text-decoration:none}
     }
     let activityText = document.querySelector('#xx14');
     let timer = null;
-    const startTime = new Date('2024-06-07 18:00:00');
-    const endTime = new Date('2024-06-10 23:00:00');
+    const startTime = new Date('2024/06/07 18:00:00');
+    const endTime = new Date('2024/06/10 23:00:00');
    
     const nowTime = new Date();
 
@@ -366,8 +407,8 @@ a{cursor: default;color: #fff;text-decoration:none}
     }
     let activityText = document.querySelector('#xx15');
     let timer = null;
-    const startTime = new Date('2024-07-02 00:00:00');
-    const endTime = new Date('2024-07-03 00:00:00');
+    const startTime = new Date('2024/07/02 00:00:00');
+    const endTime = new Date('2024/07/03 00:00:00');
    
     const nowTime = new Date();
 
@@ -409,8 +450,8 @@ a{cursor: default;color: #fff;text-decoration:none}
     }
     let activityText = document.querySelector('#xx16');
     let timer = null;
-    const startTime = new Date('2024-07-08 00:00:00');
-    const endTime = new Date('2024-08-20 00:00:00');
+    const startTime = new Date('2024/07/08 00:00:00');
+    const endTime = new Date('2024/08/20 00:00:00');
    
     const nowTime = new Date();
 
@@ -452,8 +493,8 @@ a{cursor: default;color: #fff;text-decoration:none}
     }
     let activityText = document.querySelector('#xx16z');
     let timer = null;
-    const startTime = new Date('2024-09-14 20:00:00');
-    const endTime = new Date('2024-09-17 23:00:00');
+    const startTime = new Date('2024/09/14 20:00:00');
+    const endTime = new Date('2024/09/17 23:00:00');
    
     const nowTime = new Date();
 
@@ -495,8 +536,8 @@ a{cursor: default;color: #fff;text-decoration:none}
     }
     let activityText = document.querySelector('#xx17');
     let timer = null;
-    const startTime = new Date('2024-09-29 20:00:00');
-    const endTime = new Date('2024-10-05 23:00:00');
+    const startTime = new Date('2024/09/29 20:00:00');
+    const endTime = new Date('2024/10/05 23:00:00');
    
     const nowTime = new Date();
 
@@ -538,8 +579,8 @@ a{cursor: default;color: #fff;text-decoration:none}
     }
     let activityText = document.querySelector('#xx18');
     let timer = null;
-    const startTime = new Date('2024-12-31 20:00:00');
-    const endTime = new Date('2025-01-01 23:00:00');
+    const startTime = new Date('2024/12/31 20:00:00');
+    const endTime = new Date('2025/01/01 23:00:00');
    
     const nowTime = new Date();
 
@@ -581,8 +622,8 @@ a{cursor: default;color: #fff;text-decoration:none}
     }
     let activityText = document.querySelector('#xx19');
     let timer = null;
-    const startTime = new Date('2025-01-08 20:00:00');
-    const endTime = new Date('2025-02-16 23:00:00');
+    const startTime = new Date('2025/01/08 20:00:00');
+    const endTime = new Date('2025/02/17 00:00:00');
    
     const nowTime = new Date();
 
@@ -624,8 +665,8 @@ a{cursor: default;color: #fff;text-decoration:none}
     }
     let activityText = document.querySelector('#xx1a');
     let timer = null;
-    const startTime = new Date('2025-04-03 20:00:00');
-    const endTime = new Date('2025-04-06 23:00:00');
+    const startTime = new Date('2025/04/03 20:00:00');
+    const endTime = new Date('2025/04/06 22:00:00');
    
     const nowTime = new Date();
 
@@ -667,8 +708,8 @@ a{cursor: default;color: #fff;text-decoration:none}
     }
     let activityText = document.querySelector('#xx1b');
     let timer = null;
-    const startTime = new Date('2025-04-30 20:00:00');
-    const endTime = new Date('2025-05-04 23:00:00');
+    const startTime = new Date('2025/04/30 20:00:00');
+    const endTime = new Date('2025/05/04 23:00:00');
    
     const nowTime = new Date();
 
