@@ -10,13 +10,13 @@
 }
 body { font-family: bb, monospace;
   font-variant-numeric: tabular-nums;margin:0px;padding:0px;color:#fff;
-  font-size: 30px;text-shadow: 0 0 19px #9f9;
+  font-size: 30px;text-shadow: 0 0 19px #ff0;
   padding-top: 30px;
 }
 a{cursor: default;color: #fff;text-decoration:none}
 
 .jr{position: absolute;top:41px;left:0px;width: 100%;height: auto;background-color: #205;}
-#ding{width: 100%;margin: 0px;height: 35px;background-color: #900;color: #fff;position: absolute;z-index: 3;top:0px;left:0px;}
+#ding{width: 100%;margin: 0px;height: 35px;background-color: #c02;color: #fff;position: absolute;z-index: 3;top:0px;left:0px;}
 #jieri{width: 300px;height: 134px;padding: 10px;border-radius: 30px;background-color: #205;overflow: hidden;position: relative;}
 </style>
 </head><body align="center">
@@ -46,8 +46,12 @@ a{cursor: default;color: #fff;text-decoration:none}
 --> 
 
 
-<div id="activityText1"></div>
-  
+<div id="activityText1"></div><br>
+<div id="surface1"></div><br>
+<div id="surface"></div><br>
+<div id="surface2"></div>
+
+ 
       
       <!--暂无<div id="jieri" style="text-shadow: none;">
     <div id="ding">其它倒计时</div><br>
@@ -740,6 +744,136 @@ console.log(transTime)
       ${day}天
       ${hour}:${minute}:${second}`;
       timer = setTimeout(countDown93, 1000);
+    }
+  }
+</script>
+<script>
+  countDown333();
+  function countDown333() {
+    function addZero(i) {
+      return i < 10 ? "0" + i : i;
+    }
+    let activityText = document.querySelector('#surface1');
+    let timer = null;
+    const startTime = new Date('2023/09/15 21:05:00');
+    const endTime = new Date('2023/09/19 21:05:00');
+   
+    const nowTime = new Date();
+
+    const beginDiff = parseInt((startTime.getTime() - nowTime.getTime()) / 1000);
+
+    const endDiff = parseInt((endTime.getTime() - nowTime.getTime()) / 1000);
+
+    const leftTime = beginDiff > 0 ? beginDiff : endDiff;
+    let day = parseInt(leftTime / (24 * 60 * 60))
+    let hour = parseInt(leftTime / (60 * 60) % 24);
+    let minute = parseInt(leftTime / 60 % 60);
+    let second = parseInt(leftTime % 60);
+    day = addZero(day);
+    hour = addZero(hour);
+    minute = addZero(minute);
+    second = addZero(second);
+
+    if (beginDiff > 0) {
+      activityText.innerText = `距皮鞋的
+      Surface Pro 5 下单
+      ${day}天
+      ${hour}:${minute}:${second}`;
+      timer = setTimeout(countDown333, 1000);
+    } else if (leftTime <= 0) {
+      activityText.innerText = '';
+      clearTimeout(timer);
+    } else {
+      activityText.innerText = `距皮鞋的
+      Surface Pro 5 到货
+      ${day}天
+      ${hour}:${minute}:${second}`;
+      timer = setTimeout(countDown333, 1000);
+    }
+  }
+</script>
+<script>
+  co1ntDown331();
+  function co1ntDown331() {
+    function addZero(i) {
+      return i < 10 ? "0" + i : i;
+    }
+    let activityText = document.querySelector('#surface');
+    let timer = null;
+    const startTime = new Date('2023/09/18 09:18:00');
+    const endTime = new Date('2023/09/18 09:30:00');
+   
+    const nowTime = new Date();
+
+    const beginDiff = parseInt((startTime.getTime() - nowTime.getTime()) / 1000);
+
+    const endDiff = parseInt((endTime.getTime() - nowTime.getTime()) / 1000);
+
+    const leftTime = beginDiff > 0 ? beginDiff : endDiff;
+    let day = parseInt(leftTime / (24 * 60 * 60))
+    let hour = parseInt(leftTime / (60 * 60) % 24);
+    let minute = parseInt(leftTime / 60 % 60);
+    let second = parseInt(leftTime % 60);
+    day = addZero(day);
+    hour = addZero(hour);
+    minute = addZero(minute);
+    second = addZero(second);
+
+    if (beginDiff > 0) {
+      activityText.innerText = `距防空警报
+      ${day}天
+      ${hour}:${minute}:${second}`;
+      timer = setTimeout(co1ntDown331, 1000);
+    } else if (leftTime <= 0) {
+      activityText.innerText = '';
+      clearTimeout(timer);
+    } else {
+      activityText.innerText = `防空警报鸣响中
+      ${day}天
+      ${hour}:${minute}:${second}`;
+      timer = setTimeout(co1ntDown331, 1000);
+    }
+  }
+</script>
+<script>
+  co1ntDown332();
+  function co1ntDown332() {
+    function addZero(i) {
+      return i < 10 ? "0" + i : i;
+    }
+    let activityText = document.querySelector('#surface2');
+    let timer = null;
+    const startTime = new Date('2023/10/01 08:40:00');
+    const endTime = new Date('2023/10/01 23:50:00');
+   
+    const nowTime = new Date();
+
+    const beginDiff = parseInt((startTime.getTime() - nowTime.getTime()) / 1000);
+
+    const endDiff = parseInt((endTime.getTime() - nowTime.getTime()) / 1000);
+
+    const leftTime = beginDiff > 0 ? beginDiff : endDiff;
+    let day = parseInt(leftTime / (24 * 60 * 60))
+    let hour = parseInt(leftTime / (60 * 60) % 24);
+    let minute = parseInt(leftTime / 60 % 60);
+    let second = parseInt(leftTime % 60);
+    day = addZero(day);
+    hour = addZero(hour);
+    minute = addZero(minute);
+    second = addZero(second);
+
+    if (beginDiff > 0) {
+      activityText.innerText = `距第3批房员招募一周年
+      ${day}天
+      ${hour}:${minute}:${second}`;
+      timer = setTimeout(co1ntDown332, 1000);
+    } else if (leftTime <= 0) {
+      activityText.innerText = '';
+      clearTimeout(timer);
+    } else {
+      activityText.innerText = `第3批房员招募一周年
+      ${hour}:${minute}:${second}`;
+      timer = setTimeout(co1ntDown332, 1000);
     }
   }
 </script>
