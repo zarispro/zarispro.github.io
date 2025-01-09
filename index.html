@@ -1,1 +1,501 @@
-404 Not Found - zarispro.github.io
+<!DOCTYPE html>
+<html align="center" style="cursor:default;background-color: #fff;" leftmargin="0" topmargin="0" οncοntextmenu="return false" οndragstart="return false" onselectstart="return false" οnselect="document.selection.empty()" οncοpy="document.selection.empty()" onbeforecopy="return false" οnmοuseup="document.selection.empty()" ondragstart="return false;" oncontextmenu="return false;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZARISPRO - 主页面</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    let currentPlayingMedia = null;
+
+    const mediaElements = Array.from(document.querySelectorAll('audio, video'));
+
+    mediaElements.forEach(media => {
+        media.addEventListener('play', () => {
+            if (currentPlayingMedia && currentPlayingMedia !== media) {
+                currentPlayingMedia.pause();
+            }
+            currentPlayingMedia = media;
+        });
+
+        media.addEventListener('pause', () => {
+            if (media === currentPlayingMedia) {
+                currentPlayingMedia = null;
+            }
+        });
+
+        media.addEventListener('ended', () => {
+            if (media === currentPlayingMedia) {
+                currentPlayingMedia = null;
+            }
+        });
+    });
+});
+    </script>
+    <style>
+        /* Reset some basic elements */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: arial , sans-serif;
+        }
+
+        html{overflow: hidden;}
+        body {
+            background-color: #f1f3f4; /* 浅灰色背景 */
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            color: #333;
+            padding: 16px 32px;
+            border-bottom: 2px solid #e0e0e0;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo img {
+            height: 40px;
+            border-radius: 8px;
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+            gap: 16px;
+        }
+
+        .nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 12px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .nav a.active {
+            background-color: #f39c12; /* 当前页面背景深橙色 */
+            color: white; /* 白色文字 */
+        }
+
+        .nav a:hover {
+            background-color: #f39c12;
+            color: white;
+        }
+
+        /* Main content */
+        .main-content {
+            display: flex;
+            flex: 1;
+            gap: 20px;
+            padding: 24px;
+        }
+
+        .sidebar {
+            width: 220px;
+            background-color: #ffffff;
+            padding: 16px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #f9f9f9;
+            color: #333;
+            border: none;
+            text-align: left;
+            font-size: 27px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .sidebar-btn:hover {
+            background-color: #d4d4d4;
+        }
+
+        .sidebar-btn.active {
+            background-color: #f39c12;
+            color: #fff;
+        }
+
+        /* Game area */
+        .game-area {
+            flex: 1;
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .page-content {
+            display: none;height: 70vh;
+        }
+
+        .page-content.active {
+            display: block;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #ffffff;
+            text-align: center;
+            padding: 16px;
+            font-size: 14px;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        /* Button styles */
+        .action-btn {
+            padding: 12px 24px;
+            font-size: 16px;
+            background-color: #f39c12;
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 16px;
+        }
+
+        .action-btn:hover {
+            background-color: #e67e22;
+        }
+
+        audio::-webkit-media-controls-pause-button {
+  background-color: #00000033;border-radius: 55px;margin-right: 6px;
+}audio::-webkit-media-controls-play-button {
+  background-color: #00000033;border-radius: 55px;margin-right: 6px;
+}
+audio {
+    display: block;margin-top: 0px;margin-left: 0px;
+    padding-right: 20px;border-radius: 999px;
+    width: 330px;
+    transform: scale(2);
+    border: 0px solid #000;
+}
+audio:hover{border: 0px solid #000;}
+audio::-webkit-media-controls-mute-button {
+    display: none;
+    width:0px;height:0px;
+    background-color: #00000000;
+    }
+    audio::-webkit-media-controls {background-color: #00000000;
+        overflow: hidden !important
+    }
+    audio::-webkit-media-controls-enclosure {
+        width: calc(100% + 82px);
+        margin-left: auto;
+    border-radius: 0px;
+    background-color: #00000000;
+
+    }
+    audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-feature-settings: "tnum";font-size: 28px;margin-bottom: -1px;font-weight: 400;
+    color: #000;text-shadow: 0 0 2px #0000006e;
+}
+
+video::-webkit-media-controls-pause-button {
+  background-color: #00000033;border-radius: 55px;margin-left: 6px;
+}video::-webkit-media-controls-play-button {
+  background-color: #00000033;border-radius: 55px;margin-left: 6px;
+}
+
+video::-webkit-media-controls-mute-button {
+    display: none;
+    width:0px;height:0px;
+    background-color: #00000000;
+    }
+    video::-webkit-media-controls {background-color: #00000000;
+        overflow: hidden !important
+    }
+
+    video::-webkit-media-controls-current-time-display,
+    video::-webkit-media-controls-time-remaining-display {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-feature-settings: "tnum";font-size: 26px;margin-bottom: -1px;font-weight: 400;
+    color: #ffffff;text-shadow: 0 0 2px #0000006e;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 顶部导航栏<ul>
+                    <li><a href="#" id="home-btn" onclick="showPage('home')">首页</a></li>
+                    <li><a href="#" id="shoper-btn" onclick="showPage('shoper')">商城</a></li>
+                    <li><a href="#" id="ranking-btn" onclick="showPage('ranking')">排行榜</a></li>
+                    <li><a href="#" id="settings-btn" onclick="showPage('settings')">设置</a></li>
+                    <li><a href="#" id="logout-btn" onclick="showPage('logout')">退出</a></li>
+                </ul> -->
+        <header class="header" style="font-size: 30px;font-family: simhei;">
+            <div class="logo">
+                zarispro.github.io
+            </div>
+            <nav class="nav" >
+                欢迎访问我的个人网站
+            </nav>
+        </header>
+
+        <!-- 游戏主内容区域 -->
+        <main class="main-content">
+            <div class="sidebar">
+                <ul>
+                    <li><button class="sidebar-btn" id="character-btn" onclick="showPage('character')">商业广告</button></li>
+                    <li><button class="sidebar-btn" id="inventory-btn" onclick="showPage('inventory')">日历</button></li>
+                    <li><button class="sidebar-btn" id="quests-btn" onclick="showPage('quests')">时间</button></li>
+                    <li><button class="sidebar-btn" id="map-btn" onclick="showPage('map')">联系方式</button></li>
+                    <li><button class="sidebar-btn" id="shop-btn" onclick="showPage('shop')">心理FM</button></li>
+                </ul>
+            </div>
+            <div class="game-area">
+                <div id="character" class="page-content"><center>
+
+
+                    <div style="font-size: 55px;margin-top: 4px;">商业广告友情链接专区</div><br><br>
+                    <style>
+                    #k1{transition: 0.32s;cursor:pointer;margin-left: 5px;margin-right: 5px;
+                    color:white;font-size: 47px;
+                    width: 399px;height: 333px; border: 2px solid #00000000;border-radius: 15px;display:inline-block;background-color: #8800ff;overflow: hidden;}
+                    #k1in{font-size:26px;margin-left: 10px;margin-right: 10px;
+                    
+                    
+                    }
+                    
+                    #k1:hover{transform: translate(0px, -8px);transition: 0.32s;}
+                    .k21:hover{box-shadow: 0 0 14px #8800ff;z-index: 99999;}
+                    .k2:hover{box-shadow: 0 0 14px #007777;z-index: 99999;}
+                    .k22:hover{box-shadow: 0 0 14px #770000;z-index: 99999;}
+                    </style>
+                    <div id="k1" class="k21" onclick="window.open('https://www.google.com/','_self')">Google
+                    <br><img src="https://zarandzjy.github.io/gg.png" width="100" height="100" style="border-radius: 13px;">
+                    <br><div align="left" id="k1in">&nbsp;&nbsp;&nbsp;&nbsp;
+                    
+                    世界最大的搜索引擎公司，为用户提供各式各样的服务，同时也是硬件产品设计者。</div>
+                    
+                    
+                    </div>
+                    
+                    
+                    <div id="k1" class="k2" style="background-color: #007777;" onclick="window.open('https://www.microsoft.com/','_self')">
+                    Microsoft
+                    <br><img src="https://zarandzjy.github.io/mic.png" width="100" height="100" style="border-radius: 21px;">
+                    <br><div align="left" id="k1in">&nbsp;&nbsp;&nbsp;&nbsp;
+                    美国跨国科技企业，研发、制造、授权和提供广泛的电脑软件服务业务。</div>
+                    
+                    
+                    
+                    </div>
+          
+                    </center></div>
+                <div id="inventory" class="page-content" style="overflow-y: scroll;"><center>
+                    <style>
+                        #k10{transition: 0.32s;margin-left:0px;margin-right: 0px;
+                        color:black;font-size: 47px;
+                        width: 399px;height: 623px; border: 2px solid #00000000;border-radius: 0px;display:inline-block;background-color: #fff;overflow: hidden;}
+                        #k1in{font-size:26px;margin-left: 10px;margin-right: 10px;
+                        
+                        
+                        }
+                        #k10 img{height: 459px;}
+                        #k1:hover{transform: translate(0px, -8px);transition: 0.32s;}
+                        .k21:hover{box-shadow: 0 0 14px #8800ff;z-index: 99999;}
+                        .k2:hover{box-shadow: 0 0 14px #007777;z-index: 99999;}
+                        .k22:hover{box-shadow: 0 0 14px #770000;z-index: 99999;}
+                        .k82:hover{box-shadow: 0 0 14px #0066af;z-index: 99999;}
+                        </style>
+                    <br><br><br>
+                    <div style="font-size: 55px;margin-top: -54px;">欢迎参观我设计的日历</div>
+                    
+                    
+                    
+                    <div id="k10">
+                    <img src="https://zarandzjy.github.io/c/image/01.jpg" width="379">
+                    <br>第1版日历
+                    </div>
+                    
+                    
+                    <div id="k10">
+                    <img src="https://zarandzjy.github.io/c/image/03.jpg" width="379">
+                    <br>第3版日历
+                    </div>
+                    
+                    
+                    <div id="k10">
+                    <img src="https://zarandzjy.github.io/c/image/05.jpg" width="379">
+                    <br>第5版日历
+                    </div>
+                    <br>
+                    <div id="k10">
+                    <img src="https://zarandzjy.github.io/c/image/07.jpg" width="379">
+                    <br>第7版日历
+                    </div>
+                    
+                    
+                    <div id="k10">
+                    <img src="https://zarandzjy.github.io/c/image/08.jpg" width="379">
+                    <br>第8版日历
+                    </div>
+                    
+                    <div id="k10">
+                    <img src="https://zarandzjy.github.io/c/image/09.jpg" width="379">
+                    <br>第9版日历
+                    </div>
+                    <br>
+                    <div id="k10">
+                    <img src="https://zarandzjy.github.io/c/image/10.jpg" width="379">
+                    <br>第10版日历
+                    </div>
+                    <div id="k10">
+                    <img src="https://zarandzjy.github.io/c/image/13.jpg" width="379">
+                    <br>第13版日历
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    </center></div>
+                <div id="quests" class="page-content"><div id="shanghhs">
+                 
+                      <b>
+                        
+                        <script>
+                            function getTime() {
+                                var date = new Date();
+                                var year = date.getFullYear(); //获取年份
+                                var month = date.getMonth() + 1; //获取月份
+                                var day = date.getDate(); //获取日期
+                                var hour = date.getHours(); //获取小时
+                                hour = hour < 10 ? '0' + hour : hour;
+                                var minute = date.getMinutes(); // 获取分
+                                minute = minute < 10 ? '0' + minute : minute;
+                                var seconds = date.getSeconds(); //获取秒
+                                seconds = seconds < 10 ? '0' + seconds : seconds;
+                                return hour + ':' + minute + ':' + seconds;
+                            }
+                     
+                            setInterval(function() {
+                                document.querySelector('.box').innerHTML = getTime();
+                            }, 1000)
+                        </script>
+                    
+                    </b>
+                 
+                    <br><br>
+                      <div style="font-size: 55px;font-weight: 200;">
+                      <b>
+                        
+                        <script type="text/javascript">
+                          var date = new Date();
+                          document.write(""+ date.getFullYear() + "/" + (date.getMonth() +1) + "/" + date.getDate() + "" + " 周" + "日一二三四五六".charAt(date.getDay()));
+                        </script></b>
+                    </div>
+      <div class="box" style="font-size: 134px;font-weight: 200;"></div>
+                    </div></div>
+                <div id="map" class="page-content"><center><div style="font-size: 55px;margin-top: 5px;">我的联系方式</div><h2>邮箱 pixel347619251@outlook.com</h2></center></div>
+                <div id="shop" class="page-content" style="overflow-y: auto;"><div style="font-size: 55px;margin-top: 4px;">心理FM专区</div><br><br>
+                    <video controls="" loop="5" width="384px" height="216px" controlslist="nodownload" style="border-radius: 13px;box-shadow: 0 0 10px #eee;">
+                    <source src="https://zarispro.github.io/gb/0001/1.mp4" type="video/mp4">
+                  </video>
+                  <video controls="" loop="5" width="384px" height="216px" controlslist="nodownload" style="border-radius: 13px;box-shadow: 0 0 10px #eee;">
+                    <source src="https://zarispro.github.io/gb/0003/1.mp4" type="video/mp4">
+                  </video>
+                  <video controls="" loop="5" width="384px" height="216px" controlslist="nodownload" style="border-radius: 13px;box-shadow: 0 0 10px #eee;">
+                    <source src="https://zarispro.github.io/gb/0002/1.mp4" type="video/mp4">
+                  </video>
+                  <video controls="" loop="5" width="384px" height="216px" controlslist="nodownload" style="border-radius: 13px;box-shadow: 0 0 10px #eee;">
+                    <source src="https://zarispro.github.io/gb/0004/1.mp4" type="video/mp4">
+                  </video>
+                  <video controls="" loop="5" width="384px" height="216px" controlslist="nodownload" style="border-radius: 13px;box-shadow: 0 0 10px #eee;">
+                    <source src="https://zarispro.github.io/gb/0005/1.mp4" type="video/mp4">
+                  </video>
+                  <video controls="" loop="5" width="384px" height="216px" controlslist="nodownload" style="border-radius: 13px;box-shadow: 0 0 10px #eee;">
+                    <source src="https://zarispro.github.io/gb/0008/1.mp4" type="video/mp4">
+                  </video>
+                  <video controls="" loop="5" width="384px" height="216px" controlslist="nodownload" style="border-radius: 13px;box-shadow: 0 0 10px #eee;">
+                    <source src="https://zarispro.github.io/gb/0007/1.mp4" type="video/mp4">
+                  </video>
+                  <video controls="" loop="5" width="384px" height="216px" controlslist="nodownload" style="border-radius: 13px;box-shadow: 0 0 10px #eee;">
+                    <source src="https://zarispro.github.io/gb/0006/1.mp4" type="video/mp4">
+                  </video></div>
+
+                  
+            </div>
+        </main>
+
+        <!--  -->
+        <footer class="footer" style="position: relative;">            <div style="float: left;font-size: 34px;position: absolute;left: 39px;">
+            相思遥(变调版) - 玉慧同学
+        </div>
+            <center><p><audio loop="22" src="xiangsiyao.mp3" controls autoplay id="play"></audio></div></p></center>
+        </footer>
+    </div>
+
+    <script>
+        // JavaScript for switching pages
+        function showPage(page) {
+            // Hide all page content
+            const pages = document.querySelectorAll('.page-content');
+            pages.forEach((pageContent) => {
+                pageContent.classList.remove('active');
+            });
+
+            // Show the selected page content
+            const selectedPage = document.getElementById(page);
+            selectedPage.classList.add('active');
+
+            // Highlight active button on sidebar
+            const sidebarBtns = document.querySelectorAll('.sidebar-btn');
+            sidebarBtns.forEach((btn) => {
+                btn.classList.remove('active');
+            });
+            const activeSidebarBtn = document.getElementById(page + '-btn');
+            if (activeSidebarBtn) activeSidebarBtn.classList.add('active');
+
+            // Highlight active link in top nav
+            const navLinks = document.querySelectorAll('.nav a');
+            navLinks.forEach((link) => {
+                link.classList.remove('active');
+            });
+            const activeNavLink = document.getElementById(page + '-btn');
+            if (activeNavLink) activeNavLink.classList.add('active');
+        }
+
+        // Set the default page
+        document.addEventListener('DOMContentLoaded', function () {
+            showPage('character'); // 默认显示首页
+        });
+    </script>
+</body>
+</html>
