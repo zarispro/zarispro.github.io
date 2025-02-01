@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>状态</title>
+    <style>
+        table {
+            width: 100%;font-size: 26px;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+            border: hidden;
+        }
+        /* 缩小英雄名的列宽 */
+        td:first-child {
+            width: 33%;
+        }
+        /* 灯的圆形div */
+        .lamp {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .red {
+            background-color: red;
+        }
+        .green {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tr style="background-color: #ff8d0a;color: #ffffff;top: 0px;">
+        <th>英雄名</th>
+        <th>级别</th>
+        <th>上场</th>
+    </tr>
+    <tr>
+        <td>艾琳</td>
+        <td>二将军</td>
+        <td><div class="lamp green"></div></td>
+    </tr>
+    <tr>
+        <td>白起</td>
+        <td>稳定</td>
+        <td><div class="lamp green"></div></td>
+    </tr>
+    <tr>
+        <td>杨戬</td>
+        <td>稳定</td>
+        <td><div class="lamp red"></div></td>
+    </tr>
+    <tr>
+        <td>孙尚香</td>
+        <td>四将军</td>
+        <td><div class="lamp green"></div></td>
+    </tr>
+    <tr>
+        <td>亚连</td>
+        <td>大将军</td>
+        <td><div class="lamp green"></div></td>
+    </tr>
+    <tr>
+        <td>吕布</td>
+        <td>稳定</td>
+        <td><div class="lamp red"></div></td>
+    </tr>
+    <tr>
+        <td>苍</td>
+        <td>稳定</td>
+        <td><div class="lamp green"></div></td>
+    </tr>
+    <tr>
+        <td>妲己</td>
+        <td>存疑</td>
+        <td><div class="lamp green"></div></td>
+    </tr>
+    <tr>
+        <td>公孙离</td>
+        <td>存疑</td>
+        <td><div class="lamp red"></div></td>
+    </tr>
+    <tr>
+        <td>露娜</td>
+        <td>存疑</td>
+        <td><div class="lamp red"></div></td>
+    </tr>
+    <tr>
+        <td>少司缘</td>
+        <td>稳定</td>
+        <td><div class="lamp green"></div></td>
+    </tr>
+    <tr>
+        <td>朵莉亚</td>
+        <td>三将军</td>
+        <td><div class="lamp red"></div></td>
+    </tr>
+    <tr>
+        <td>项羽</td>
+        <td>稳定</td>
+        <td><div class="lamp green"></div></td>
+    </tr>
+    <tr>
+        <td>后羿</td>
+        <td>稳定</td>
+        <td><div class="lamp green"></div></td>
+    </tr>
+    <tr>
+        <td>刘邦</td>
+        <td>稳定</td>
+        <td><div class="lamp green"></div></td>
+    </tr>
+    <tr>
+        <td>亚瑟</td>
+        <td>稳定</td>
+        <td><div class="lamp green"></div></td>
+    </tr>
+    <tr>
+        <td>小乔</td>
+        <td>存疑</td>
+        <td><div class="lamp red"></div></td>
+    </tr>
+    <tr>
+        <td>李信</td>
+        <td>稳定</td>
+        <td><div class="lamp red"></div></td>
+    </tr>
+</table>
+<style>
+    @import url('https://static.zeoseven.com/zsft/161/main/result.css');
+    
+    html {
+       font-family: "Sarasa Gothic SC";
+       font-weight: normal;
+       
+    }
+    @keyframes tmd {
+       0%{opacity: 0;}
+       60%{opacity: 0;}
+       100%{opacity: 1;} 
+    }
+    iframe{background-color: #000000;}
+        body {
+    margin: 0;
+    padding: 0;
+    
+    animation-name: tmd;animation-duration: 0.7s;
+    height: 100%;
+        }
+        
+        .top-section {
+    background-color: #da0054;color: #fff;
+    border-radius: 19px;margin: 20px;left: 0;right: 0;
+    width: 309px;
+    height: 144px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Adjust size based on viewport width */
+        }
+    
+        .days-container {
+    position: relative;
+        }
+        
+        .days-container span:first-child {
+    font-size: 59px; /* Larger than the "天" character */
+        }
+        
+        .days-container span:last-child {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 2vw; /* Smaller than the main number */
+        }
+        
+        .button-container {
+    margin-top: auto;
+    text-align: center;
+    width: 100%;
+        }
+        
+        .circle-button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #ff6347; /* Tomato color */
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: default;
+    margin-bottom: 20px;
+        }
+        
+        .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+        }
+        
+        .modal-content {
+    margin: 15% auto;
+    margin-top: 23%;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+        }
+        
+        .close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+        }
+        
+        .close-button:hover,
+        .close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+        }
+        
+        .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+        }
+        #copyButton {
+        background-color: rgb(0, 89, 255);
+        color: white;
+        padding: 10px 43px;font-size: 22px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+        #close-hint {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: #aaa;
+    font-size: 1rem;
+        }
+        #di{background-color: #000000;width: 100%;height: 100%;position: fixed;z-index: -1;left:0px;top:0px;}
+        </style>
+</body><br><br><br><br><center>声明：任何人无权干涉本表状态<br>本表仅在五排时生效</center><br><br><br><br>
+</html>
