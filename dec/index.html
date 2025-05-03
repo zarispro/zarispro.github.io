@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html align="center" style="cursor:default;background-color: #fff;background: linear-gradient(to bottom, #ffffff, #c8c8ff);font-family: Arial, Helvetica, sans-serif;" leftmargin="0" topmargin="0" οncοntextmenu="return false" οndragstart="return false" onselectstart="return false" οnselect="document.selection.empty()" οncοpy="document.selection.empty()" onbeforecopy="return false" οnmοuseup="document.selection.empty()" ondragstart="return false;" oncontextmenu="return false;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P娱抽卡器</title>
+<script language="JavaScript">
+<!--
+function updateDisplay() {
+    // Get current time
+    var now = new Date();
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var seconds = now.getSeconds();
+    
+    // Format with leading zeros
+    hours = (hours < 10) ? "0" + hours : hours;
+    minutes = (minutes < 10) ? "0" + minutes : minutes;
+    seconds = (seconds < 10) ? "0" + seconds : seconds;
+    
+    // Display time
+    document.getElementById("timeDisplay").innerHTML = hours + ":" + minutes + ":" + seconds;
+    
+    // Generate and display random number
+    var randomNum = Math.floor(Math.random() * 994) + 1;
+    document.getElementById("randomDisplay").innerHTML = randomNum;
+    
+    // Update every second
+    setTimeout("updateDisplay()", 20);
+}
+//-->
+</script>
+</head>
+<body onload="updateDisplay()">
+<h1 align="center">第3届明目之夜</h1>
+<div align="center">
+    <p id="timeDisplay" style="font-size: 39px; font-weight: bold;background-color: #ff0000;padding: 11px;border-radius: 19px;width: auto;display: inline-block;color: #fff;">00:00:00</p>
+</div>
+<div align="center">
+    <div id="randomDisplay" style="font-size: 155px; font-weight: bold;color: rgb(52, 0, 148);">0</div>
+</div>
+</body>
+</html>
