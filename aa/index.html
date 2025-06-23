@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H5 Game</title>
+    <style>#key{font-size: 23px;}
+        body { 
+            margin: 0; 
+            overflow: hidden; 
+            font-family: Arial, sans-serif;
+        }
+        #info {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            background-color: rgba(0,0,0,0.5);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        #skill-bar {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+        .skill {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(0,0,0,0.7);
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            cursor: pointer;
+            border: 2px solid #444;
+            position: relative;
+        }
+        .skill .key {
+            font-size: 12px;
+            color: #aaa;
+        }
+        .skill .name {
+            font-size: 10px;
+            margin-top: 5px;
+        }
+        .cooldown-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 3px;
+        }
+        .cooldown-text {
+            font-size: 29px;
+            font-weight: bold;
+            color: white;
+        }
+        #health-bar {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 20px;
+            background-color: rgba(0,0,0,0.5);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        #health-fill {
+            height: 100%;
+            width: 100%;
+            background-color: #f00;
+            transition: width 0.3s;
+        }
+        #markers {
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 5px;
+        }
+        .marker {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.3);
+            border: 1px solid #fff;
+        }
+        .marker.active {
+            background-color: gold;
+        }
+    </style>
+</head>
+<body>
+    <div id="info">
+        WASD: 移动 
+    </div>
+    <div id="health-bar">
+        <div id="health-fill"></div>
+    </div>
+    <div id="markers">
+        <div class="marker"></div>
+        <div class="marker"></div>
+        <div class="marker"></div>
+    </div>
+    <div id="skill-bar">
+        <div class="skill" id="skill1" onclick="useSkill(1)">
+            <div class="key"></div>
+            <div class="name">流星斩</div>
+            <div class="cooldown-overlay" id="cooldown1" style="display: none;">
+                <div class="cooldown-text">0</div>
+            </div>
+        </div>
+        <div class="skill" id="skill2" onclick="useSkill(2)">
+            <div class="key"></div>
+            <div class="name">逐月闪</div>
+            <div class="cooldown-overlay" id="cooldown2" style="display: none;">
+                <div class="cooldown-text">0</div>
+            </div>
+        </div>
+        <div class="skill" id="skill3" onclick="useSkill(3)">
+            <div class="key"></div>
+            <div class="name">落日斩</div>
+            <div class="cooldown-overlay" id="cooldown3" style="display: none;">
+                <div class="cooldown-text">0</div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/FirstPersonControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/GLTFLoader.js"></script>
+    
+    <script>
+        // 游戏常量
+        const SKILL1_COOLDOWN = 8;
+        const SKILL2_COOLDOWN = 10;
+        const SKILL2_CHARGES = 2;
+        const SKILL3_COOLDOWN = 15;
+        
+        // 游戏状态
+        let scene, camera, renderer, controls;
+        let clock = new THREE.Clock();
+        let character, sword;
+        let enemies = [];
+        let health = 100;
+        let maxHealth = 100;
+        let markers = 0;
+        let skill1Cooldown = 0;
+        let skill2Cooldown = 0;
+        let skill2Charges = SKILL2_CHARGES;
+        let skill3Cooldown = 0;
+        let isSkill3Active = false;
+        let skill3Target = null;
+        let skill3Timer = 0;
+        let skill3Position = new THREE.Vector3();
+        let skill3Circle = null;
+        let isAttacking = false;
+        let isImmortal = false;
+        let moveSpeed = 5;
+        let attackDamage = 20;
+        let attackRange = 2;
+        let lastAttackTime = 0;
+        let attackCooldown = 1;
+        
+        // 初始化场景
+        init();
+        animate();
+        
+        function init() {
+            // 创建场景
+            scene = new THREE.Scene();
+            scene.background = new THREE.Color(0x88ccff);
+            scene.fog = new THREE.Fog(0x88ccff, 10, 50);
+            
+            // 创建相机 - 固定在角色后上方
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            camera.position.set(0, 3, -5);
+            
+            // 创建渲染器
+            renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setPixelRatio(window.devicePixelRatio);
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            document.body.appendChild(renderer.domElement);
+            
+            // 添加灯光
+            const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+            scene.add(ambientLight);
+            
+            const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+            directionalLight.position.set(1, 1, 1);
+            scene.add(directionalLight);
+            
+            // 添加地面
+            const groundGeometry = new THREE.PlaneGeometry(100, 100);
+            const groundMaterial = new THREE.MeshStandardMaterial({ 
+                color: 0x3a5f0b,
+                roughness: 0.8,
+                metalness: 0.2
+            });
+            const ground = new THREE.Mesh(groundGeometry, groundMaterial);
+            ground.rotation.x = -Math.PI / 2;
+            ground.receiveShadow = true;
+            scene.add(ground);
+            
+            // 添加一些障碍物
+            addObstacles();
+            
+            // 创建角色
+            createCharacter();
+            
+            // 创建敌人
+            createEnemies(5);
+            
+            // 添加简单的键盘控制
+            controls = {
+                moveForward: false,
+                moveBackward: false,
+                moveLeft: false,
+                moveRight: false,
+                isLocked: true
+            };
+            
+            // 添加事件监听器
+            document.addEventListener('click', function() {
+                if (!isAttacking && !isSkill3Active) {
+                    attack();
+                }
+            });
+            
+            document.addEventListener('keydown', onKeyDown);
+            document.addEventListener('keyup', onKeyUp);
+            window.addEventListener('resize', onWindowResize);
+            
+            // 更新UI
+            updateHealthBar();
+            updateMarkers();
+            updateSkillCooldowns();
+        }
+        
+        function createCharacter() {
+            // 创建简单的角色模型
+            const bodyGeometry = new THREE.BoxGeometry(0.5, 1.8, 0.5);
+            const bodyMaterial = new THREE.MeshStandardMaterial({ color: 0x3366ff });
+            const body = new THREE.Mesh(bodyGeometry, bodyMaterial);
+            body.position.y = 0.9;
+            
+            const headGeometry = new THREE.SphereGeometry(0.3, 16, 16);
+            const headMaterial = new THREE.MeshStandardMaterial({ color: 0xffccaa });
+            const head = new THREE.Mesh(headGeometry, headMaterial);
+            head.position.y = 1.7;
+            
+            // 创建剑
+            const swordGeometry = new THREE.BoxGeometry(1.2, 0.1, 0.3);
+            const swordMaterial = new THREE.MeshStandardMaterial({ color: 0xcccccc });
+            sword = new THREE.Mesh(swordGeometry, swordMaterial);
+            sword.position.set(0.5, 1.2, 0);
+            
+            character = new THREE.Group();
+            character.add(body);
+            character.add(head);
+            character.add(sword);
+            character.position.set(0, 0, 5);
+            scene.add(character);
+        }
+        
+        function createEnemies(count) {
+            for (let i = 0; i < count; i++) {
+                createPigEnemy();
+            }
+        }
+        
+        function createPigEnemy() {
+            // 创建简单的猪模型
+            const bodyGeometry = new THREE.SphereGeometry(0.6, 16, 16);
+            const bodyMaterial = new THREE.MeshStandardMaterial({ color: 0xffaaaa });
+            const body = new THREE.Mesh(bodyGeometry, bodyMaterial);
+            
+            const headGeometry = new THREE.SphereGeometry(0.4, 16, 16);
+            const headMaterial = new THREE.MeshStandardMaterial({ color: 0xff9999 });
+            const head = new THREE.Mesh(headGeometry, headMaterial);
+            head.position.z = 0.5;
+            
+            const noseGeometry = new THREE.SphereGeometry(0.2, 16, 16);
+            const noseMaterial = new THREE.MeshStandardMaterial({ color: 0xff7777 });
+            const nose = new THREE.Mesh(noseGeometry, noseMaterial);
+            nose.position.z = 0.7;
+            
+            const earGeometry = new THREE.BoxGeometry(0.3, 0.1, 0.5);
+            const earMaterial = new THREE.MeshStandardMaterial({ color: 0xff9999 });
+            const leftEar = new THREE.Mesh(earGeometry, earMaterial);
+            leftEar.position.set(-0.3, 0.3, 0.2);
+            leftEar.rotation.x = Math.PI / 4;
+            
+            const rightEar = leftEar.clone();
+            rightEar.position.x = 0.3;
+            
+            const pig = new THREE.Group();
+            pig.add(body);
+            pig.add(head);
+            pig.add(nose);
+            pig.add(leftEar);
+            pig.add(rightEar);
+            
+            // 随机位置
+            const angle = Math.random() * Math.PI * 2;
+            const radius = 10 + Math.random() * 10;
+            pig.position.x = Math.cos(angle) * radius;
+            pig.position.z = Math.sin(angle) * radius;
+            pig.position.y = 0.6;
+            
+            // 添加血条
+            const healthBar = createHealthBar();
+            pig.add(healthBar);
+            healthBar.position.y = 1.5;
+            
+            // 敌人属性
+            pig.health = 100;
+            pig.maxHealth = 100;
+            pig.speed = 1 + Math.random() * 0.5;
+            pig.damage = 10;
+            pig.attackRange = 1.5;
+            pig.attackCooldown = 2;
+            pig.lastAttackTime = 0;
+            pig.isAlive = true;
+            
+            scene.add(pig);
+            enemies.push(pig);
+        }
+        
+        function createHealthBar() {
+            const barWidth = 1;
+            const barHeight = 0.1;
+            const barDepth = 0.01;
+            
+            const backgroundGeometry = new THREE.BoxGeometry(barWidth, barHeight, barDepth);
+            const backgroundMaterial = new THREE.MeshBasicMaterial({ color: 0x000000 });
+            const background = new THREE.Mesh(backgroundGeometry, backgroundMaterial);
+            background.position.y = 0;
+            
+            const healthGeometry = new THREE.BoxGeometry(barWidth - 0.02, barHeight - 0.02, barDepth + 0.01);
+            const healthMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+            const healthBar = new THREE.Mesh(healthGeometry, healthMaterial);
+            healthBar.position.y = 0;
+            healthBar.position.z = 0.01;
+            
+            const group = new THREE.Group();
+            group.add(background);
+            group.add(healthBar);
+            group.userData.healthBar = healthBar;
+            group.userData.maxWidth = barWidth - 0.02;
+            
+            return group;
+        }
+        
+        function updateEnemyHealthBar(enemy) {
+            const healthBar = enemy.children.find(child => child.userData.healthBar);
+            if (healthBar) {
+                const scale = enemy.health / enemy.maxHealth;
+                healthBar.userData.healthBar.scale.x = scale > 0 ? scale : 0;
+            }
+        }
+        
+        function addObstacles() {
+            // 添加一些简单的障碍物
+            const obstacleGeometry = new THREE.BoxGeometry(2, 2, 2);
+            const obstacleMaterial = new THREE.MeshStandardMaterial({ color: 0x8B4513 });
+            
+            for (let i = 0; i < 10; i++) {
+                const obstacle = new THREE.Mesh(obstacleGeometry, obstacleMaterial);
+                obstacle.position.x = (Math.random() - 0.5) * 40;
+                obstacle.position.z = (Math.random() - 0.5) * 40;
+                obstacle.position.y = 1;
+                scene.add(obstacle);
+            }
+        }
+        
+        function onKeyDown(event) {
+            switch (event.key.toLowerCase()) {
+                case 'w':
+                    controls.moveForward = true;
+                    break;
+                case 's':
+                    controls.moveBackward = true;
+                    break;
+                case 'a':
+                    controls.moveLeft = true;
+                    break;
+                case 'd':
+                    controls.moveRight = true;
+                    break;
+                case '1':
+                    useSkill(1);
+                    break;
+                case '2':
+                    useSkill(2);
+                    break;
+                case '3':
+                    useSkill(3);
+                    break;
+            }
+        }
+        
+        function onKeyUp(event) {
+            switch (event.key.toLowerCase()) {
+                case 'w':
+                    controls.moveForward = false;
+                    break;
+                case 's':
+                    controls.moveBackward = false;
+                    break;
+                case 'a':
+                    controls.moveLeft = false;
+                    break;
+                case 'd':
+                    controls.moveRight = false;
+                    break;
+            }
+        }
+        
+        function useSkill(skillNumber) {
+            const now = Date.now() / 1000;
+            
+            switch (skillNumber) {
+                case 1: // 流星斩
+                    if (skill1Cooldown <= 0) {
+                        meteorStrike();
+                        skill1Cooldown = SKILL1_COOLDOWN;
+                        updateSkillCooldowns();
+                    }
+                    break;
+                    
+                case 2: // 逐月闪
+                    if (skill2Charges > 0) {
+                        moonDash();
+                        skill2Charges--;
+                        if (skill2Charges <= 0) {
+                            skill2Cooldown = SKILL2_COOLDOWN;
+                        }
+                        updateSkillCooldowns();
+                    }
+                    break;
+                    
+                case 3: // 落日斩
+                    if (skill3Cooldown <= 0) {
+                        const target = findNearestEnemy();
+                        if (target) {
+                            sunsetStrike(target);
+                            skill3Cooldown = SKILL3_COOLDOWN;
+                            updateSkillCooldowns();
+                        }
+                    }
+                    break;
+            }
+        }
+        
+        function meteorStrike() {
+            isAttacking = true;
+            
+            // 动画效果
+            const initialPosition = character.position.clone();
+            const jumpHeight = 0.5;
+            const duration = 0.5;
+            let elapsed = 0;
+            
+            // 找到前方敌人
+            const hitEnemies = findEnemiesInFront(3, Math.PI / 3);
+            
+            const animateJump = () => {
+                elapsed += clock.getDelta();
+                const progress = Math.min(elapsed / duration, 1);
+                
+                // 抛物线运动
+                const jumpProgress = progress < 0.5 ? progress * 2 : 1 - (progress - 0.5) * 2;
+                character.position.y = initialPosition.y + jumpHeight * jumpProgress;
+                
+                // 旋转剑
+                sword.rotation.z = Math.sin(progress * Math.PI * 2) * 0.5;
+                
+                if (progress >= 0.3 && progress <= 0.4) {
+                    // 造成伤害
+                    hitEnemies.forEach(enemy => {
+                        if (enemy.isAlive) {
+                            // 法术伤害
+                            const magicDamage = 85 + attackDamage * 0.37;
+                            enemy.health -= magicDamage;
+                            
+                            // 物理伤害
+                            const physicalDamage = 85 + attackDamage * 0.37;
+                            enemy.health -= physicalDamage;
+                            
+                            // 击飞效果
+                            const direction = new THREE.Vector3().subVectors(enemy.position, character.position).normalize();
+                            enemy.position.add(direction.multiplyScalar(0.5));
+                            enemy.position.y += 0.5;
+                            
+                            // 根据印记层数追加攻击
+                            if (markers >= 1) {
+                                enemy.health -= magicDamage;
+                                enemy.health -= physicalDamage;
+                                
+                                if (markers >= 2) {
+                                    // 扩大击飞范围
+                                    enemy.position.add(direction.multiplyScalar(0.5));
+                                    enemy.position.y += 0.5;
+                                    
+                                    enemy.health -= magicDamage;
+                                    enemy.health -= physicalDamage;
+                                    
+                                    if (markers >= 3) {
+                                        // 真实伤害
+                                        enemy.health -= (85 + attackDamage * 0.37) + (170 + attackDamage * 0.75);
+                                        
+                                        // 霸体效果
+                                        isImmortal = true;
+                                        setTimeout(() => {
+                                            isImmortal = false;
+                                        }, 2000);
+                                    }
+                                }
+                            }
+                            
+                            updateEnemyHealthBar(enemy);
+                            checkEnemyDeath(enemy);
+                        }
+                    });
+                }
+                
+                if (progress < 1) {
+                    requestAnimationFrame(animateJump);
+                } else {
+                    character.position.y = initialPosition.y;
+                    sword.rotation.z = 0;
+                    isAttacking = false;
+                }
+            };
+            
+            animateJump();
+        }
+        
+        function moonDash() {
+            const dashDistance = 3;
+            const dashDuration = 0.3;
+            const direction = new THREE.Vector3(0, 0, -1).applyQuaternion(camera.quaternion);
+            direction.y = 0;
+            direction.normalize();
+            
+            const targetPosition = new THREE.Vector3().addVectors(character.position, direction.multiplyScalar(dashDistance));
+            const initialPosition = character.position.clone();
+            let elapsed = 0;
+            
+            // 对路径上的敌人造成伤害
+            const hitEnemies = findEnemiesInPath(initialPosition, targetPosition, 1);
+            hitEnemies.forEach(enemy => {
+                if (enemy.isAlive) {
+                    const damage = 100 + attackDamage * 0.25;
+                    enemy.health -= damage; // 物理伤害
+                    enemy.health -= damage; // 法术伤害
+                    
+                    // 减速效果
+                    enemy.speed *= 0.7;
+                    setTimeout(() => {
+                        enemy.speed /= 0.7;
+                    }, 1500);
+                    
+                    updateEnemyHealthBar(enemy);
+                    checkEnemyDeath(enemy);
+                }
+            });
+            
+            // 加速效果
+            moveSpeed *= 1.2;
+            setTimeout(() => {
+                moveSpeed /= 1.2;
+            }, 3000);
+            
+            const animateDash = () => {
+                elapsed += clock.getDelta();
+                const progress = Math.min(elapsed / dashDuration, 1);
+                
+                character.position.lerpVectors(initialPosition, targetPosition, progress);
+                
+                if (progress < 1) {
+                    requestAnimationFrame(animateDash);
+                }
+            };
+            
+            animateDash();
+        }
+        
+        function sunsetStrike(target) {
+            isSkill3Active = true;
+            isImmortal = true;
+            skill3Target = target;
+            skill3Timer = 0;
+            skill3Position.copy(character.position);
+            
+            // 创建圆圈范围指示器
+            if (skill3Circle) {
+                scene.remove(skill3Circle);
+            }
+            
+            const circleGeometry = new THREE.CircleGeometry(3, 32);
+            circleGeometry.rotateX(-Math.PI / 2);
+            const circleMaterial = new THREE.MeshBasicMaterial({ 
+                color: 0xff9900,
+                transparent: true,
+                opacity: 0.3
+            });
+            skill3Circle = new THREE.Mesh(circleGeometry, circleMaterial);
+            skill3Circle.position.copy(skill3Position);
+            scene.add(skill3Circle);
+            
+            // 使角色透明
+            character.traverse(child => {
+                if (child.isMesh) {
+                    child.material.transparent = true;
+                    child.material.opacity = 0.5;
+                }
+            });
+        }
+        
+        function findNearestEnemy() {
+            let nearestEnemy = null;
+            let minDistance = Infinity;
+            
+            enemies.forEach(enemy => {
+                if (enemy.isAlive) {
+                    const distance = character.position.distanceTo(enemy.position);
+                    if (distance < minDistance && distance < 10) {
+                        minDistance = distance;
+                        nearestEnemy = enemy;
+                    }
+                }
+            });
+            
+            return nearestEnemy;
+        }
+        
+        function findEnemiesInFront(distance, angle) {
+            const frontEnemies = [];
+            const characterDirection = new THREE.Vector3(0, 0, -1).applyQuaternion(camera.quaternion);
+            characterDirection.y = 0;
+            characterDirection.normalize();
+            
+            enemies.forEach(enemy => {
+                if (enemy.isAlive) {
+                    const toEnemy = new THREE.Vector3().subVectors(enemy.position, character.position);
+                    toEnemy.y = 0;
+                    const enemyDistance = toEnemy.length();
+                    
+                    if (enemyDistance <= distance) {
+                        toEnemy.normalize();
+                        const dot = characterDirection.dot(toEnemy);
+                        const enemyAngle = Math.acos(dot);
+                        
+                        if (enemyAngle <= angle) {
+                            frontEnemies.push(enemy);
+                        }
+                    }
+                }
+            });
+            
+            return frontEnemies;
+        }
+        
+        function findEnemiesInPath(start, end, width) {
+            const pathEnemies = [];
+            const pathDirection = new THREE.Vector3().subVectors(end, start).normalize();
+            const pathLength = start.distanceTo(end);
+            
+            enemies.forEach(enemy => {
+                if (enemy.isAlive) {
+                    const toEnemy = new THREE.Vector3().subVectors(enemy.position, start);
+                    const parallelDistance = toEnemy.dot(pathDirection);
+                    
+                    if (parallelDistance >= 0 && parallelDistance <= pathLength) {
+                        const perpendicularDistance = Math.sqrt(toEnemy.lengthSq() - parallelDistance * parallelDistance);
+                        if (perpendicularDistance <= width) {
+                            pathEnemies.push(enemy);
+                        }
+                    }
+                }
+            });
+            
+            return pathEnemies;
+        }
+        
+        function attack() {
+            const now = Date.now() / 1000;
+            if (now - lastAttackTime < attackCooldown) return;
+            
+            lastAttackTime = now;
+            isAttacking = true;
+            
+            // 动画效果
+            const initialRotation = sword.rotation.z;
+            const targetRotation = initialRotation + Math.PI / 4;
+            let elapsed = 0;
+            const duration = 0.3;
+            
+            // 找到前方敌人
+            const hitEnemies = findEnemiesInFront(attackRange, Math.PI / 4);
+            
+            const animateAttack = () => {
+                elapsed += clock.getDelta();
+                const progress = Math.min(elapsed / duration, 1);
+                
+                if (progress < 0.5) {
+                    sword.rotation.z = initialRotation + progress * 2 * (targetRotation - initialRotation);
+                } else {
+                    sword.rotation.z = targetRotation - (progress - 0.5) * 2 * (targetRotation - initialRotation);
+                }
+                
+                // 在攻击动画的中间点造成伤害
+                if (progress >= 0.4 && progress <= 0.6) {
+                    hitEnemies.forEach(enemy => {
+                        if (enemy.isAlive) {
+                            enemy.health -= attackDamage;
+                            updateEnemyHealthBar(enemy);
+                            checkEnemyDeath(enemy);
+                            
+                            // 有概率获得印记
+                            if (Math.random() < 0.3) {
+                                addMarker();
+                            }
+                        }
+                    });
+                }
+                
+                if (progress < 1) {
+                    requestAnimationFrame(animateAttack);
+                } else {
+                    sword.rotation.z = initialRotation;
+                    isAttacking = false;
+                }
+            };
+            
+            animateAttack();
+        }
+        
+        function addMarker() {
+            if (markers < 3) {
+                markers++;
+                updateMarkers();
+            }
+        }
+        
+        function checkEnemyDeath(enemy) {
+            if (enemy.health <= 0 && enemy.isAlive) {
+                enemy.isAlive = false;
+                enemy.visible = false;
+                
+                // 3秒后重生
+                setTimeout(() => {
+                    enemy.health = enemy.maxHealth;
+                    enemy.isAlive = true;
+                    enemy.visible = true;
+                    updateEnemyHealthBar(enemy);
+                    
+                    // 随机位置重生
+                    const angle = Math.random() * Math.PI * 2;
+                    const radius = 10 + Math.random() * 10;
+                    enemy.position.x = Math.cos(angle) * radius;
+                    enemy.position.z = Math.sin(angle) * radius;
+                }, 3000);
+            }
+        }
+        
+        function updateHealthBar() {
+            const healthPercentage = health / maxHealth;
+            document.getElementById('health-fill').style.width = `${healthPercentage * 100}%`;
+        }
+        
+        function updateMarkers() {
+            const markerElements = document.querySelectorAll('.marker');
+            markerElements.forEach((marker, index) => {
+                if (index < markers) {
+                    marker.classList.add('active');
+                } else {
+                    marker.classList.remove('active');
+                }
+            });
+        }
+        
+        function updateSkillCooldowns() {
+            // 技能1冷却
+            const cooldown1 = document.getElementById('cooldown1');
+            if (skill1Cooldown > 0) {
+                cooldown1.style.display = 'flex';
+                cooldown1.querySelector('.cooldown-text').textContent = Math.ceil(skill1Cooldown);
+            } else {
+                cooldown1.style.display = 'none';
+            }
+            
+            // 技能2冷却和充能
+            const cooldown2 = document.getElementById('cooldown2');
+            const skill2Element = document.getElementById('skill2');
+            
+            if (skill2Charges < SKILL2_CHARGES) {
+                cooldown2.style.display = 'flex';
+                cooldown2.querySelector('.cooldown-text').textContent = Math.ceil(skill2Cooldown);
+            } else {
+                cooldown2.style.display = 'none';
+            }
+            
+            // 更新技能2的可用次数显示
+            skill2Element.querySelector('.key').textContent = ` (${skill2Charges}/${SKILL2_CHARGES})`;
+            
+            // 技能3冷却
+            const cooldown3 = document.getElementById('cooldown3');
+            if (skill3Cooldown > 0) {
+                cooldown3.style.display = 'flex';
+                cooldown3.querySelector('.cooldown-text').textContent = Math.ceil(skill3Cooldown);
+            } else {
+                cooldown3.style.display = 'none';
+            }
+        }
+        
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+        
+        function animate() {
+            requestAnimationFrame(animate);
+            
+            const delta = clock.getDelta();
+            
+            // 更新角色移动
+            const moveDirection = new THREE.Vector3();
+            if (controls.moveForward) moveDirection.z -= 1;
+            if (controls.moveBackward) moveDirection.z += 1;
+            if (controls.moveLeft) moveDirection.x -= 1;
+            if (controls.moveRight) moveDirection.x += 1;
+            
+            moveDirection.normalize();
+            moveDirection.applyQuaternion(camera.quaternion);
+            moveDirection.y = 0;
+            
+            if (!isAttacking && !isSkill3Active) {
+                character.position.add(moveDirection.multiplyScalar(moveSpeed * delta));
+            }
+            
+            // 更新相机位置 - 固定在角色后上方
+            const targetCameraPosition = new THREE.Vector3(0, 3, -5).add(character.position);
+            camera.position.lerp(targetCameraPosition, 0.1);
+            camera.lookAt(character.position);
+            
+            // 更新技能冷却
+            if (skill1Cooldown > 0) {
+                skill1Cooldown -= delta;
+                if (skill1Cooldown <= 0) {
+                    skill1Cooldown = 0;
+                    updateSkillCooldowns();
+                } else {
+                    document.getElementById('cooldown1').querySelector('.cooldown-text').textContent = Math.ceil(skill1Cooldown);
+                }
+            }
+            
+            if (skill2Cooldown > 0 && skill2Charges < SKILL2_CHARGES) {
+                skill2Cooldown -= delta;
+                if (skill2Cooldown <= 0) {
+                    skill2Charges++;
+                    skill2Cooldown = skill2Charges < SKILL2_CHARGES ? SKILL2_COOLDOWN : 0;
+                    updateSkillCooldowns();
+                } else {
+                    document.getElementById('cooldown2').querySelector('.cooldown-text').textContent = Math.ceil(skill2Cooldown);
+                }
+            }
+            
+            if (skill3Cooldown > 0) {
+                skill3Cooldown -= delta;
+                if (skill3Cooldown <= 0) {
+                    skill3Cooldown = 0;
+                    updateSkillCooldowns();
+                } else {
+                    document.getElementById('cooldown3').querySelector('.cooldown-text').textContent = Math.ceil(skill3Cooldown);
+                }
+            }
+            
+            // 更新落日斩技能
+            if (isSkill3Active) {
+                skill3Timer += delta;
+                
+                // 可以移动但保持在同一高度
+                const moveDirection = new THREE.Vector3();
+                if (controls.moveForward) moveDirection.z -= 1;
+                if (controls.moveBackward) moveDirection.z += 1;
+                if (controls.moveLeft) moveDirection.x -= 1;
+                if (controls.moveRight) moveDirection.x += 1;
+                
+                moveDirection.normalize();
+                moveDirection.applyQuaternion(camera.quaternion);
+                moveDirection.y = 0;
+                
+                character.position.add(moveDirection.multiplyScalar(moveSpeed * delta));
+                skill3Position.copy(character.position);
+                skill3Circle.position.copy(skill3Position);
+                
+                // 1.5秒后落地
+                if (skill3Timer >= 1.5) {
+                    // 造成伤害
+                    const hitEnemies = findEnemiesInFront(3, Math.PI);
+                    hitEnemies.forEach(enemy => {
+                        if (enemy.isAlive) {
+                            // 基础伤害
+                            let damage = 175 + attackDamage * 0.45;
+                            
+                            // 距离越近伤害越高
+                            const distance = enemy.position.distanceTo(character.position);
+                            const distanceFactor = 1 + (1 - Math.min(distance / 3, 1));
+                            damage *= distanceFactor;
+                            
+                            enemy.health -= damage; // 物理伤害
+                            enemy.health -= damage; // 法术伤害
+                            
+                            // 获得印记和怒气
+                            addMarker();
+                            
+                            updateEnemyHealthBar(enemy);
+                            checkEnemyDeath(enemy);
+                        }
+                    });
+                    
+                    // 添加护盾
+                    health += Math.min(600 + attackDamage * 1.5, maxHealth - health);
+                    updateHealthBar();
+                    
+                    // 重置状态
+                    isSkill3Active = false;
+                    isImmortal = false;
+                    scene.remove(skill3Circle);
+                    skill3Circle = null;
+                    
+                    // 恢复角色外观
+                    character.traverse(child => {
+                        if (child.isMesh) {
+                            child.material.transparent = false;
+                            child.material.opacity = 1;
+                        }
+                    });
+                }
+            }
+            
+            // 更新敌人AI
+            if (!isSkill3Active) {
+                enemies.forEach(enemy => {
+                    if (enemy.isAlive) {
+                        // 向玩家移动
+                        const direction = new THREE.Vector3().subVectors(character.position, enemy.position).normalize();
+                        enemy.position.add(direction.multiplyScalar(enemy.speed * delta));
+                        
+                        // 确保敌人在地面上
+                        enemy.position.y = 0.6;
+                        
+                        // 旋转面向玩家
+                        enemy.lookAt(character.position);
+                        enemy.rotation.x = 0;
+                        enemy.rotation.z = 0;
+                        
+                        // 攻击玩家
+                        const distance = enemy.position.distanceTo(character.position);
+                        const now = Date.now() / 1000;
+                        if (distance <= enemy.attackRange && now - enemy.lastAttackTime >= enemy.attackCooldown) {
+                            if (!isImmortal) {
+                                health -= enemy.damage;
+                                updateHealthBar();
+                                
+                                if (health <= 0) {
+                                    // 游戏结束逻辑
+                                    alert('游戏结束!');
+                                    health = maxHealth;
+                                    updateHealthBar();
+                                }
+                            }
+                            enemy.lastAttackTime = now;
+                        }
+                    }
+                });
+            }
+            
+            // 渲染场景
+            renderer.render(scene, camera);
+        }
+    </script>
+</body>
+</html>
